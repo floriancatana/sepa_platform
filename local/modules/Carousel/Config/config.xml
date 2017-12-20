@@ -14,7 +14,7 @@
 
     <hooks>
         <hook id="carousel.hook">
-            <tag name="hook.event_listener" event="home.body" type="front" templates="render:carousel.html" />
+            <tag name="hook.event_listener" event="main.content-top" type="front" templates="render:carousel.html" />
             <tag name="hook.event_listener" event="module.configuration" type="back" templates="render:module_configuration.html" />
             <tag name="hook.event_listener" event="module.config-js" type="back" templates="js:assets/js/module-configuration.js" />
         </hook>

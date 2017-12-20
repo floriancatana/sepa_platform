@@ -120,8 +120,14 @@ GNU General Public License : http://www.gnu.org/licenses/
         <div class="header-container" itemscope itemtype="http://schema.org/WPHeader">
             {hook name="main.header-top"}
             <div class="navbar navbar-default navbar-secondary" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                <div class="container">
-
+                <div class="container container-hadi">
+                    <div class="logo container hidden-xs logo-hadi">
+                        <a href="{navigate to="index"}" title="{$store_name}">
+                            {local_media type="logo"}
+                            <img src="{$MEDIA_URL}" alt="{$store_name}">
+                            {/local_media}
+                        </a>
+                    </div>
                     <div class="navbar-header">
                         <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-secondary">
@@ -135,7 +141,7 @@ GNU General Public License : http://www.gnu.org/licenses/
 
                     {ifhook rel="main.navbar-secondary"}
                         {* Place everything within .nav-collapse to hide it until above 768px *}
-                        <nav class="navbar-collapse collapse nav-secondary" role="navigation" aria-label="{intl l="Secondary Navigation"}">
+                        <nav class="navbar-collapse collapse nav-secondary nav-secondary-hadi" role="navigation" aria-label="{intl l="Secondary Navigation"}">
                             {hook name="main.navbar-secondary"}
                         </nav>
                     {/ifhook}
@@ -145,13 +151,13 @@ GNU General Public License : http://www.gnu.org/licenses/
 
             <header class="container" role="banner">
                 <div class="header row">
-                    <h1 class="logo container hidden-xs">
+           {*         <h1 class="logo container hidden-xs">
                         <a href="{navigate to="index"}" title="{$store_name}">
                             {local_media type="logo"}
                             <img src="{$MEDIA_URL}" alt="{$store_name}">
                             {/local_media}
                         </a>
-                    </h1>
+                    </h1>*}
                     {hook name="main.navbar-primary"}
                 </div>
             </header><!-- /.header -->
@@ -160,8 +166,9 @@ GNU General Public License : http://www.gnu.org/licenses/
         </div><!-- /.header-container -->
 
         <main class="main-container" role="main">
+            {hook name="main.content-top"}
             <div class="container">
-                {hook name="main.content-top"}
+{*                {hook name="main.content-top"}*}
                 {block name="breadcrumb"}{include file="misc/breadcrumb.tpl"}{/block}
                 <div id="content">{block name="main-content"}{/block}</div>
                 {hook name="main.content-bottom"}

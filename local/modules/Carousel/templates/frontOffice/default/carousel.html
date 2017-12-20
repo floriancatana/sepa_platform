@@ -6,7 +6,7 @@
                 {loop type="carousel" name="carousel.front" width="1200" height="390" resize_mode="borders"}
                 <figure class="item {if $LOOP_COUNT == 1}active{/if}">
                     {if $URL}<a href="{$URL|default:'#'}">{/if}
-                    <img src="{$IMAGE_URL}" alt="{$ALT}">
+                        <img src="{$IMAGE_URL}" alt="{$ALT}" style="width: 100%; height: 422px;">
                     {if $URL}</a>{/if}
 
                     <div class="carousel-caption">
