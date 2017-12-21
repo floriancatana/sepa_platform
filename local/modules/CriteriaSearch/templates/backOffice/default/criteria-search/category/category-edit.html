@@ -1,0 +1,74 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">{intl l="CriteriaSearch configuration" d='criteriasearch.bo.default'}</h4>
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive col-md-4">
+            <table class="table table-striped">
+                <caption class="clearfix">
+                    {intl l="Features list" d='criteriasearch.bo.default'}
+                </caption>
+                <thead>
+                    <tr>
+                        <th>{intl l="ID" d='criteriasearch.bo.default'}</th>
+                        <th>{intl l="Title" d='criteriasearch.bo.default'}</th>
+                        <th>{intl l="Searchable" d='criteriasearch.bo.default'}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {loop type="search_feature" name="search_feature_loop" category=$category_id}
+                        <tr>
+                            <td>{$ID}</td>
+                            <td>{$TITLE}</td>
+                            <td>
+                                <div class="switch-small search_switch" data-categoryid="{$category_id}" data-id="{$ID}" data-type="feature" data-on="success" data-off="danger" data-on-label="<i class='glyphicon glyphicon-ok-circle'></i>" data-off-label="<i class='glyphicon glyphicon-remove-circle'></i>">
+                                    <input type="checkbox" name="search_feature" {if $SEARCHABLE}checked{/if} />
+                                </div>
+                            </td>
+                        </tr>
+                    {/loop}
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive col-md-4">
+            <table class="table table-striped">
+                <caption class="clearfix">
+                    {intl l="Attirbutes list" d='criteriasearch.bo.default'}
+                </caption>
+                <thead>
+                    <tr>
+                        <th>{intl l="ID" d='criteriasearch.bo.default'}</th>
+                        <th>{intl l="Title" d='criteriasearch.bo.default'}</th>
+                        <th>{intl l="Searchable" d='criteriasearch.bo.default'}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {loop type="search_attribute" name="search_attribute_loop" category=$category_id}
+                        <tr>
+                            <td>{$ID}</td>
+                            <td>{$TITLE}</td>
+                            <td>
+                                <div class="switch-small search_switch" data-categoryid="{$category_id}" data-id="{$ID}" data-type="attribute" data-on="success" data-off="danger" data-on-label="<i class='glyphicon glyphicon-ok-circle'></i>" data-off-label="<i class='glyphicon glyphicon-remove-circle'></i>">
+                                    <input type="checkbox" name="search_attribute" {if $SEARCHABLE}checked{/if} />
+                                </div>
+                            </td>
+                        </tr>
+                    {/loop}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <h4>{intl l='Choose taxe rule for price filter :'}</h4>
+            <form id="category_tax_rule" class="form-inline" action="{url path='/admin/module/config/CriteriaSearch/category/tax'}">
+                <input type="hidden" name="category_id" value="{$category_id}">
+                <select class='form-control' name="tax_rule_id">
+                    <option>{intl l="No tax selected"}</option>
+                    {loop type="tax-rule" name="category_tax_rule"}
+                        <option value="{$ID}"{if $ID === $taxe_rule_id}selected{/if}>{$TITLE}</option>
+                    {/loop}
+                </select>
+                <input id="category_tax_rule_btn" type="submit" class="btn btn-success">
+            </form>
+        </div>
+    </div>
+</div>

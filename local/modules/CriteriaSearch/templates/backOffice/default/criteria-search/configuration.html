@@ -1,0 +1,84 @@
+{extends file="admin-layout.tpl"}
+
+{block name="after-bootstrap-css"}
+
+{/block}
+
+{block name="no-return-functions"}
+  {$admin_current_location = 'modules'}
+{/block}
+
+{block name="page-title"}{intl l='Modules'}{/block}
+
+{block name="check-resource"}admin.module{/block}
+{block name="check-access"}view{/block}
+
+{block name="main-content"}
+  {default_translation_domain domain='criteriasearch.bo.default'}
+
+  {if $form_error_message}
+    <div class="alert alert-danger">{$form_error_message}</div>
+  {/if}
+  <div class="edit-module">
+    <div id="wrapper" class="container">
+      <ul class="breadcrumb">
+        <li><a href="{url path='/admin/home'}">{intl l="Home"}</a></li>
+        <li><a href="{url path='/admin/modules'}">{intl l="Modules"}</a></li>
+        <li>{intl l="CriteriaSearch"}</li>
+      </ul>
+
+      <div class="row">
+        <div class="col-md-12 general-block-decorator">
+          <div class="col-md-12 title title-without-tabs">
+            {intl l='Enable filter for CriteriaSearch'}
+          </div>
+          <div class="col-md-4">
+            <div class="switch-small filter_switch" data-filter="brand" data-on="success" data-off="danger" data-on-label="<i class='glyphicon glyphicon-ok-circle'></i>" data-off-label="<i class='glyphicon glyphicon-remove-circle'></i>">
+              <input type="checkbox" name="search_filter" {if $brand === "true"}checked{/if} />
+            </div>
+            {intl l="Filter by brand"}
+          </div>
+          <div class="col-md-4">
+            <div class="switch-small filter_switch" data-filter="price" data-on="success" data-off="danger" data-on-label="<i class='glyphicon glyphicon-ok-circle'></i>" data-off-label="<i class='glyphicon glyphicon-remove-circle'></i>">
+              <input type="checkbox" name="search_filter" {if $price === "true"}checked{/if} />
+            </div>
+            {intl l="Filter by price slider"}
+
+          </div>
+          <div class="col-md-4">
+            <div class="switch-small filter_switch" data-filter="new" data-on="success" data-off="danger" data-on-label="<i class='glyphicon glyphicon-ok-circle'></i>" data-off-label="<i class='glyphicon glyphicon-remove-circle'></i>">
+              <input type="checkbox" name="search_filter" {if $new === "true"}checked{/if} />
+            </div>
+            {intl l="Filter by new"}
+
+          </div>
+          <div class="col-md-4">
+            <div class="switch-small filter_switch" data-filter="promo" data-on="success" data-off="danger" data-on-label="<i class='glyphicon glyphicon-ok-circle'></i>" data-off-label="<i class='glyphicon glyphicon-remove-circle'></i>">
+              <input type="checkbox" name="search_filter" {if $promo === "true"}checked{/if} />
+            </div>
+            {intl l="Filter by promo"}
+
+          </div>
+          <div class="col-md-4">
+            <div class="switch-small filter_switch" data-filter="stock" data-on="success" data-off="danger" data-on-label="<i class='glyphicon glyphicon-ok-circle'></i>" data-off-label="<i class='glyphicon glyphicon-remove-circle'></i>">
+              <input type="checkbox" name="search_filter" {if $stock === "true"}checked{/if} />
+            </div>
+            {intl l="Filter by in stock"}
+          </div>
+        </div>
+      </div>
+      {hook name="module.configuration" location="module_configuration"  modulecode="CriteriaSearch"}
+    </div>
+  </div>
+{/block}
+
+{block name="javascript-initialization"}
+  {javascripts file='assets/js/bootstrap-switch/bootstrap-switch.js'}
+      <script src='{$asset_url}'></script>
+  {/javascripts}
+  {include file="criteria-search/configuration-js.html"}
+{/block}
+
+{block name="javascript-last-call"}
+
+{/block}

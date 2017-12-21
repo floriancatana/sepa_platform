@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <!--Back config routes-->
+    <route id="criteria_search_config" path="/admin/module/config/CriteriaSearch/toggle/{type}">
+        <default key="_controller">CriteriaSearch\Controller\Admin\ConfigurationController::toggleCriteria</default>
+    </route>
+
+    <route id="criteria_search_module_config_view" path="/admin/module/CriteriaSearch">
+        <default key="_controller">CriteriaSearch\Controller\Admin\ConfigurationController::viewAction</default>
+    </route>
+
+    <route id="criteria_search_category_tax" path="/admin/module/config/CriteriaSearch/category/tax">
+        <default key="_controller">CriteriaSearch\Controller\Admin\ConfigurationController::setCategoryTaxRule</default>
+    </route>
+
+    <!--Front search routes-->
+    <route id="criteria_search_full" path="/criteria/render/search">
+        <default key="_controller">CriteriaSearch\Controller\Front\SearchController::getSearchRender</default>
+    </route>
+
+    <route id="criteria_url_search" path="/criteria/url/search">
+        <default key="_controller">CriteriaSearch\Controller\Front\SearchController::getSearchUrl</default>
+    </route>
+
+    <route id="criteria_page_info_search" path="/criteria/page/info/search">
+        <default key="_controller">CriteriaSearch\Controller\Front\SearchController::getSearchPageInfo</default>
+    </route>
+
+</routes>

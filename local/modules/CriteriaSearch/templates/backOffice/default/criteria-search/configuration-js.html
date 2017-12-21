@@ -1,0 +1,21 @@
+<script>
+    $(document).ready(function() {
+        $(".filter_switch").bootstrapSwitch();
+
+        $(".filter_switch").on("switch-change", function(e, data) {
+            var checkbox = $(this);
+            var is_checked = data.value;
+            var filter = $(this).data('filter');
+            var url = "{url path='/admin/module/config/CriteriaSearch/toggle/filter'}";
+            {literal}
+                $.post(url, {
+                    checked : is_checked,
+                    filter : filter
+                }).fail(function() {
+                    checkbox.bootstrapSwitch('toggleState', true);
+                });
+            {/literal}
+        });
+    });
+</script>
+

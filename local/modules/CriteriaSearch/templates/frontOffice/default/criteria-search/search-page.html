@@ -1,0 +1,114 @@
+asdasads
+
+<section class="clearfix">
+<form id="criteria-search-form" action="{url path='/criteria/search/'}" method="get">
+    <input type="hidden" name="category_id" value="{$category_id}">
+    <input type="hidden" name="page">
+    {$categories[] = $category_id}
+    {loop type="category" name="categories" parent=$category_id}
+        {$categories[] = $ID}
+    {/loop}
+    {loop type="search_feature" name="search_feature_loop" category=$category_id}
+        {if $SEARCHABLE}
+            {$featureId = $ID}
+            {ifloop rel="search_feature_av_loop"}
+                <div id="search-feature" class="block block-nav col-md-3" role="navigation" aria-labelledby="categories-label">
+                    <h4  id="categories-label">{$TITLE}</h4>
+                    <select class="select-search" id="feature-{$featureId}" name="features[{$featureId}][]" multiple="multiple">
+                        {loop type="search_feature_av" name="search_feature_av_loop" feature=$featureId category={', '|implode:$categories} return_empty=false force_return=true}
+                            <option class="input-search" value="{$ID}">{$TITLE}</option>
+                        {/loop}
+                    </select>
+                </div>
+            {/ifloop}
+        {/if}
+    {/loop}
+    asdasdasdasd
+    {loop type="search_attribute" name="search_attribute_loop" category=$category_id}
+        {if $SEARCHABLE}
+            {$attributeId = $ID}
+            {ifloop rel="search_attribute_av_loop"}
+                <div id="search-attribute" class="block block-nav col-md-3" role="navigation" aria-labelledby="categories-label">
+                    <h4  id="categories-label">{$TITLE}</h4>
+                    <select class="select-search" id="attribute-{$attributeId}" name="attributes[{$attributeId}][]" multiple="multiple">
+                        {loop type="search_attribute_av" name="search_attribute_av_loop" attribute=$ID category={', '|implode:$categories} return_empty=false force_return=true}
+                            <option class="input-search" value="{$ID}">{$TITLE}</option>
+                        {/loop}
+                    </select>
+                </div>
+            {/ifloop}
+        {/if}
+    {/loop}
+    {if $brand_filter === "true"}
+        {ifloop rel="brand-filter"}
+            <div id="search-brand" class="block block-nav col-md-3" role="navigation" aria-labelledby="search-label">
+                <h4  id="search-label">{intl l="Brand" d="criteriasearch.fo.default"}</h4>
+                <select class="select-search" id="brand-{$ID}" name="brands[]" multiple="multiple">
+                    {loop type="search_brand" name="brand-filter" category={', '|implode:$categories}}
+                        <option class="input-search" value="{$ID}">{$TITLE}</option>
+                    {/loop}
+                </select>
+            </div>
+        {/ifloop}
+    {/if}
+    <div id="search-others" class="block block-nav col-md-3" role="navigation" aria-labelledby="search-label">
+        <h4  id="search-label">{intl l="Others filters" d="criteriasearch.fo.default"}</h4>
+            {if $new_filter === "true"}
+                <div>
+                    <input class="input-search" id="is-new" type="checkbox" name="new" value="true">
+                    <label for="is-new">{intl l="New" d="criteriasearch.fo.default"}</label>
+                </div>
+            {/if}
+            {if $promo_filter === "true"}
+                <div>
+                    <input class="input-search" id="is-promo" type="checkbox" name="promo" value="true">
+                    <label for="is-promo">{intl l="Promo" d="criteriasearch.fo.default"}</label>
+                </div>
+            {/if}
+            {if $stock_filter === "true"}
+                <div>
+                    <input class="input-search" id="in-stock" type="checkbox" name="in_stock" value="1">
+                    <label for="in-stock">{intl l="In stock" d="criteriasearch.fo.default"}</label>
+                </div>
+            {/if}
+    </div>
+    
+    {if $price_filter === "true"}
+        <div id="search-price" class="block block-nav col-md-4" role="navigation" aria-labelledby="search-label">
+            <label for="price-filter">{intl l="Price filter" d="criteriasearch.fo.default"}</label>
+            <input id="price-filter" type="text" data-slider-ticks="[{$value_price_filter.0}, {$value_price_filter.1}, {$value_price_filter.2}, {$value_price_filter.3}, {$value_price_filter.4}]" data-slider-ticks-labels='["{$value_price_filter.0}€", "{$value_price_filter.1}€", "{$value_price_filter.2}€", "{$value_price_filter.3}€", "{$value_price_filter.4}€"]' data-slider-min="0" data-slider-max="{$max_price_filter}" data-slider-value="[0,{$max_price_filter}]" data-slider-step="50" />
+            <input type="hidden" name="price_min">
+            <input type="hidden" name="price_max">
+        </div>
+    {/if}
+
+        <div class="block block-nav col-md-2" role="navigation" aria-labelledby="search-label">
+            <label for="search-limit">{intl l="Limit" d="criteriasearch.fo.default"}</label>
+            <select  class="input-search form-control col-md-3" id="search-limit" name="limit">
+                <option value="4" {if $limit==4}selected{/if}>4</option>
+                <option value="8" {if $limit==8}selected{/if}>8</option>
+                <option value="12" {if $limit==12}selected{/if}>12</option>
+                <option value="50" {if $limit==50}selected{/if}>50</option>
+                <option value="10000" {if $limit==100000}selected{/if}>{intl l="All"}</option>
+            </select>
+        </div>
+
+        <div class="block block-nav col-md-3" role="navigation" aria-labelledby="search-label">
+            <label for="search-sort">{intl l="Sort" d="criteriasearch.fo.default"}</label>
+            <select  class="input-search form-control col-md-3" id="search-sort" name="order">
+            <option value="alpha" {if $product_order=="alpha"}selected{/if}>{intl l="Name ascending"}</option>
+                <option value="alpha_reverse" {if $product_order=="alpha_reverse"}selected{/if}>{intl l="Name descending"}</option>
+                <option value="min_price" {if $product_order=="min_price"}selected{/if}>{intl l="Price ascending"}</option>
+                <option value="max_price" {if $product_order=="max_price"}selected{/if}>{intl l="Price descending"}</option>
+            </select>
+        </div>
+</form>
+</section>
+<hr>
+<div id="category-products">
+    <div class="products-content">
+        {include file="criteria-search/search-results.html"}
+    </div>
+</div>
+
+
