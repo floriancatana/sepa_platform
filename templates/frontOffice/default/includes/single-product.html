@@ -1,4 +1,4 @@
-<li class="item {$colClass|default:"col-md-3"}">
+<li class="item {$colClass|default:"col-md-3"} col-md-5th">
     {if $PSE_COUNT > 1}
         {assign var="hasSubmit" value = false}
     {else}
@@ -12,7 +12,7 @@
 		
 		{hook name="singleproduct.top" product="{$product_id}"}
 
-        <a href="{$URL nofilter}" itemprop="url" tabindex="-1" class="product-image{if $hasQuickView == true} product-quickview{/if} overlay col-sm-3">
+        <a href="{$URL nofilter}" itemprop="url" tabindex="-1" class="product-image{if $hasQuickView == true} product-quickview{/if} col-sm-3">
             {loop name="product_thumbnail" type="image" product=$product_id width="{$width}" height="{$height}" resize_mode="borders" limit="1"}
                 <img itemprop="image" src="{$IMAGE_URL nofilter}" class="img-responsive" alt="{$productTitle}">
             {/loop}
@@ -119,4 +119,7 @@
         {hook name="singleproduct.bottom" product={$product_id}}
 
     </article><!-- /product -->
+    {ifhook rel="product.cart-wish"}
+    	{hook name="product.cart-wish" product_id="{$product_id}" virtual="{$VIRTUAL}" quantity="{$QUANTITY}" pse_count="{$PSE_COUNT}" pse="{$PRODUCT_SALE_ELEMENT}" type_products="offer"}
+	{/ifhook}
 </li>

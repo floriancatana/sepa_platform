@@ -1,0 +1,89 @@
+{* Stock *} 
+{assign var="current_stock_content" value = "in_stock"}
+{assign var="current_stock_href" value = "http://schema.org/InStock"}
+{if {config key="check-available-stock"} != 0}
+    {if $virtual == 0 && $quantity <= 0}
+        {assign var="current_stock_content" value = "out_stock"}
+        {assign var="current_stock_href" value = "http://schema.org/OutOfStock"}
+    {/if}
+{/if}
+
+{if $pse_count > 1}
+    {assign var="hasSubmit" value = false}
+{else}
+    {assign var="hasSubmit" value = true}
+{/if}
+
+<div class="row cart-wish">
+	<div class = "col-md-10 col-sm-10">
+        {if $hasSubmit == true && $current_stock_content == "in_stock"}
+            {form name="thelia.cart.add" }
+            <form id="{$type_products}_form-product-details-{$product_id}" action="{url path="/cart/add" }" method="post" class="form-product">
+                {form_hidden_fields}
+                <input type="hidden" name="view" value="product">
+                <input type="hidden" name="product_id" value="{$product_id}">
+                {form_field field="append"}
+                    <input type="hidden" name="{$name}" value="1">
+                {/form_field}
+
+                {if $form_error}<div class="alert alert-error">{$form_error_message}</div>{/if}
+
+                {form_field field='product_sale_elements_id'}
+                    <input type="hidden" class="pse-id" name="{$name}" value="{$pse}" {$attr}>
+                {/form_field}
+                {form_field field="product"}
+                    <input id="{$type_products}_{$label_attr.for}_{$product_id}" type="hidden" name="{$name}" value="{$product_id}" {$attr} >
+                {/form_field}
+
+                <fieldset class="product-cart form-inline">
+                    {form_field field='quantity'}
+                        <div class="form-group group-qty hide {if $error}has-error{elseif $value != "" && !$error}has-success{/if}">
+                            <label for="{$label_attr.for}">{$label}</label>
+                            <input type="number" name="{$name}" id="{$type_products}_{$label_attr.for}_{$product_id}" class="form-control" value="{$value|default:1}" min="0" required>
+                            {if $error }
+                                <span class="help-block"><i class="fa fa-remove"></i> {$message}</span>
+                            {elseif $value != "" && !$error}
+                                <span class="help-block"><i class="fa fa"></i></span>
+                            {/if}
+                        </div>
+                    {/form_field}
+                    <div>
+                        <div class="product-btn">
+                            <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-shopping-cart"></i> {intl l="Add to cart" d="fo.default"}</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            {/form}
+        {else}
+            <div>
+                <div class="product-btn">
+                    <a href="{$URL nofilter}" class="btn btn-primary btn-block"><i class="fa fa-eye"></i> {intl l="View product" d="fo.default"}</a>
+                </div>
+            </div>
+        {/if}
+	</div>
+         	
+	<div class = "col-md-2 col-sm-2">
+		{if {in_wishlist product_id="$product_id"}}
+	        <div class="form-group group-btn wish-list in-wish-list">
+	            <a class="btn btn_add_to_cart btn-primary" href="{url path="/wishlist/remove/$product_id"}"></a>
+	            <input type="hidden" value="{$product_id}">
+	        </div>
+	        {loop type="auth" name="customer_info_block" role="CUSTOMER"}
+	            {if !{is_saved_in_wishlist product_id="$product_id"}}
+	                <p>This product is not really in your wish list. To really add, click the button below.</p>
+	            <div class="form-group group-btn wish-list">
+	                <a class="btn btn_add_to_cart btn-primary" href="{url path="/wishlist/add/$product_id"}"></a>
+	                <input type="hidden" value="{$product_id}">
+	            </div>
+	            {/if}
+	        {/loop}
+	    {else}
+		     <div class="form-group group-btn wish-list">
+		         <a class="btn btn_add_to_cart btn-primary" href="{url path="/wishlist/add/$product_id"}"></a>
+		         <input type="hidden" value="{$product_id}">
+		     </div>
+		{/if}
+	</div>
+</div>
