@@ -34,11 +34,12 @@ class CriteriaSearchHook extends BaseHook
     {
         $request = $this->getRequest();
 
-        $params['category_id'] = $event->getArgument('category_id');
+//        $params['category_id'] = $event->getArgument('category_id');
+        $params['category_id'] = $request->get("category_id");
 
         $categorieTaxeRule = CriteriaSearchCategoryTaxRuleQuery::create()
             ->findOneByCategoryId($params['category_id']);
-
+        
         //Enable price filter only if a tax rule is chosen for this category
         if (null !== $categorieTaxeRule && null !== $categorieTaxeRule->getTaxRuleId()) {
             $params['price_filter'] = CriteriaSearch::getConfigValue('price_filter');
@@ -72,7 +73,7 @@ class CriteriaSearchHook extends BaseHook
 
                 $priceSlice = $params['max_price_filter']/4;
 
-                for ($i = 0; $i <=  $params['max_price_filter']; $i = $i+$priceSlice) {
+                for ($i = 0; $i <=  $params['max_price_filter']; $i = $i + $priceSlice) {
                     $params['value_price_filter'][] = $i;
                 }
             }

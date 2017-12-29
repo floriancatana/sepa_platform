@@ -34,7 +34,7 @@ web/.htaccess
 local/I18n/*.php
 
 # Ignore everything in the "modules" directory, except the "default modules"
-local/modules/*
+#local/modules/*
 !local/modules/Cheque/
 !local/modules/Carousel/
 !local/modules/Front/
@@ -48,6 +48,7 @@ local/modules/*
 local/modules/HookTest/
 
 # Ignore everything in the "templates" directory, except the "default template"
+templates/frontOffice/default/assets/*
 templates/*
 !templates/frontOffice
 templates/frontOffice/*

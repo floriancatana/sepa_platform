@@ -1,4 +1,5 @@
-{$product_total={count type="search_product" complex="true" feature_availability=$features attribute_availability=$attributes category=$category_id brand=$brands min_price_ttc=$price_min max_price_ttc=$price_max category_id=$category_id min_stock=$in_stock new=$new promo=$promo limit="100000" depth="10"}}
+{$product_total={count type="search_product" complex="true" feature_availability=$features attribute_availability=$attributes category=$category_id brand=$brands min_price=$price_min max_price=$price_max category_id=$category_id min_stock=$in_stock new=$new promo=$promo limit="100000" depth="10"}}
+
 <div class="toolbar toolbar-top" role="toolbar">
     <div class="sorter-container clearfix">
         <span class="amount">{if ($product_total > 1)}{intl l="%nb Items" nb="{$product_total}"}{else}{intl l="%nb Item" nb="{$product_total}"}{/if}</span>

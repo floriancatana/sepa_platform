@@ -70,5 +70,19 @@
         </nav>
     </div>
 </section>
+
+{assign var="search_criteria" value=$smarty.get.criteria}
+{assign var="search_category" value=$smarty.get.category_id}
+{assign var="search_brands" value=$smarty.get.brands}
+{assign var="search_price_min" value=$smarty.get.price_min}
+{assign var="search_price_max" value=$smarty.get.price_max}
+{assign var="search_new" value=$smarty.get.new}
+{assign var="search_promo" value=$smarty.get.promo} 
+{assign var="search_limit" value=$smarty.get.limit}
+{assign var="search_page" value=$smarty.get.page}
+{assign var="search_order" value=$smarty.get.order}
+
+{hook name="criteria-search.search-page" criteria=$search_criteria category=$search_category brands=$search_brands price_min=$search_price_min price_max=$search_price_max limit=$limit  new=$search_new promo=$search_promo limit=$search_limit page=$search_page order=$search_order}
+
 {/elsehook}
 {hook name="category.sidebar-bottom"}

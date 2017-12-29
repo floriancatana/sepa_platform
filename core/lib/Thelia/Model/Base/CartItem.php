@@ -80,7 +80,7 @@ abstract class CartItem implements ActiveRecordInterface
 
     /**
      * The value for the quantity field.
-     * Note: this column has a database default value of: 1
+     * Note: this column has a database default value of: 1.0
      * @var        double
      */
     protected $quantity;
@@ -160,7 +160,7 @@ abstract class CartItem implements ActiveRecordInterface
      */
     public function applyDefaultValues()
     {
-        $this->quantity = 1;
+        $this->quantity = 1.0;
         $this->price = '0.000000';
         $this->promo_price = '0.000000';
     }
@@ -826,7 +826,7 @@ abstract class CartItem implements ActiveRecordInterface
      */
     public function hasOnlyDefaultValues()
     {
-            if ($this->quantity !== 1) {
+            if ($this->quantity !== 1.0) {
                 return false;
             }
 
