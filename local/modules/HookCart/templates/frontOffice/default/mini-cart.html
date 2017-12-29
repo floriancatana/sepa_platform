@@ -70,12 +70,15 @@
     </li>
 {/ifloop}
 {elseloop rel="cartloop"}
-    <li class="dropdown pull-right  cart-container">
+    <!-- <li class="dropdown pull-right  cart-container"> -->
+    <li class="pull-right  cart-container">
         <a href="{url path="/cart"}" rel="nofollow" class="cart">
-            {intl l="Cart" d="hookcart.fo.default"} <span class="badge">0</span>
+            <span class="badge">0</span> 
+            <span class="cart_icon"></span>
+            <!-- {intl l="Cart" d="hookcart.fo.default"}  -->
         </a>
-        <div class="dropdown-menu cart-content">
+        <!-- <div class="dropdown-menu cart-content">
             <p>{intl l="You have no items in your shopping cart." d="hookcart.fo.default"}</p>
-        </div>
+        </div> -->
     </li>
 {/elseloop}
