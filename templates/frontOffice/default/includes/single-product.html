@@ -65,7 +65,22 @@
                     <span class="regular-price col-xs-12"><span itemprop="price" class="price">{format_money number=$BEST_TAXED_PRICE}</span></span>
                 {/if}
             </div>
+                {$rating={meta meta="COMMENT_RATING" key="product" id="$ID"}}
+                {function name=comment_stars empty=1}
+                    {$star='<span class="glyphicon glyphicon-star"></span>'}
+                    {$star_empty='<span class="glyphicon glyphicon-star-empty"></span>'}
 
+                    {for $foo=0 to 4}
+                        {if $value > $foo}
+                            {$star nofilter}
+                        {elseif $empty == 1}
+                            {$star_empty nofilter}
+                        {/if}
+                    {/for}
+                {/function}
+                <p>
+                    <b>{$rating}</b> <span class="text-primary">{comment_stars value=$rating}</span>
+                </p>
             {if $hasBtn == true}
                 {if $hasSubmit == true && $current_stock_content == "in_stock"}
                     {form name="thelia.cart.add" }
