@@ -102,18 +102,6 @@
                 {$amount={count type="product" category=$category_id}}
                 <div class="toolbar toolbar-top" role="toolbar">
                     <div class="sorter-container clearfix">
-                    <form id="criteria-search-form" action="{url path='/criteria/search/'}" method="get">
-                        <div class="block block-nav col-md-2" role="navigation" aria-labelledby="search-label" style="width: 16%;display: flex;">
-                            <label for="search-limit">{intl l="Limit" d="criteriasearch.fo.default"}</label>
-                            <select  class="input-search form-control col-md-3" id="search-limit" name="limit">
-                                <option value="8" {if $limit==8}selected{/if}>8</option>
-                                <option value="16" {if $limit==16}selected{/if}>16</option>
-                                <option value="32" {if $limit==32}selected{/if}>32</option>
-                                <option value="64" {if $limit==64}selected{/if}>64</option>
-                                <option value="10000" {if $limit==100000}selected{/if}>{intl l="All"}</option>
-                            </select>
-                        </div>
-                    </form>
                 </div><!-- /.sorter --> 
             </div> 
                 
