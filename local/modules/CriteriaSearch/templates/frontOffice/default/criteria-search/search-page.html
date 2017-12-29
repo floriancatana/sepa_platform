@@ -1,5 +1,3 @@
-asdasads
-
 <section class="clearfix">
 <form id="criteria-search-form" action="{url path='/criteria/search/'}" method="get">
     <input type="hidden" name="category_id" value="{$category_id}">
@@ -23,7 +21,7 @@ asdasads
             {/ifloop}
         {/if}
     {/loop}
-    asdasdasdasd
+    
     {loop type="search_attribute" name="search_attribute_loop" category=$category_id}
         {if $SEARCHABLE}
             {$attributeId = $ID}
@@ -82,7 +80,7 @@ asdasads
         </div>
     {/if}
 
-        <div class="block block-nav col-md-2" role="navigation" aria-labelledby="search-label">
+<!--        <div class="block block-nav col-md-2" role="navigation" aria-labelledby="search-label">
             <label for="search-limit">{intl l="Limit" d="criteriasearch.fo.default"}</label>
             <select  class="input-search form-control col-md-3" id="search-limit" name="limit">
                 <option value="4" {if $limit==4}selected{/if}>4</option>
@@ -91,7 +89,7 @@ asdasads
                 <option value="50" {if $limit==50}selected{/if}>50</option>
                 <option value="10000" {if $limit==100000}selected{/if}>{intl l="All"}</option>
             </select>
-        </div>
+        </div>-->
 
         <div class="block block-nav col-md-3" role="navigation" aria-labelledby="search-label">
             <label for="search-sort">{intl l="Sort" d="criteriasearch.fo.default"}</label>
@@ -105,10 +103,11 @@ asdasads
 </form>
 </section>
 <hr>
+{*
 <div id="category-products">
     <div class="products-content">
         {include file="criteria-search/search-results.html"}
     </div>
 </div>
-
+*}
 

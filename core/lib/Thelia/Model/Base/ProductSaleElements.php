@@ -111,7 +111,7 @@ abstract class ProductSaleElements implements ActiveRecordInterface
 
     /**
      * The value for the weight field.
-     * Note: this column has a database default value of: 0
+     * Note: this column has a database default value of: 0.0
      * @var        double
      */
     protected $weight;
@@ -246,7 +246,7 @@ abstract class ProductSaleElements implements ActiveRecordInterface
     {
         $this->promo = 0;
         $this->newness = 0;
-        $this->weight = 0;
+        $this->weight = 0.0;
         $this->is_default = false;
     }
 
@@ -910,7 +910,7 @@ abstract class ProductSaleElements implements ActiveRecordInterface
                 return false;
             }
 
-            if ($this->weight !== 0) {
+            if ($this->weight !== 0.0) {
                 return false;
             }
 

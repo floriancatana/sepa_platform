@@ -102,41 +102,28 @@
                 {$amount={count type="product" category=$category_id}}
                 <div class="toolbar toolbar-top" role="toolbar">
                     <div class="sorter-container clearfix">
-                    <span class="amount">{if ($amount > 1)}{intl l="%nb Items" nb={$amount}}{else}{intl l="%nb Item" nb={$amount}}{/if}</span>
-
-                    <span class="limiter">
-                        <label for="limit-top">{intl l="Show"}</label>
-                        <select id="limit-top" name="limit">
-                            <option value="{url current="1" page=1 limit="4"}" {if $limit==4}selected{/if}>4</option>
-                            <option value="{url current="1" page=1 limit="8"}" {if $limit==8}selected{/if}>8</option>
-                            <option value="{url current="1" page=1 limit="12"}" {if $limit==12}selected{/if}>12</option>
-                            <option value="{url current="1" page=1 limit="50"}" {if $limit==50}selected{/if}>50</option>
-                            <option value="{url current="1" page=1 limit="100000"}" {if $limit==100000}selected{/if}>{intl l="All"}</option>
-                        </select>
-                        <span class="per-page">{intl l="per page"}</span>
-                    </span><!-- /.limiter -->
-
-                    <span class="sort-by">
-                        <label for="sortby-top">{intl l="Sort By"}</label>
-                        <select id="sortby-top" name="sortby">
-                            {*<option value="{url path="{category attr="url"}" order="manual"}">{intl l="Position"}</option>*}
-                            <option value="{url current="1" limit=$limit order="alpha"}" {if $product_order=="alpha"}selected{/if}>{intl l="Name ascending"}</option>
-                            <option value="{url current="1" limit=$limit order="alpha_reverse"}" {if $product_order=="alpha_reverse"}selected{/if}>{intl l="Name descending"}</option>
-                            <option value="{url current="1" limit=$limit order="min_price"}" {if $product_order=="min_price"}selected{/if}>{intl l="Price ascending"}</option>
-                            <option value="{url current="1" limit=$limit order="max_price"}" {if $product_order=="max_price"}selected{/if}>{intl l="Price descending"}</option>
-                        </select>
-                    </span><!-- /.sort-by -->
-
-                    <span class="view-mode">
-                        <span class="view-mode-label sr-only">{intl l="View as"}:</span>
-                        <span class="view-mode-btn">
-                            <a href="{url current="1" mode="grid"}" data-toggle="view" role="button" title="{intl l="Grid"}" rel="nofollow" class="btn btn-default btn-grid"><i class="fa fa-th"></i></a>
-                            <a href="{url current="1" mode="list"}" data-toggle="view" role="button" title="{intl l="List"}" rel="nofollow" class="btn btn-default btn-list"><i class="fa fa-th-list"></i></a>
-                        </span>
-                    </span><!-- /.view-mode -->
-
-                </div><!-- /.sorter -->
+                    <form id="criteria-search-form" action="{url path='/criteria/search/'}" method="get">
+                        <div class="block block-nav col-md-2" role="navigation" aria-labelledby="search-label" style="width: 16%;display: flex;">
+                            <label for="search-limit">{intl l="Limit" d="criteriasearch.fo.default"}</label>
+                            <select  class="input-search form-control col-md-3" id="search-limit" name="limit">
+                                <option value="8" {if $limit==8}selected{/if}>8</option>
+                                <option value="16" {if $limit==16}selected{/if}>16</option>
+                                <option value="32" {if $limit==32}selected{/if}>32</option>
+                                <option value="64" {if $limit==64}selected{/if}>64</option>
+                                <option value="10000" {if $limit==100000}selected{/if}>{intl l="All"}</option>
+                            </select>
+                        </div>
+                    </form>
+                </div><!-- /.sorter --> 
+            </div> 
+                
+            <div id="category-products">
+                <div class="products-content">
+                    {include file="criteria-search/search-results.html"}
+                </div>
             </div>
+            
+            {*
             <div id="category-products">
                 <div class="products-content">
                     <ul class="list-unstyled row">
@@ -181,6 +168,8 @@
                     </div>
                 {/if}
             </div><!-- /.toolbar toolbar-bottom -->
+            
+            *}
             {/ifloop}
             {elseloop rel="product_list"}
                 <div class="alert alert-warning">
@@ -205,10 +194,13 @@
 
 {block name="stylesheet"}
 {hook name="category.stylesheet"}
+{hook name="criteria-search.search-css"}
 {/block}
 
 {block name="after-javascript-include"}
 {hook name="category.after-javascript-include"}
+
+{hook name="criteria-search.search-js"}
 {/block}
 
 {block name="javascript-initialization"}

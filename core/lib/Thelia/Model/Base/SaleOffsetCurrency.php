@@ -69,7 +69,7 @@ abstract class SaleOffsetCurrency implements ActiveRecordInterface
 
     /**
      * The value for the price_offset_value field.
-     * Note: this column has a database default value of: 0
+     * Note: this column has a database default value of: 0.0
      * @var        double
      */
     protected $price_offset_value;
@@ -100,7 +100,7 @@ abstract class SaleOffsetCurrency implements ActiveRecordInterface
      */
     public function applyDefaultValues()
     {
-        $this->price_offset_value = 0;
+        $this->price_offset_value = 0.0;
     }
 
     /**
@@ -477,7 +477,7 @@ abstract class SaleOffsetCurrency implements ActiveRecordInterface
      */
     public function hasOnlyDefaultValues()
     {
-            if ($this->price_offset_value !== 0) {
+            if ($this->price_offset_value !== 0.0) {
                 return false;
             }
 

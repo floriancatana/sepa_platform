@@ -19,6 +19,7 @@ use Thelia\Model\TaxRuleQuery;
 use Thelia\TaxEngine\Calculator;
 use Thelia\Type\IntToCombinedIntsListType;
 use Thelia\Type\TypeCollection;
+use Thelia\Model\ProductQuery;
 
 class CriteriaSearchProductLoop extends Product implements PropelSearchLoopInterface
 {
@@ -51,6 +52,7 @@ class CriteriaSearchProductLoop extends Product implements PropelSearchLoopInter
         $maxPriceTTC = $this->getMaxPriceTtc();
 
         if ($minPriceTTC || $maxPriceTTC) {
+        	$search = ProductQuery::create();
             $this->managePriceFilter($search, $minPriceTTC, $maxPriceTTC);
         }
 
@@ -238,7 +240,7 @@ class CriteriaSearchProductLoop extends Product implements PropelSearchLoopInter
      * @return LoopResult
      */
     public function parseResults(LoopResult $loopResult)
-    {
+    { 
         return parent::parseResults($loopResult);
     }
 }
