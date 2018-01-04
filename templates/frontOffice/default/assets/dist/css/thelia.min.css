@@ -58,7 +58,10 @@ header .header {
     background-position: center bottom;
     background-repeat: no-repeat;    
     text-transform: uppercase;
-<<<<<<< HEAD
+    font-size: 24px; 
+    color: rgba(0, 0, 0, 0.87);
+    padding-bottom: 40px;
+    font-weight: 600;
 }
 /* Custom Code*/
 .container-hadi{
@@ -329,12 +332,6 @@ input, select {
 }
 /*End Close up the menu elements*/
 /*End Custom Code*/
-=======
-    font-size: 24px; 
-    color: rgba(0, 0, 0, 0.87);
-    padding-bottom: 40px;
-    font-weight: 600;
-}
 
 #products-new .products-content .products-grid.row,
 #products-offer .products-content .products-grid.row {
@@ -614,4 +611,3 @@ input, select {
 	padding: 0px;
 }
 
->>>>>>> 7d91a87f64d9798096766457633c752eb42f4b92

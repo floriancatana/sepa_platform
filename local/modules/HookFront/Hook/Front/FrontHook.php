@@ -22,13 +22,17 @@ class FrontHook extends BaseHook
 				));
 	}
 	
+	public function homepageContent(HookRenderEvent $event)
+	{
+		$event->add($this->render(
+				'homepage.html'
+				));
+	}
+	
 	public function displayBanner(HookRenderEvent $event)
 	{
 		$event->add($this->render(
 				'hp-banner.html'
 				));
 	}
-	
-
-	
 }

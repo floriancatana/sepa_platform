@@ -7,6 +7,7 @@
 	<hooks>
         <hook id="front.product" class="HookFront\Hook\Front\FrontHook" scope="request">
             <tag name="hook.event_listener" event="product.cart-wish" type="front" method="displayCartWishList" />
+            <tag name="hook.event_listener" event="home.body" type="front" method="homepageContent" />
             <tag name="hook.event_listener" event="home.body" type="front" method="displayBanner" />
         </hook> 
     	
