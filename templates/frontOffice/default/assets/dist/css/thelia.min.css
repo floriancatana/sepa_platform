@@ -63,29 +63,52 @@ header .header {
     text-transform: uppercase;
 }
 /* Custom Code*/
+.container-hadi{
+	padding-right: 0px;
+}
+/*.header_wrapper {
+	margin-right: -30px;
+}*/
+.header_wrapper .header_section_1{
+	padding-right: 0px;
+	background-color: #33383c;
+}
+/*.header_wrapper [class*="col-"]{
+	background-color: #12b3a6;
+}*/
+.header_wrapper .col-lg-2{
+	padding-left: 0px;
+}
 .header_section_1{
-    padding-left: 0px;
-    border-left: none;
     margin-left: unset;
-    padding-right: 1.5%;
 }
 .header_section_2{
 	background-color: #12b3a6;
+	position: relative;
+  	top: 50%;
+  	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
 }
 .is-table-row{
-	 display: table;
+	display: table;
+	/*width: 100%;	*/
 }
-.is-table-row [class*="col-"] {
+.is-table-row .col-1, .is-table-row .col-2{
    /* float: none;*/
     display: table-cell;
-    vertical-align: top;
+}
+.is-table-row .col-2{
+	padding-right: 0px;
+	background-color: #12b3a6;
 }
 .navbar{
 	border: none;
 }
+
 .hotline_row{
-	padding-top: 30px;
-    padding-bottom: 15px;
+	padding-top: 1.2%;
+	padding-bottom: 0.3%;
 }
 .hotline_content .glyphicon-earphone{
 	color: black;
@@ -95,32 +118,41 @@ header .header {
 .hotline_phone_wrapper{
 	display: block;
 	float: left;
-	padding-right: 3%;
+	padding-right: : 0px;
+}
+.hotline_partners{
+	padding-left: 1%;
 }
 .hotline_content .hotline_phone,
 .dropdown{
 	white-space: nowrap;
-	line-height: 1.2em;
 	font-size: 1em;
 	font-family: "VPEIFF+Lato-Regular";
 	color: #454545;
-	padding-top: 1px;
-    padding-left: 3px;
 }
-.hotline_content  .dropdown .phonebook::before{
+.hotline_content  .dropdown::before{
 	font-family: "Material Icons"; 
 	content: url("../img/phonebook-icon.png");
-	zoom:40%;
-    float: left;
-    margin-right: 5px;
+
+	/*zoom:40%;
+	
+	zoom: 0.5;
+	-ms-zoom: 0.5;
+	-webkit-zoom: 0.5;
+	-moz-transform:  scale(0.5);*/
+	/*-moz-transform-origin: left center;*/
+
+    /*float: left;
+    margin-right: 5px;*/
+	display: inline-block;
+    position: relative;
+    top: 2px;
 }
 /*.nav-secondary{
 	background-color: red;
 	min-height: 100px;
 }*/
-/*.cart_holder, .search_holder, .category_holder{
-	float: left;
-}
+/*
 .customer_holder{
 	float: right;
 }*/
@@ -128,41 +160,50 @@ header .header {
     display: flex;
     flex-wrap: wrap;
 }
-.nav-secondary, .category_hold{
+.header_wrapper .col-lg-2 a{
+	padding-right: 20px;
+}
+.header_wrapper .col-md-6 a, .header_wrapper .col-sm-12 a, .header_wrapper .col-xs-12 a{
+	padding-right: 0px;
+}
+.cart_holder, .search_holder, .category_hold{
+	float: left;
+}
+.category_hold{
 	display: -ms-flex;
 	display: -webkit-flex;
 	display: flex;
-}
-.category_hold{
-	padding-top: 0.8%;
-}
-.category_hold select.dropdown{
 	position: relative;
-    width: 30%;
+    display: block;
+    padding-right: 0px;
+}
+.nav-secondary-hadi .category_hold select.dropdown{
+	position: relative;
     display: block;
     float: left;
-    height: inherit;
     overflow: hidden;
-	line-height: 1.0;
 	font-size: 1.2em;
 	font-family: "VPEIFF+Lato-Regular";
 	color: #000000;
 	border-color: black;
 	padding-left: 2%;
+	width: 100%;
+	min-height: 2em;
 }
-.category_hold .search-container{
+.nav-secondary-hadi  .search-container{
 	display: block;
     float: left;
-    width: 70%;
+    width: 73%;
+    padding-left: 0px;
 }
-.category_hold .search-container .form-control{
+.nav-secondary-hadi .search-container .form-control{
 	border-radius: 0px;
 	border-color: black;	
 }
-.category_hold .search-container .form-control::placeholder{
+.nav-secondary-hadi  .search-container .form-control::placeholder{
 	color: black;
 }
-.category_hold .search-container input[type=search] {
+.nav-secondary-hadi .search-container input[type=search] {
     box-sizing: border-box;
     font-size: 1.2em;
     background-color: white;
@@ -177,21 +218,57 @@ header .header {
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
-.cart_holder{
-	/*padding-top: 0.8%;*/
+.cart_holder ul.navbar-cart li{
+	 list-style-type: none;
+}
+.cart_holder ul{
+	padding-left: unset;
 }
 .cart_holder .badge{
+	font-family: "VPEIFF+Lato-Regular";
 	display: inline-block;
-    padding: 9px 12px;
+    /*padding: 8px 16px;*/
+    /*padding: 9% 19%;*/
+    padding: 0.55em 1em;
     color: #000;
     vertical-align: middle;
     background-color: #fff;
     border-radius: unset;
     border:1px solid;
     border-color: black;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    font-weight: 600;
+    /*line-height: 1.6;*/
 }
-.cart_holder .navbar-nav a.cart{
+.cart_holder .cart_icon{
+	display: inline-block;
+/*    padding: 9px 12px;*/
+   /* border:1px solid;
+    border-color: black;*/
+}
+.cart_holder .cart_icon img{
+	content:url("../img/cart-icon.png");
+    zoom: 34%;
+    background-color: #fff;
+   /* padding: 16px 32px;*/
+   	/*padding: 9% 19%;*/
+   	-moz-transform: scale(2);
+   	padding: 1em 1.6em;
+    font-weight: 600;
+    border: 1px solid;
+    border-color: black;
+}
+.cart_holder span{
+	display: inline;
+    float: left;
+}
+.cart_holder .navbar-default .navbar-nav>.active>a, .cart_holder .navbar-default .navbar-nav>.active>a:focus, 
+.cart_holder .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>li>a:focus, 
+.cart_holder .navbar-default .navbar-nav>li>a:hover{
+	background-color: transparent;
+	text-decoration: none;
+}
+/*.cart_holder .navbar-nav a.cart{
 	white-space: nowrap;
 	line-height: 1.2em;
 	font-size: 1em;
@@ -199,8 +276,58 @@ header .header {
 	padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
+}*/
+/*input, select, option {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;  
 }
+input, select {
+    width:100px;
+    height:20px;
+    border : 1px #ccc solid;
+    vertical-align:top;
+}*/
 /*.cart_holder .navbar-nav span{
 	font-size: 1.85em;
 }*/
+
+/*Customer hook*/
+.customer_holder ul.navbar-customer li{
+	list-style-type: none;
+	float: left;
+	display: block;
+	padding-right: 1em;
+}
+.customer_holder .customer_icon img{
+	content:url("../img/man.png");
+}
+.customer_holder a{
+	text-decoration: none;
+	color: #fff;
+}
+.customer_holder .glyphicon-user{
+	font-size: 1.3em;
+	color: #fff;
+}
+.customer_holder .logout{
+	white-space: nowrap;
+    font-size: 1em;
+    font-family: "VPEIFF+Lato-Regular";
+    position: relative;
+}
+.customer_holder .glyphicon-lock{
+	font-size: 1.3em;
+	color: #fff;
+}
+/*End Customer Hook*/
+
+/*Close up the menu elements*/
+.nav-secondary-hadi .col-lg-8, .nav-secondary-hadi .search-container{
+	padding-right: 0px;
+}
+.nav-secondary-hadi .col-lg-1{
+	 padding-left: 0px;	
+}
+/*End Close up the menu elements*/
 /*End Custom Code*/

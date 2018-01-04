@@ -1,11 +1,13 @@
-<div class="col-lg-6 category_hold">
-	<select name="category" class="dropdown">
-		<option value="Alle_Kategorien " selected>Alle Kategorien</option>
-	    {loop name="categories-tree" type="category-tree" category="0"}
-	        <option value="{$ID}">{"-"|str_repeat:$LEVEL} {$TITLE} {if $CHILD_COUNT != 0}({$CHILD_COUNT}){/if}</option>
-	    {/loop}
-	</select>
-	<div class="search-container">
+<div class="col-lg-8 col-md-6 col-sm-12 col-xs-12 row row-eq-height">
+	<div class="category_hold col-lg-3 col-md-6 col-sm-12 col-sm-12">
+		<select name="category" class="dropdown">
+			<option value="Alle_Kategorien " selected>Alle Kategorien</option>
+		    {loop name="categories-tree" type="category-tree" category="0"}
+		        <option value="{$ID}">{"-"|str_repeat:$LEVEL} {$TITLE} {if $CHILD_COUNT != 0}({$CHILD_COUNT}){/if}</option>
+		    {/loop}
+		</select>
+	</div>
+	<div class="search-container col-lg-9 col-md-6 col-sm-12 col-sm-12>
 	    <form id="form-search" action="{url path="/search"}" method="get" role="search" aria-labelledby="search-label">
 	        <label id="search-label" class="sr-only" for="q">{intl l="Search a product" d="hooksearch.fo.default"}</label>
 	        <input type="search" name="q" id="q" placeholder="{intl l="SUCHEN" d="hooksearch.fo.default"}" class="form-control" autocomplete="off" aria-required="true" required pattern=".{ldelim}2,{rdelim}" title="{intl l="Minimum 2 characters." d="hooksearch.fo.default"}">
