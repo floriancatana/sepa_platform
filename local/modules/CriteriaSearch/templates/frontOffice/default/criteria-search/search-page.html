@@ -21,7 +21,7 @@
             {/ifloop}
         {/if}
     {/loop}
-    
+
     {loop type="search_attribute" name="search_attribute_loop" category=$category_id}
         {if $SEARCHABLE}
             {$attributeId = $ID}
@@ -50,7 +50,7 @@
         {/ifloop}
     {/if}
     <div id="search-others" class="block block-nav col-md-3" role="navigation" aria-labelledby="search-label">
-        <h4  id="search-label">{intl l="Others filters" d="criteriasearch.fo.default"}</h4>
+        <!--<h4  id="search-label">{intl l="Others filters" d="criteriasearch.fo.default"}</h4>-->
             {if $new_filter === "true"}
                 <div>
                     <input class="input-search" id="is-new" type="checkbox" name="new" value="true">
@@ -72,7 +72,7 @@
     </div>
     
     {if $price_filter === "true"}
-        <div id="search-price" class="block block-nav col-md-4" role="navigation" aria-labelledby="search-label">
+        <div id="search-price" class="block block-nav col-md-4" role="navigation" aria-labelledby="search-label" style="display: inline-table;">
             <label for="price-filter">{intl l="Price filter" d="criteriasearch.fo.default"}</label>
             <input id="price-filter" type="text" data-slider-ticks="[{$value_price_filter.0}, {$value_price_filter.1}, {$value_price_filter.2}, {$value_price_filter.3}, {$value_price_filter.4}]" data-slider-ticks-labels='["{$value_price_filter.0}€", "{$value_price_filter.1}€", "{$value_price_filter.2}€", "{$value_price_filter.3}€", "{$value_price_filter.4}€"]' data-slider-min="0" data-slider-max="{$max_price_filter}" data-slider-value="[0,{$max_price_filter}]" data-slider-step="50" />
             <input type="hidden" name="price_min">
@@ -80,18 +80,18 @@
         </div>
     {/if}
 
-<!--        <div class="block block-nav col-md-2" role="navigation" aria-labelledby="search-label">
+    <div class="block block-nav col-md-2" role="navigation" aria-labelledby="search-label" style="display: inline-table; width: auto;">
             <label for="search-limit">{intl l="Limit" d="criteriasearch.fo.default"}</label>
             <select  class="input-search form-control col-md-3" id="search-limit" name="limit">
-                <option value="4" {if $limit==4}selected{/if}>4</option>
                 <option value="8" {if $limit==8}selected{/if}>8</option>
-                <option value="12" {if $limit==12}selected{/if}>12</option>
-                <option value="50" {if $limit==50}selected{/if}>50</option>
+                <option value="16" {if $limit==16}selected{/if}>16</option>
+                <option value="32" {if $limit==32}selected{/if}>32</option>
+                <option value="64" {if $limit==64}selected{/if}>64</option>
                 <option value="10000" {if $limit==100000}selected{/if}>{intl l="All"}</option>
             </select>
-        </div>-->
+        </div>
 
-        <div class="block block-nav col-md-3" role="navigation" aria-labelledby="search-label">
+        <div class="block block-nav col-md-3" role="navigation" aria-labelledby="search-label" style="display: inline-table; width: auto;">
             <label for="search-sort">{intl l="Sort" d="criteriasearch.fo.default"}</label>
             <select  class="input-search form-control col-md-3" id="search-sort" name="order">
             <option value="alpha" {if $product_order=="alpha"}selected{/if}>{intl l="Name ascending"}</option>
