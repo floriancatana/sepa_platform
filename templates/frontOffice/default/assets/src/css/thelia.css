@@ -11073,3 +11073,34 @@ td.product .name > a:focus,
 #sale-details .sale-information .description {
   margin-bottom: 10px;
 }
+
+/* Custom Style */
+.navbar-default{
+  background-color: white;
+}
+.logo-hadi {
+display: inline-block;
+width: auto;
+}
+.logo-hadi a{
+  width: inherit;
+  height: inherit;
+}
+.logo-hadi a img {max-width: 100%;}
+
+
+.header_section_1{
+    padding-left: 0px;
+    border-left: none;
+    margin-left: unset;
+}
+.header_section_2{
+background-color: #12b3a6;
+}
+/*.cart_holder, .search_holder, .category_holder{
+  float: left;
+}
+.customer_holder{
+  float: right;
+}*/
+ /*EnD Custom Style */

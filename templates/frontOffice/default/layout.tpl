@@ -117,34 +117,56 @@ GNU General Public License : http://www.gnu.org/licenses/
 
     <div class="page" role="document">
 
-        <div class="header-container" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-container " itemscope itemtype="http://schema.org/WPHeader">
             {hook name="main.header-top"}
             <div class="navbar navbar-default navbar-secondary" itemscope itemtype="http://schema.org/SiteNavigationElement">
                 <div class="container container-hadi">
-                    <div class="logo container hidden-xs logo-hadi">
-                        <a href="{navigate to="index"}" title="{$store_name}">
-                            {local_media type="logo"}
-                            <img src="{$MEDIA_URL}" alt="{$store_name}">
-                            {/local_media}
-                        </a>
+                    <div class="row hotline_row">
+                        <div class="hotline_content col-lg-offset-2 col-lg-10 row">
+                            <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12 row row-eq-height">
+                                <div class="hotline_phone_wrapper col-lg-5 col-md-6 col-sm-12 col-xs-12">
+                                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                                    <span class="hotline_phone"> HADI Hotline +43 664 4083452 </span>
+                                </div>
+                                <div class="hotline_partners col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="dropdown">
+                                        <span class="phonebook" aria-hidden="true" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></span>
+                                            Partner Hotlines
+                                            <span class="caret"></span>
+                                        </span>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                            <li><a href="#">Partner 1</a></li>
+                                            <li><a href="#">Partner 2</a></li>
+                                            <li><a href="#">Partner 3</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="navbar-header">
-                        <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-secondary">
-                            <span class="sr-only">{intl l="Toggle navigation"}</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand visible-xs" href="{navigate to="index"}">{$store_name}</a>
+                    <!-- <div class="header_wrapper row is-table-row"> -->
+                    <div class="header_wrapper row equal row-eq-height is-table-row">
+                        <div class="col-1 col-lg-2 col-md-3 col-sm-12 col-xs-12">
+                            <div class="logo header_section_1">
+                                <a href="{navigate to="index"}" title="{$store_name}" class="img-responsive">
+                                    {local_media type="logo"}
+                                        <img src="{$MEDIA_URL}" alt="{$store_name}" class="img-responsive">
+                                    {/local_media}
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-2 col-lg-10 col-md-9 col-sm-12 col-xs-12">
+                            <!-- Create Container structure -->
+                            <div class=" header_section_2">
+                                {ifhook rel="main.navbar-secondary"}
+                                    {* Place everything within .nav-collapse to hide it until above 768px *}
+                                    <nav class="navbar-collapse collapse nav-secondary nav-secondary-hadi row row-eq-height" role="navigation" aria-label="{intl l="Secondary Navigation"}">
+                                       {hook name="main.navbar-secondary"}
+                                    </nav>
+                                {/ifhook}
+                            </div>
+                        </div>
                     </div>
-
-                    {ifhook rel="main.navbar-secondary"}
-                        {* Place everything within .nav-collapse to hide it until above 768px *}
-                        <nav class="navbar-collapse collapse nav-secondary nav-secondary-hadi" role="navigation" aria-label="{intl l="Secondary Navigation"}">
-                            {hook name="main.navbar-secondary"}
-                        </nav>
-                    {/ifhook}
                 </div>
             </div>
 
