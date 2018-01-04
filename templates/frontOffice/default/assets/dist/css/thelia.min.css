@@ -49,8 +49,9 @@ header .header {
 }
 
 #products-new .products-heading h2, 
-#products-offer .products-heading h2{
-    background-image: url(../img/separator_horizontal.png); 
+#products-offer .products-heading h2,
+.partner-heading h2 {
+    background-image: url(../img/store/separator_horizontal.png); 
     background-position: center bottom;
     background-repeat: no-repeat;    
     text-transform: uppercase;
@@ -139,7 +140,7 @@ header .header {
 }
 
 .wish-list a {
-	background-image: url(../img/star.png);
+	background-image: url(../img/store/star.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-color: #4d4d4d;
@@ -151,7 +152,7 @@ header .header {
 }
 
 .wish-list.in-wish-list a {
-	background-image: url(../img/star_yellow.png);
+	background-image: url(../img/store/star_yellow.png);
 }
 
 .wish-list a:hover,
@@ -160,7 +161,7 @@ header .header {
 }
 
 .wish-list a:active{
-	background-image: url(../img/star.png);
+	background-image: url(../img/store/star.png);
 }
 
 .cart-wish.row {
@@ -199,13 +200,20 @@ header .header {
 }
 
 .hp-banner {
-	background-image: url(../img/hp_banner.png);
+	background-image: url(../img/store/hp_banner.png);
 	background-repeat: no-repeat;
     height: 20vw;
     background-size: 100% auto;
     margin: 50px 0px;
 }
 	
+	
+@media (max-width: 480px) {
+	.partners {
+	    display: none !important;
+	}
+}
+
 @media (min-width: 768px ) {
 	#products-new .products-content li.col-sm-4,
 	#products-offer .products-content li.col-sm-4  {
@@ -213,9 +221,15 @@ header .header {
 	}
 	
 	#products-new .products-heading h2, 
-	#products-offer .products-heading h2 {
+	#products-offer .products-heading h2,
+	.partner-heading h2 {
 		padding-bottom: 20px;
 	}
+	
+	.mobile-app .logo-app img {
+		width: 80%;
+	}
+	
 } 
 
 @media (max-width: 768px ) {
@@ -233,10 +247,6 @@ header .header {
 	    padding: 4px 6px;
 	    height: 27px;
 	}
-	
-	/* .hp-banner {
-	    height: 210px;
-	} */
 }
 
 @media (max-width: 992px ) {
@@ -251,8 +261,81 @@ header .header {
 	    width: 18%;
 	}
 	
-	/* .hp-banner {
-	    height: 250px;
-	} */
+	.hp-banner {
+		height: 250px;
+	}
+	
+	.mobile-app .logo-app img {
+		width: 100%;
+	}
+}
+
+.hp-horizontal {
+	background-image: url(../img/store/separator_horizontal.png); 
+    background-repeat: no-repeat;
+    background-position: center bottom;	
+    padding-bottom: 40px;
+    margin-top: 30px;
+}
+
+.mobile-app .logo-app {
+	padding-top: 5px;
+}
+
+.mobile-app .logo-app.col-xs-4{
+	margin-bottom: 20px;
+}
+
+.mobile-app {
+	text-align: center;
+}
+
+.mobile-app,
+.partners {
+	margin: 30px 0px 0px 0px;
+}
+
+.mobile-app img {
+	width: 100%;
+}
+
+.mobile-app .store-app {
+	padding-top: 8px;
+}
+
+.mobile-app .store-app .col-sm-6{
+	padding: 5px;
+}
+
+.mobile-app .store-app .col-xs-6{
+	padding: 10px;
+}
+
+.mobile-app .download-app {
+	text-transform: uppercase;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    padding: 20px 0px 0px;
+}
+
+.mobile-app .download-app a:hover {
+	text-decoration: none;
+}
+
+.mobile-app .download-app .corporate {
+	color: #12b3a6;
+}
+
+.mobile-app .phone-app {
+	padding: 0px;
+}
+
+.partner-content {
+	margin: 0px;
+}
+
+.partner-content .col-md-1 {
+	padding: 0px;
 }
 
