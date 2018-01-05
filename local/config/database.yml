@@ -1,0 +1,6 @@
+database:
+  connection:
+    driver: mysql
+    user: root
+    password: admin
+    dsn: mysql:host=localhost;dbname=heating_configurator;port=3306
