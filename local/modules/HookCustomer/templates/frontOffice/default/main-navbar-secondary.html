@@ -6,7 +6,7 @@
             <li class="dropdown">
                 <!-- <span class="customer_icon"> <img /></span> -->
                 <a href="{url path="/account"}" class="account"> 
-                    <span class="glyphicon glyphicon-user"></span> 
+                    <span class="glyphicon glyphicon-user"></span>
                     {intl l="My Account" d="hookcustomer.fo.default"}
                 </a>
             </li>
@@ -18,9 +18,17 @@
             </li>
             {/loop}
             {elseloop rel="customer_info_block"}
-            <li><a href="{url path="/register"}" class="register">{intl l="Register!" d="hookcustomer.fo.default"}</a></li>
+            <li>
+                <a href="{url path="/register"}" class="register">
+                    <span class="glyphicon glyphicon-registration-mark"></span>
+                    {intl l="Register!" d="hookcustomer.fo.default"}
+                </a>
+            </li>
             <li class="dropdown">
-                <a href="{url path="/login"}" class="login dropdown-toggle">{intl l="Log In!" d="hookcustomer.fo.default"}</a>
+                <a href="{url path="/login"}" class="login dropdown-toggle">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                    {intl l="Log In!" d="hookcustomer.fo.default"}
+                </a>
                 <div class="dropdown-menu">
                     {form name="thelia.front.customer.login"}
                     <form id="form-login-mini" action="{url path="/login"}" method="post" {form_enctype}>

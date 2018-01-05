@@ -9,7 +9,7 @@
             </button>
             <a class="navbar-brand visible-xs-block visible-sm-block" href="{navigate to="index"}">{intl l="Categories" d="hooknavigation.fo.default"}</a>
         </div>
-        <div class="collapse navbar-collapse" id="navbar-primary">
+        <!-- <div class="collapse navbar-collapse" id="navbar-primary">
             <ul class="nav navbar-nav navbar-categories">
                 <li><a href="{navigate to="index"}" class="home">{intl l="Home" d="hooknavigation.fo.default"}</a></li>
                 {loop type="category" name="category.navigation" parent="0" need_count_child="yes"}
@@ -25,6 +25,53 @@
                 {else}
                     <li><a href="{$URL}">{$TITLE}</a></li>
                 {/if}
+                {/loop}
+            </ul>
+        </div> -->
+        <div class="dropdown collapse navbar-collapse" id="navbar-primary"
+            <!-- About Hadi Folder -->
+            {loop type="folder" name="get_the_about"}
+            <!-- {$ID} {$TITLE} -->
+                {if $TITLE == 'ÜBER HADI'}
+                    {assign var="$FOLDER_ABOUT_IS" value="empty" nocache}
+                    {assign var="$FOLDER_ABOUT_TITLE" value="empty" nocache}
+ 
+                    {$FOLDER_ABOUT_IS = $ID}
+                    {$FOLDER_ABOUT_TITLE = $TITLE}
+                {/if}
+            {/loop}
+
+            <!-- Menu Items Folder -->
+            {loop type="folder" name="get_the_menu_items"}
+            <!-- {$ID} {$TITLE} -->
+                {if $TITLE == 'Menu Items'}
+                    {assign var="$FOLDER_MENU_ITEMS_IS" value="empty" nocache}
+                    {assign var="$FOLDER_MENU_ITEMS_TITLE" value="empty" nocache}
+ 
+                    {$FOLDER_MENU_ITEMS_IS = $ID}
+                    {$FOLDER_MENU_ITEMS_TITLE = $TITLE}
+                {/if}
+            {/loop}
+
+            <ul class="nav navbar-nav navbar-categories">
+                <li> 
+                    <!-- About hadi Menu Items -->
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">{$FOLDER_ABOUT_TITLE}
+                    </button>
+                    <ul class="dropdown-menu">
+                        {loop type="content" name="LoopUberHadi" folder=$FOLDER_ABOUT_IS order="position"}
+                            <li> 
+                                <a href= {$URL}> {$TITLE} </a>
+                            </li>
+                        {/loop}
+                    </ul>
+                </li>
+                
+                <!-- All Menu Items -->
+                {loop type="content" name="LoopMenuItems" folder=$FOLDER_MENU_ITEMS_IS order="position"}
+                    <li>
+                        <a href= {$URL}> {$TITLE} </a>
+                    </li>
                 {/loop}
             </ul>
         </div>
