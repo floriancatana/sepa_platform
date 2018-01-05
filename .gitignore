@@ -48,7 +48,7 @@ local/I18n/*.php
 local/modules/HookTest/
 
 # Ignore everything in the "templates" directory, except the "default template"
-templates/frontOffice/default/assets/*
+#templates/frontOffice/default/assets/*
 templates/*
 !templates/frontOffice
 templates/frontOffice/*
