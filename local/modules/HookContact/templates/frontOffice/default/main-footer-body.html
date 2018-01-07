@@ -1,7 +1,7 @@
 <div itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="{$store_name}">
     <ul>
-        <li class="contact-address">
+       <!--  <li class="contact-address">
             <address class="adr" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                 <span class="street-address" itemprop="streetAddress">{config key="store_address1"} {config key="store_address2"} {config key="store_address3"}</span><br>
                 <span class="postal-code" itemprop="postalCode">{config key="store_zipcode"}</span>
@@ -12,14 +12,30 @@
                     {/if}
                 </span>
             </address>
-        </li>
+        </li> -->
         {if {config key="store_phone"} }
         <li class="contact-phone">
             <a href="tel:{config key="store_phone"}" class="tel" itemprop="telephone">{config key="store_phone"}</a>
         </li>
         {/if}
-        <li class="contact-contact">
+        
+        {if {config key="store_email"} }
+        <li class="contact-email">
+            <a href="mailto:{config key="store_email"}" class="email" itemprop="email">{config key="store_email"}</a>
+        </li>
+        {/if}
+       <!--  <li class="contact-contact">
             <a href="{url path='/contact'}">{intl l="Find us, Contact us" d="hookcontact.fo.default"}</a>
+        </li> -->
+        
+         <li class="contact-support">
+            {intl l="24/7 Support"}
+        </li>
+         <li class="contact-sure">
+            {intl l="100% sicher"}
+        </li>
+         <li class="contact-warranty">
+            {intl l="Geld-Zurück-Garantie"}
         </li>
     </ul>
 </div>

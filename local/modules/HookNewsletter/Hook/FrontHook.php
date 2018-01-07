@@ -14,6 +14,7 @@ namespace HookNewsletter\Hook;
 
 use Thelia\Core\Event\Hook\HookRenderBlockEvent;
 use Thelia\Core\Hook\BaseHook;
+use Thelia\Core\Event\Hook\HookRenderEvent;
 
 /**
  * Class FrontHook
@@ -22,7 +23,7 @@ use Thelia\Core\Hook\BaseHook;
  */
 class FrontHook extends BaseHook {
 
-    public function onMainFooterBody(HookRenderBlockEvent $event)
+   /*  public function onMainFooterBody(HookRenderBlockEvent $event)
     {
         $content = trim($this->render("main-footer-body.html"));
         if ("" != $content){
@@ -33,5 +34,12 @@ class FrontHook extends BaseHook {
                 "content" => $content
             ));
         }
+    } */
+    
+    public function displayNewsletter(HookRenderEvent $event)
+    {
+    	$event->add($this->render(
+    			'main-footer-body.html'
+    			));
     }
 } 

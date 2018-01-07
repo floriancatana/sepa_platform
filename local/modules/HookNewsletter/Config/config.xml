@@ -6,7 +6,8 @@
 
     <hooks>
         <hook id="hooknewsletter.hook.front" class="HookNewsletter\Hook\FrontHook">
-            <tag name="hook.event_listener" event="main.footer-body" />
+            <!-- <tag name="hook.event_listener" event="main.footer-body" /> -->
+            <tag name="hook.event_listener" event="hp.newsletter" type="front" method="displayNewsletter" />
         </hook>
     </hooks>
 
