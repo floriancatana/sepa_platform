@@ -126,18 +126,18 @@ GNU General Public License : http://www.gnu.org/licenses/
                             <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12 row row-eq-height">
                                 <div class="hotline_phone_wrapper col-lg-5 col-md-6 col-sm-12 col-xs-12">
                                     <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
-                                    <span class="hotline_phone"> HADI Hotline +43 664 4083452 </span>
+                                    <span class="hotline_phone"> {intl l="HADI Hotline +43 664 4083452"} </span>
                                 </div>
                                 <div class="hotline_partners col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <div class="dropdown">
                                         <span class="phonebook" aria-hidden="true" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></span>
-                                            Partner Hotlines
+                                            {intl l="Partner Hotlines"}
                                             <span class="caret"></span>
                                         </span>
                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="#">Partner 1</a></li>
-                                            <li><a href="#">Partner 2</a></li>
-                                            <li><a href="#">Partner 3</a></li>
+                                            <li><a href="#">{intl l="Partner 1"}</a></li>
+                                            <li><a href="#">{intl l="Partner 2"}</a></li>
+                                            <li><a href="#">{intl l="Partner 3"}</a></li>
                                         </ul>
                                     </div>
                                 </div>
