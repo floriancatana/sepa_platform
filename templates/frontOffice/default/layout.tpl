@@ -126,18 +126,18 @@ GNU General Public License : http://www.gnu.org/licenses/
                             <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12 row row-eq-height">
                                 <div class="hotline_phone_wrapper col-lg-5 col-md-6 col-sm-12 col-xs-12">
                                     <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
-                                    <span class="hotline_phone"> HADI Hotline +43 664 4083452 </span>
+                                    <span class="hotline_phone"> {intl l="HADI Hotline +43 664 4083452"} </span>
                                 </div>
                                 <div class="hotline_partners col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <div class="dropdown">
                                         <span class="phonebook" aria-hidden="true" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></span>
-                                            Partner Hotlines
+                                            {intl l="Partner Hotlines"}
                                             <span class="caret"></span>
                                         </span>
                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="#">Partner 1</a></li>
-                                            <li><a href="#">Partner 2</a></li>
-                                            <li><a href="#">Partner 3</a></li>
+                                            <li><a href="#">{intl l="Partner 1"}</a></li>
+                                            <li><a href="#">{intl l="Partner 2"}</a></li>
+                                            <li><a href="#">{intl l="Partner 3"}</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -160,7 +160,8 @@ GNU General Public License : http://www.gnu.org/licenses/
                             <div class=" header_section_2">
                                 {ifhook rel="main.navbar-secondary"}
                                     {* Place everything within .nav-collapse to hide it until above 768px *}
-                                    <nav class="navbar-collapse collapse nav-secondary nav-secondary-hadi row row-eq-height" role="navigation" aria-label="{intl l="Secondary Navigation"}">
+                                    <!-- <nav class="navbar-collapse collapse nav-secondary nav-secondary-hadi row row-eq-height" role="navigation" aria-label="{intl l="Secondary Navigation"}"> -->
+                                    <nav class="nav-secondary nav-secondary-hadi row row-eq-height" role="navigation" aria-label="{intl l="Secondary Navigation"}">
                                        {hook name="main.navbar-secondary"}
                                     </nav>
                                 {/ifhook}
@@ -188,7 +189,7 @@ GNU General Public License : http://www.gnu.org/licenses/
         </div><!-- /.header-container -->
 
         <main class="main-container" role="main">
-            {hook name="main.content-top"}
+                {hook name="main.content-top"}
             <div class="container">
 {*                {hook name="main.content-top"}*}
                 {block name="breadcrumb"}{include file="misc/breadcrumb.tpl"}{/block}

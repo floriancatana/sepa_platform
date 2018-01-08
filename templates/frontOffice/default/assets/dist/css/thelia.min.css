@@ -705,8 +705,8 @@ header .header {
     padding-bottom: 0px;
 }
 .header_wrapper a img{
-	padding-top: 3px;
-    padding-bottom: 3px;
+	/*padding-top: 3px;
+    padding-bottom: 3px;*/
 }
 .header_wrapper .col-lg-2 a{
 	padding-right: 20px;
@@ -716,6 +716,13 @@ header .header {
 }
 .cart_holder, .search_holder, .category_hold{
 	float: left;
+}
+.cart_holder .cart-container{
+	margin-left: 0px;
+    margin-right: 0px;
+}
+.cart-container a{
+	margin: 0px;
 }
 .category_hold{
 	display: -ms-flex;
@@ -764,6 +771,9 @@ header .header {
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
+.hook_cart{
+	padding-right: 0px;
+}
 .cart_holder ul.navbar-cart li{
 	 list-style-type: none;
 }
@@ -783,15 +793,15 @@ header .header {
     font-size: 1.1em;
     font-weight: 600;
 }
-.cart_holder .cart_icon{
-	display: inline-block;
+.cart-container .cart_icon{
+	padding: 0px;
 }
 .cart_holder .cart_icon img{
 	zoom:34%;
 	content:url("../img/cart-icon.png");
     background-color: #fff;
    	-moz-transform: scale(2);
-   	padding: 1em 1.6em;
+    padding: 1em 1.6em;
     font-weight: 600;
     border: 1px solid;
     border-color: black;
@@ -805,6 +815,7 @@ header .header {
 .cart_holder .navbar-default .navbar-nav>li>a:hover{
 	background-color: transparent;
 	text-decoration: none;
+	color: #000;
 }
 
 /*Customer hook*/
@@ -844,6 +855,9 @@ header .header {
 .nav-secondary-hadi .col-lg-8, .nav-secondary-hadi .search-container{
 	padding-right: 0px;
 }
+.nav-secondary-hadi .col-sm-2{
+	padding-left: 15px;
+}
 .nav-secondary-hadi .col-lg-1{
 	padding-left: 0px;	
 }
@@ -866,6 +880,18 @@ header .header {
 #form-login-mini .group-btn a{
 	padding: 2px 5px;
 }
+ul.navbar-nav .btn-primary.active,
+ul.navbar-nav .btn-primary:active,
+ul.navbar-nav .btn-primary:hover,
+ul.navbar-nav .open>.dropdown-toggle.btn-primary,
+.navbar-nav a,
+.navbar-nav>.active>a, .navbar-nav>.active>a:focus,
+.navbar-nav>.active>a:hover, .navbar-nav>li>a:focus, 
+.navbar-nav>li>a:hover {
+	color: #000;
+    background-color: unset;
+    border-color: unset;
+}
 /*End Close up the menu elements*/
 
 /*Main Menu Code*/
@@ -874,17 +900,19 @@ header .header {
     padding-top: 15px;
     padding-bottom: 15px;
     padding-right: 10px;
-    border-bottom-width: 0px;
-    border-top-width: 0px;
+   	border: unset;
+    background-color: UNSET;
+    border-color: UNSET;
+    color: #000;
 }
 li.open .dropdown-menu {
 	margin-top: 20px;
     display: block;
     left: -25%;
-    right: -100%;
+    right: -70%;
 }
 header .navigation-main{
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 .navigation-main .container-fluid>.navbar-collapse, 
 .navigation-main .container-fluid>.navbar-header, 
@@ -893,6 +921,31 @@ header .navigation-main{
 	padding-left: 0px;
     padding-right: 0px;
 }
+.open .dropdown-menu{
+	padding-top: 0px;
+    padding-bottom: 0px;
+}
+.navbar-nav .dropdown-menu li a{
+    padding-top: 6%;
+    padding-bottom:  6%;
+    border: 1px solid grey;
+    color: #000;
+}
+
+/*Carousel Overrides*/
+.carousel-indicators{
+	left:35%;
+}
+.carousel-indicators li{
+	width: 20px;
+	height: 20px;
+}
+
+.carousel-indicators .active{
+	width: 22px;
+	height: 22px;
+}
+/*End Carousel Overrides*/
 /*End Main Menu Code*/
 
 /*End Custom Code Remus*/
