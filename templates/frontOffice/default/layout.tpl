@@ -199,42 +199,14 @@ GNU General Public License : http://www.gnu.org/licenses/
 
         <section class="footer-container" itemscope itemtype="http://schema.org/WPFooter">
 
-            {ifhook rel="main.footer-top"}
-                <section class="footer-block">
-                    <div class="container">
-                        <div class="blocks row">
-                            {hook name="main.footer-top"}
-                        </div>
-                    </div>
-                </section>
-            {/ifhook}
-            {elsehook rel="main.footer-top"}
-                <section class="footer-banner">
-                    <div class="container">
-                        <div class="banner row banner-col-3">
-                            <div class="col col-sm-4">
-                                <span class="fa fa-truck fa-flip-horizontal"></span>
-                                {intl l="Free shipping"} <small>{intl l="Orders over $50"}</small>
-                            </div>
-                            <div class="col col-sm-4">
-                                <span class="fa fa-credit-card"></span>
-                                {intl l="Secure payment"} <small>{intl l="Multi-payment platform"}</small>
-                            </div>
-                            <div class="col col-sm-4">
-                                <span class="fa fa-info"></span>
-                                {intl l="Need help ?"} <small>{intl l="Questions ? See our F.A.Q."}</small>
-                            </div>
-                        </div>
-                    </div>
-                </section><!-- /.footer-banner -->
-            {/elsehook}
-
             {ifhook rel="main.footer-body"}
                 <section class="footer-block">
                     <div class="container">
                         <div class="blocks row">
                             {hookblock name="main.footer-body"  fields="id,class,title,content"}
+                            {$step=1}
                             {forhook rel="main.footer-body"}
+                            	{if $step==1}
                                 <div class="col col-sm-3">
                                     <section {if $id} id="{$id}"{/if} class="block {if $class} block-{$class}{/if}">
                                         <div class="block-heading"><h3 class="block-title">{$title}</h3></div>
@@ -243,6 +215,26 @@ GNU General Public License : http://www.gnu.org/licenses/
                                         </div>
                                     </section>
                                 </div>
+                                {elseif $step!=1 && $step!=5 && $step!=6}
+                                <div class="col col-sm-2">
+                                    	<section {if $id} id="{$id}"{/if} class="block {if $class} block-{$class}{/if}">
+                                        <div class="block-heading"><h3 class="block-title">{$title}</h3></div>
+                                        <div class="block-content">
+                                            {$content nofilter}
+                                        </div>
+                                    </section>
+                                </div>
+                                {else}
+                                <div class="col col-sm-3">
+                                    	<section {if $id} id="{$id}"{/if} class="block {if $class} block-{$class}{/if}">
+                                        <div class="block-heading"><h3 class="block-title">{$title}</h3></div>
+                                        <div class="block-content">
+                                            {$content nofilter}
+                                        </div>
+                                    </section>
+                                </div>
+								{/if}
+                                {$step=$step+1}
                             {/forhook}
                             {/hookblock}
                         </div>

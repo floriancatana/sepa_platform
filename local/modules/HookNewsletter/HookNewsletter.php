@@ -13,8 +13,15 @@
 namespace HookNewsletter;
 
 use Thelia\Module\BaseModule;
+use Propel\Runtime\Connection\ConnectionInterface;
+use Thelia\Install\Database;
 
 class HookNewsletter extends BaseModule
 {
-
+	public function postActivation(ConnectionInterface $con = null)
+	{
+		$database = new Database($con);
+		$database->insertSql(null, [__DIR__ . "/Config/insert_hooks.sql"]);
+		
+	}
 }

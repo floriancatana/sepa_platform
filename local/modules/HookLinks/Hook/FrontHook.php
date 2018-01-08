@@ -22,17 +22,43 @@ use Thelia\Core\Hook\BaseHook;
  */
 class FrontHook extends BaseHook {
 
-    public function onMainFooterBody(HookRenderBlockEvent $event)
+    public function aboutHadi(HookRenderBlockEvent $event)
     {
-        $content = trim($this->render("main-footer-body.html"));
+        $content = trim($this->render("about_links.html"));
         if ("" != $content){
             $event->add(array(
                 "id" => "links-footer-body",
                 "class" => "default",
-                "title" => $this->trans("Useful links", array(), "hooklinks"),
+                "title" => $this->trans("Über hadi", array(), "hooklinks"),
                 "content" => $content
             ));
         }
+    }
+    
+    public function service(HookRenderBlockEvent $event)
+    {
+    	$content = trim($this->render("service_links.html"));
+    	if ("" != $content){
+    		$event->add(array(
+    				"id" => "links-footer-body",
+    				"class" => "default",
+    				"title" => $this->trans("Service", array(), "hooklinks"),
+    				"content" => $content
+    		));
+    	}
+    }
+    
+    public function help(HookRenderBlockEvent $event)
+    {
+    	$content = trim($this->render("help_links.html"));
+    	if ("" != $content){
+    		$event->add(array(
+    				"id" => "links-footer-body",
+    				"class" => "default",
+    				"title" => $this->trans("Wir helfen", array(), "hooklinks"),
+    				"content" => $content
+    		));
+    	}
     }
 
 } 

@@ -6,7 +6,9 @@
 
     <hooks>
         <hook id="hooklinks.hook.front" class="HookLinks\Hook\FrontHook">
-            <tag name="hook.event_listener" event="main.footer-body" />
+            <tag name="hook.event_listener" event="main.footer-body"  type="front" method="aboutHadi"/>
+            <tag name="hook.event_listener" event="main.footer-body"  type="front" method="service"/>
+            <tag name="hook.event_listener" event="main.footer-body"  type="front" method="help"/>
         </hook>
     </hooks>
 
