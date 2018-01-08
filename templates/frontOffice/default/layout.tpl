@@ -189,9 +189,7 @@ GNU General Public License : http://www.gnu.org/licenses/
         </div><!-- /.header-container -->
 
         <main class="main-container" role="main">
-            <div class="collapse navbar-collapse">
                 {hook name="main.content-top"}
-            </div>
             <div class="container">
 {*                {hook name="main.content-top"}*}
                 {block name="breadcrumb"}{include file="misc/breadcrumb.tpl"}{/block}
