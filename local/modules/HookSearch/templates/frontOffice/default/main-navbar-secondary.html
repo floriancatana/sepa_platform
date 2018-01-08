@@ -1,9 +1,9 @@
 <div class="col-xl-8 col-lg-7 col-md-12 col-sm-12 col-xs-12 row row-eq-height hook_search">
 	<div class="category_hold col-lg-3 col-md-3 col-sm-3 col-xs-3">
-		<select name="category" class="dropdown">
-			<option value="Alle_Kategorien " selected>Alle Kategorien</option>
+		<select name="category" class="dropdown" onchange="window.location.href=this.value;">
+			<option value="/#" selected>Alle Kategorien</option>
 		    {loop name="categories-tree" type="category-tree" category="0"}
-		        <option value="{$ID}">{"-"|str_repeat:$LEVEL} {$TITLE} {if $CHILD_COUNT != 0}({$CHILD_COUNT}){/if}</option>
+		        <option value="{$URL}">{"-"|str_repeat:$LEVEL} {$TITLE} {if $CHILD_COUNT != 0}({$CHILD_COUNT}){/if}</option>
 		    {/loop}
 		</select>
 	</div>
