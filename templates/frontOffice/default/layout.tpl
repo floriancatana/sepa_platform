@@ -169,9 +169,9 @@ GNU General Public License : http://www.gnu.org/licenses/
                     </div>
                 </div>
             </div>
-
-
-            <header class="container" role="banner">
+            
+            <!-- <header class="container" role="banner"> -->
+            <header class="container-fluid" role="banner">
                 <div class="header row">
            {*         <h1 class="logo container hidden-xs">
                         <a href="{navigate to="index"}" title="{$store_name}">
