@@ -60,5 +60,31 @@ class FrontHook extends BaseHook {
     		));
     	}
     }
+    
+    public function payment(HookRenderBlockEvent $event)
+    {
+    	$content = trim($this->render("payment.html"));
+    	if ("" != $content){
+    		$event->add(array(
+    				"id" => "links-footer-body",
+    				"class" => "default",
+    				"title" => $this->trans("Zahlungsarten", array(), "hooklinks"),
+    				"content" => $content
+    		));
+    	}
+    }
+    
+    public function safety(HookRenderBlockEvent $event)
+    {
+    	$content = trim($this->render("safety.html"));
+    	if ("" != $content){
+    		$event->add(array(
+    				"id" => "links-footer-body",
+    				"class" => "default",
+    				"title" => $this->trans("Sicherheit", array(), "hooklinks"),
+    				"content" => $content
+    		));
+    	}
+    }
 
 } 

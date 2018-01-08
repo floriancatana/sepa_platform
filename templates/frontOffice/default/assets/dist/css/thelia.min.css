@@ -76,10 +76,7 @@ a {
 	color: #12b3a6;
 }
 
-a:hover {
-	color: #0d857b;
-}
-
+a:hover,
 li>a:hover{ 
 	color: #0d857b;
 }
@@ -127,6 +124,13 @@ li>a:hover{
 	background: none;
 }
 	
+	
+.block-default .block-content li a:focus, 
+.block-default .block-content li a:hover {
+	color: #12b3a6;
+	text-decoration: none;
+}
+
 /*end overwrite thelia css*/
 
 .logo-hadi {
@@ -450,6 +454,19 @@ header .header {
     border-left: 0px;
 }
 
+.footer-container #links-footer-body .row {
+	margin: 0px;
+}
+.footer-container #links-footer-body .col-sm-5th {
+	width: 18%;
+	float: left;
+	margin-right: 5px;
+}
+
+.footer-container #links-footer-body .col-sm-5th img {
+	width: 100%;
+}
+
 #contact-footer-body h3,
 #links-footer-body h3{
 	color: #4d4d4d;
@@ -461,6 +478,10 @@ header .header {
 #contact-footer-body.block .block-heading,
 #links-footer-body.block .block-heading  {
 	border: none;
+}
+
+.col-sm-2 #links-footer-body.block .block-heading {
+	margin-bottom: 25px;
 }
 
 #contact-footer-body li {
@@ -475,7 +496,7 @@ header .header {
 .block.block-contact .block-content ul>li.contact-phone:before {
 	content:url("../img/store/contact_phone.png");
     zoom: 35%;
-    width: 65px;
+    width: 55px;
 }
 
 .block.block-contact .block-content ul>li.contact-support:before {
@@ -505,16 +526,21 @@ header .header {
 .block.block-contact .block-content ul>li.contact-phone a,
 .block.block-contact .block-content ul>li.contact-email a,
 .block-default .block-content li a {
-	color: #4d4d4d;
+	color: #000;
 }
 
 .block.block-contact .block-content ul>li.contact-phone a:hover,
 .block.block-contact .block-content ul>li.contact-email a:hover {
 	color: #12b3a6;
+	text-decoration: none;
 }
 
 .block-default .block-content li {
-	margin-left: 0px;
+	margin: 5px 0px;
+}
+
+.footer-container .footer-info .info .copyright {
+	text-align: center;
 }
 	
 @media (max-width: 480px) {
@@ -540,6 +566,14 @@ header .header {
 		width: 80%;
 	}
 	
+	.footer-container .payment_safety {
+	    width: 39%; 
+	}
+	
+	.footer-container .col-sm-2 {
+		width: 12%;
+		padding: 0px;
+	}
 } 
 
 @media (max-width: 768px ) {
@@ -589,6 +623,10 @@ header .header {
 	
 	#form-newsletter-mini #email_newsletter-mini {
 		width: 80%;
+	}
+	
+	.footer-container #links-footer-body .col-sm-5th {
+	    margin-right: 8px;
 	}
 }
 
