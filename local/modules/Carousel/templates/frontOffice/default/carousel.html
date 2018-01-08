@@ -3,6 +3,7 @@
     <div id="carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-wrapper">
             <div class="carousel-inner">
+                {$sliders=0}
                 {loop type="carousel" name="carousel.front" width="1200" height="390" resize_mode="borders"}
                 <figure class="item {if $LOOP_COUNT == 1}active{/if}">
                     {if $URL}<a href="{$URL|default:'#'}">{/if}
@@ -14,11 +15,20 @@
                         {if $DESCRIPTION}{$DESCRIPTION nofilter}{/if}
                     </div>
                 </figure>
+                {$sliders=$LOOP_COUNT}
                 {/loop}
             </div>
         </div>
-        <a class="left carousel-control" href="#carousel" data-slide="prev"><span class="icon-prev"></span></a>
-        <a class="right carousel-control" href="#carousel" data-slide="next"><span class="icon-next"></span></a>
+        <ol class="carousel-indicators">
+            {for $slider=1 to $sliders}
+                {if $slider == 1 }
+                   <li data-target="#carousel" data-slide-to={$slider-1} class="active"></li>
+                {else}
+                    <li data-target="#carousel" data-slide-to={$slider-1}></li>
+                {/if}
+
+            {/for}
+        </ol>
     </div>
 </section><!-- #carousel -->
 {/ifloop}

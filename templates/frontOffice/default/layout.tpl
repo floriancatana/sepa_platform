@@ -160,7 +160,8 @@ GNU General Public License : http://www.gnu.org/licenses/
                             <div class=" header_section_2">
                                 {ifhook rel="main.navbar-secondary"}
                                     {* Place everything within .nav-collapse to hide it until above 768px *}
-                                    <nav class="navbar-collapse collapse nav-secondary nav-secondary-hadi row row-eq-height" role="navigation" aria-label="{intl l="Secondary Navigation"}">
+                                    <!-- <nav class="navbar-collapse collapse nav-secondary nav-secondary-hadi row row-eq-height" role="navigation" aria-label="{intl l="Secondary Navigation"}"> -->
+                                    <nav class="nav-secondary nav-secondary-hadi row row-eq-height" role="navigation" aria-label="{intl l="Secondary Navigation"}">
                                        {hook name="main.navbar-secondary"}
                                     </nav>
                                 {/ifhook}
@@ -188,7 +189,9 @@ GNU General Public License : http://www.gnu.org/licenses/
         </div><!-- /.header-container -->
 
         <main class="main-container" role="main">
-            {hook name="main.content-top"}
+            <div class="collapse navbar-collapse">
+                {hook name="main.content-top"}
+            </div>
             <div class="container">
 {*                {hook name="main.content-top"}*}
                 {block name="breadcrumb"}{include file="misc/breadcrumb.tpl"}{/block}
