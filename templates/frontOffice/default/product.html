@@ -33,6 +33,8 @@
         {/loop}
         {$breadcrumbs[] = ['title' => {$TITLE}, 'url'=> {$URL nofilter}]}
     {/loop}
+    <!-- Add back to index link -->
+    {$breadcrumbs[] = ['title' => {intl l="Go to Homepage"}, 'url'=> {navigate to="index"}, 'is_product_page' => 1]}
 {/block}
 
 {* Content *}

@@ -146,6 +146,7 @@ li>a:hover{
 
 .nav-secondary-hadi {
     background-color: #12b3a6;
+    margin-right: 0px;
 }
     
 .container-hadi {
@@ -641,6 +642,11 @@ header .header {
 .header_wrapper .col-lg-2{
 	padding-left: 0px;
 }
+/*.header_wrapper .col-sm-12{
+	padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+}*/
 .header_section_1{
     margin-left: unset;
 }
@@ -686,7 +692,7 @@ header .header {
 .dropdown{
 	white-space: nowrap;
 	font-size: 1em;
-	font-family: "VPEIFF+Lato-Regular";
+	/*font-family: "VPEIFF+Lato-Regular";*/
 	color: #454545;
 }
 .hotline_content  .dropdown::before{
@@ -717,9 +723,15 @@ header .header {
 .cart_holder, .search_holder, .category_hold{
 	float: left;
 }
+.search-container, .category_hold{
+	height: 36px;
+}
 .cart_holder .cart-container{
 	margin-left: 0px;
     margin-right: 0px;
+}
+li.cart-container{
+	background-color: #fff;
 }
 .cart-container a{
 	margin: 0px;
@@ -738,7 +750,7 @@ header .header {
     float: left;
     overflow: hidden;
 	font-size: 1.2em;
-	font-family: "VPEIFF+Lato-Regular";
+	/*font-family: "VPEIFF+Lato-Regular";*/
 	color: #000000;
 	border-color: black;
 	padding-left: 2%;
@@ -771,6 +783,7 @@ header .header {
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
+
 .hook_cart{
 	padding-right: 0px;
 }
@@ -780,8 +793,10 @@ header .header {
 .cart_holder ul{
 	padding-left: unset;
 }
-.cart_holder .badge{
-	font-family: "VPEIFF+Lato-Regular";
+.hook_customer .navbar-customer{
+	padding-left: 0px;
+}
+/*.cart_holder .badge{
 	display: inline-block;
     padding: 0.55em 1em;
     color: #000;
@@ -816,8 +831,63 @@ header .header {
 	background-color: transparent;
 	text-decoration: none;
 	color: #000;
+}*/
+.cart-squares-elements{
+	border-right: 0;
+	height: 35px;
+	width: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: rgba(0, 0, 0, 0.87);
+	cursor: pointer;
+	border: 1px solid black;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: black;
+    font-weight: 700;
 }
-
+.fa-shopping-cart::before {
+    content: "\f07a";
+}
+.category_hold select{
+	min-height: 32px;
+}
+@media (max-width: 1200px) {
+	.hook_cart{
+		padding-left: 15px;
+	}
+}
+@media only screen and (min-width: 992px) and (max-width: 1130px) {
+	.hook_customer{
+		padding-right: 0px;
+    	margin-left: 5px;
+	}
+	.cart-container{
+		width: 70px;
+	}
+}
+@media only screen and (max-width: 992px) {
+	.header_section_2{
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+}
+@media only screen and (min-width: 500px) and (max-width: 992px) {
+	.cart-container{
+		width: 70px;
+	}
+}
+@media only screen and (min-width: 770px) and (max-width: 992px) {
+	.hook_customer{
+		padding-left: 35%;
+	}
+}
+@media only screen and (min-width: 500px) and (max-width: 992px) {
+	.hook_customer{
+		padding-left: 30%;
+	}
+}
 /*Customer hook*/
 .customer_holder ul.navbar-customer li{
 	list-style-type: none;
@@ -839,7 +909,7 @@ header .header {
 .customer_holder .logout{
 	white-space: nowrap;
     font-size: 1em;
-    font-family: "VPEIFF+Lato-Regular";
+    /*font-family: "VPEIFF+Lato-Regular";*/
     position: relative;
 }
 .customer_holder .glyphicon-lock{
@@ -906,7 +976,7 @@ ul.navbar-nav .open>.dropdown-toggle.btn-primary,
     color: #000;
 }
 li.open .dropdown-menu {
-	margin-top: 20px;
+	margin-top: 10px;
     display: block;
     left: -25%;
     right: -70%;
@@ -948,4 +1018,32 @@ header .navigation-main{
 /*End Carousel Overrides*/
 /*End Main Menu Code*/
 
+/*Product detail page*/
+.page-product .container{
+	padding-left: 0px;
+    padding-right: 0px;
+	margin-right: auto;
+    margin-left: auto;
+	box-sizing: border-box;
+    display: block;
+    width: unset;
+}
+.page-product .container .nav-breadcrumb{
+	background-color: #33383c;
+	color: #fff;
+}
+.page-product .container .nav-breadcrumb ul.breadcrumb{
+	background-color: unset;
+}
+.page-product .container .nav-breadcrumb ul.breadcrumb li,
+.page-product .container .nav-breadcrumb ul.breadcrumb li a{
+	color: #fff;
+	text-decoration: none;
+}
+.page-product .container .nav-breadcrumb .breadcrumb>li+li:before{
+	content: "\002F";
+	color: #fff;
+}
+
+/*End Product detail page*/
 /*End Custom Code Remus*/

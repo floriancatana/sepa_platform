@@ -72,9 +72,13 @@
 {elseloop rel="cartloop"}
     <!-- <li class="dropdown pull-right  cart-container"> -->
     <li class="pull-right  cart-container">
-        <a href="{url path="/cart"}" rel="nofollow" class="cart row">
-            <span class="badge col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">0</span> 
-            <span class="cart_icon col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6"> <img /></span>
+        <a href="{url path="/cart"}" rel="nofollow" class="cart row" id="sylius-cart-button">
+            <!-- <span class="badge col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">0</span> 
+            <span class="cart_icon col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6"> <img /></span> -->
+            <div class="cart-squares-elements col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6"> 0 </div>
+            <div class="cart-squares-elements col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <i class="fa fa-shopping-cart icon"></i>
+            </div>
             <!-- {intl l="Cart" d="hookcart.fo.default"} -->
         </a>
         <!-- <div class="dropdown-menu cart-content">
