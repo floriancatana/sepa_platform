@@ -74,7 +74,7 @@
     {if $price_filter === "true"}
         <div id="search-price" class="block block-nav col-md-4" role="navigation" aria-labelledby="search-label" style="display: inline-table;">
             <label for="price-filter">{intl l="Price filter" d="criteriasearch.fo.default"}</label>
-            <input id="price-filter" type="text" data-slider-ticks="[{$value_price_filter.0}, {$value_price_filter.1}, {$value_price_filter.2}, {$value_price_filter.3}, {$value_price_filter.4}]" data-slider-ticks-labels='["{$value_price_filter.0}€", "{$value_price_filter.1}€", "{$value_price_filter.2}€", "{$value_price_filter.3}€", "{$value_price_filter.4}€"]' data-slider-min="0" data-slider-max="{$max_price_filter}" data-slider-value="[0,{$max_price_filter}]" data-slider-step="50" />
+            <input id="price-filter" type="text" data-slider-ticks="[{$value_price_filter.0}, {$value_price_filter.4}]" data-slider-ticks-labels='["{$value_price_filter.0}€", "{$value_price_filter.4}€"]' data-slider-min="0" data-slider-max="{$max_price_filter}" data-slider-value="[0,{$max_price_filter}]" data-slider-step="50" />
             <input type="hidden" name="price_min">
             <input type="hidden" name="price_max">
         </div>
