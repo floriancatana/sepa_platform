@@ -208,7 +208,7 @@ GNU General Public License : http://www.gnu.org/licenses/
                             {$step=1}
                             {forhook rel="main.footer-body"}
                             	{if $step==1}
-                                <div class="col col-sm-3">
+                                <div class="col col-sm-3 col-xs-12">
                                     <section {if $id} id="{$id}"{/if} class="block {if $class} block-{$class}{/if}">
                                         <div class="block-heading"><h3 class="block-title">{$title}</h3></div>
                                         <div class="block-content">
@@ -217,7 +217,7 @@ GNU General Public License : http://www.gnu.org/licenses/
                                     </section>
                                 </div>
                                 {elseif $step!=1 && $step!=5 && $step!=6}
-                                <div class="col col-sm-2">
+                                <div class="col col-sm-2 col-xs-4">
                                     	<section {if $id} id="{$id}"{/if} class="block {if $class} block-{$class}{/if}">
                                         <div class="block-heading"><h3 class="block-title">{$title}</h3></div>
                                         <div class="block-content">
@@ -226,7 +226,7 @@ GNU General Public License : http://www.gnu.org/licenses/
                                     </section>
                                 </div>
                                 {else}
-                                <div class="col col-sm-3">
+                                <div class="col col-sm-3 col-xs-12 payment_safety">
                                     	<section {if $id} id="{$id}"{/if} class="block {if $class} block-{$class}{/if}">
                                         <div class="block-heading"><h3 class="block-title">{$title}</h3></div>
                                         <div class="block-content">
@@ -243,40 +243,15 @@ GNU General Public License : http://www.gnu.org/licenses/
                 </section>
             {/ifhook}
 
-            {ifhook rel="main.footer-bottom"}
-                <footer class="footer-info" role="contentinfo">
-                    <div class="container">
-                        <div class="info row">
-                            <div class="col-lg-9">
-                                {hook name="main.footer-bottom"}
-                            </div>
-                            <div class="col-lg-3">
-                                <section class="copyright">{intl l="Copyright"} &copy; <time datetime="{'Y-m-d'|date}">{'Y'|date}</time> <a href="http://thelia.net" rel="external">Thelia</a></section>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            {/ifhook}
-            {elsehook rel="main.footer-bottom"}
-                <footer class="footer-info" role="contentinfo">
-                    <div class="container">
-                        <div class="info row">
-                            <nav class="nav-footer col-lg-9" role="navigation">
-                                <ul class="list-unstyled list-inline">
-                                    {$folder_information={config key="information_folder_id"}}
-                                    {if $folder_information}
-                                        {loop name="footer_links" type="content" folder=$folder_information}
-                                            <li><a href="{$URL nofilter}">{$TITLE}</a></li>
-                                        {/loop}
-                                    {/if}
-                                    <li><a href="{url path="/contact"}">{intl l="Contact Us"}</a></li>
-                                </ul>
-                            </nav>
-                            <section class="copyright col-lg-3">{intl l="Copyright"} &copy; <time datetime="{'Y-m-d'|date}">{'Y'|date}</time> <a href="http://thelia.net" rel="external">Thelia</a></section>
-                        </div>
-                    </div>
-                </footer><!-- /.footer-info -->
-            {/elsehook}
+           <footer class="footer-info" role="contentinfo">
+				<div class="container">
+					<div class="info row">
+						<div class="col-lg-12"> 
+							<section class="copyright">HADI SHOP &copy; {intl l="2017. All Rights Reserved."}</section>
+						</div>
+					</div>
+				</div>
+			</footer>
 
         </section><!-- /.footer-container -->
 
