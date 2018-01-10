@@ -756,6 +756,10 @@ aside.col-md-3.col-md-pull-9 {
 	aside.col-md-3.col-md-pull-9 {
 		margin-left: 15px;
 	}
+
+	.header_wrapper .col-1{
+		padding-right: 0px;
+	}
 }
 
 @media (min-width: 1200px) {
@@ -786,9 +790,6 @@ aside.col-md-3.col-md-pull-9 {
 }
 
 /* Custom Code Remus */
-.container-hadi{
-	padding-right: 0px;
-}
 .header_wrapper .header_section_1{
 	padding-right: 0px;
 	background-color: #33383c;
