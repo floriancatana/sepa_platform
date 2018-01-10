@@ -1200,9 +1200,6 @@ header .navigation-main{
 }
 
 /*Carousel Overrides*/
-.carousel-indicators{
-	left:35%;
-}
 .carousel-indicators li{
 	width: 20px;
 	height: 20px;
