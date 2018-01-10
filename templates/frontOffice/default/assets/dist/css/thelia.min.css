@@ -1027,7 +1027,7 @@ li.cart-container{
 		padding-bottom: 15px;
 	}
 }
-@media only screen and (min-width: 500px) and (max-width: 992px) {
+@media only screen and (min-width: 300px) and (max-width: 992px) {
 	.cart-container{
 		width: 70px;
 	}
@@ -1037,7 +1037,7 @@ li.cart-container{
 		padding-left: 35%;
 	}
 }
-@media only screen and (min-width: 500px) and (max-width: 992px) {
+@media only screen and (min-width: 300px) and (max-width: 992px) {
 	.hook_customer{
 		padding-left: 30%;
 	}
@@ -1070,9 +1070,21 @@ li.cart-container{
 	font-size: 1.3em;
 	color: #fff;
 }
-.navbar li>a.login:before,
-.navbar .navbar-customer .dropdown>a:after{
+.customer_holder .glyphicon-log-in:after{
+	float: right;
+}
+.navbar li>a.login:before{
 	content: unset;
+}
+@media only screen and (min-width: 992px){
+	.navbar .navbar-cart .dropdown>a:after, .navbar .navbar-customer .dropdown>a:after {
+	    float: right;
+	    color: #fff;
+	}
+}
+.customer_holder .js .dropdown-toggle:after {
+	float: right;
+	color: #fff;
 }
 /*End Customer Hook*/
 
