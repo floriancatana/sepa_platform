@@ -7,7 +7,7 @@
             <meta itemprop="position" content="1">
         </li>
         {foreach $breadcrumbs as $breadcrumb}
-        {if $breadcrumb.title}
+        {if $breadcrumb.title && !$breadcrumb.is_product_page}
             {if $breadcrumb@last}
                 <li itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement" class="active"><span itemprop="name">{$breadcrumb.title|unescape}</span></li>
             {else}
@@ -16,6 +16,12 @@
                     <meta itemprop="position" content="{$breadcrumb@key+2}">
                 </li>
             {/if}
+        {/if}
+        {if $breadcrumb.is_product_page }
+             <li itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement" class="backToTheRoot">
+                <a href="{$breadcrumb.url|default:'#' nofilter}"  title="{$breadcrumb.title|unescape}" itemprop="item"><span itemprop="name">{$breadcrumb.title|unescape}</span></a>
+                <meta itemprop="position" content="{$breadcrumb@key+2}">
+            </li>
         {/if}
         {/foreach}
     </ul>
