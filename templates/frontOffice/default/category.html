@@ -61,7 +61,7 @@
 
             {hook name="category.content-top" category="$category_id"}
 
-            {if #category_display_detail# && $category_id}
+           <!--  {if #category_display_detail# && $category_id}
             <section class="category-description">
                 {loop name="category.description" type="category" id={$category_id} limit="1" }
                     <h1 id="main-label" class="page-header">{category attr="title"}</h1>
@@ -82,8 +82,8 @@
             </section>
             <hr/>
             {/if}
-
-            {if #category_display_subcategories#}
+ -->
+         <!--    {if #category_display_subcategories#}
             {ifloop rel="subcategories"}
                 <div class="block-links">
                     <div class="block-content">
@@ -97,14 +97,14 @@
                     </div>
                 </div>
             {/ifloop}
-            {/if}
+            {/if} -->
 
             {ifloop rel="product_list"}
                 {$amount={count type="product" category=$category_id}}
-                <div class="toolbar toolbar-top" role="toolbar">
+                <!-- <div class="toolbar toolbar-top" role="toolbar">
                         <div class="sorter-container clearfix">
-                    </div><!-- /.sorter --> 
-                </div> 
+                    </div>/.sorter 
+                </div>  -->
                 
             <div id="category-products">
                     <div class="products-content">

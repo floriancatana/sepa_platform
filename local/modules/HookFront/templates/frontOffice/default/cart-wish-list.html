@@ -15,7 +15,7 @@
 {/if}
 
 <div class="row cart-wish">
-	<div class = "col-md-10 col-sm-10">
+	<div class = "col-md-10 col-sm-10"> 
         {if $hasSubmit == true && $current_stock_content == "in_stock"}
             {form name="thelia.cart.add" }
             <form id="{$type_products}_form-product-details-{$product_id}" action="{url path="/cart/add" }" method="post" class="form-product">

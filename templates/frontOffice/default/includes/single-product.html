@@ -51,7 +51,7 @@
                 {if $IS_PROMO }
 
                     {assign var="combination_count" value={count type="product_sale_elements" promo="1" product=$ID}}
-                    <span class="special-price col-xs-6"><span itemprop="price" class="price-label">{intl l="Special Price:"} </span><span class="price">
+                    <span class="special-price  {if $SHOW_ORIGINAL_PRICE} col-xs-6 {else} col-xs-12 {/if} "><span itemprop="price" class="price-label">{intl l="Special Price:"} </span><span class="price">
                         {if $combination_count > 1}
                             {intl l="From %price" price={format_money number=$BEST_TAXED_PRICE}}
                         {else}
@@ -85,7 +85,7 @@
                 </p> 
             {/if}
             
-            {if $hasBtn == true}
+          <!--   {if $hasBtn == true}
                 {if $hasSubmit == true && $current_stock_content == "in_stock"}
                     {form name="thelia.cart.add" }
                     <form id="form-product-details{$product_id}" action="{url path="/cart/add" }" method="post" class="form-product">
@@ -132,7 +132,7 @@
                         </div>
                     </div>
                 {/if}
-            {/if}
+            {/if} -->
         </div>
 
         {hook name="singleproduct.bottom" product={$product_id}}

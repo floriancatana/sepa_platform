@@ -96,9 +96,9 @@
         </div>
         
         
-            <div class="block block-nav col-md-2" role="navigation" aria-labelledby="search-label" style="display: inline-table; width: auto;">
-            <label for="search-limit">{intl l="Limit" d="criteriasearch.fo.default"}</label>
-            <select  class="input-search form-control col-md-12" id="search-limit" name="limit">
+       <div class="items-page block block-nav col-md-12" role="navigation" aria-labelledby="search-label">
+            <label for="search-limit">{intl l="Artikel pro Seite" d="criteriasearch.fo.default"}</label>
+            <select  class="input-search form-control col-md-12 fa fa-chevron-down" id="search-limit" name="limit">
                 <option value="8" {if $limit==8}selected{/if}>8</option>
                 <option value="16" {if $limit==16}selected{/if}>16</option>
                 <option value="32" {if $limit==32}selected{/if}>32</option>
