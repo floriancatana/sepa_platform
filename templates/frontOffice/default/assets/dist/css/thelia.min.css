@@ -840,7 +840,7 @@ aside.col-md-3.col-md-pull-9 {
 .hotline_phone_wrapper{
 	display: block;
 	float: left;
-	padding-right: : 0px;
+	padding-right: 0px;
 }
 .hotline_partners{
 	padding-left: 1%;
@@ -1251,3 +1251,4 @@ header .navigation-main{
 
 #main-label.page-header {
    color: #12b3a6;
+}
