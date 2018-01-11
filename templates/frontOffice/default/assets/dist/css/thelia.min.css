@@ -835,7 +835,7 @@ aside.col-md-3.col-md-pull-9 {
 .hotline_phone_wrapper{
 	display: block;
 	float: left;
-	padding-right: : 0px;
+	padding-right: 0px;
 }
 .hotline_partners{
 	padding-left: 1%;
@@ -1318,4 +1318,27 @@ header .navigation-main{
     margin-left: 20%;
 }
 /*End Product detail page*/
-/*End Custom Code Remus
+
+/*End Custom Code Remus*/
+
+/*FAQ*/
+#faqs dt, #faqs dd { padding: 0 0 0 50px }
+#faqs dt { font-size:1.5em; color: black; cursor: pointer; height: 37px; line-height: 37px; margin: 0 0 15px 25px;}
+#faqs dd { font-size: 1em; margin: 0 0 20px 25px}
+#faqs dt { background: url("../img/store/selectarrow.png") no-repeat left; background-size: contain;}
+#faqs .expanded { background: url("../img/store/selectedarrow.png") no-repeat left; background-size: contain;}
+
+#main-label.page-header {
+   color: #12b3a6;
+}
+
+.products-heading-h2 {
+    background-image: url(../img/store/separator_horizontal.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.87);
+    padding-bottom: 40px;
+    font-weight: 600;
+}
