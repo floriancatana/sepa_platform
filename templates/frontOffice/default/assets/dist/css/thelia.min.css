@@ -799,6 +799,10 @@ aside.col-md-pull-9 {
 	padding: 0px 10px;
 }
 
+.pagination-container .pagination-label {
+	margin-right: 10px;
+}
+
 .navbar-categories .dropdown-toggle:after {
 	font-size: 12px;
     bottom: 2px;
@@ -1022,7 +1026,6 @@ aside.col-md-pull-9 {
 	display: block;
 	float: left;
 	padding-right: 0px;
-	padding-left: 1%;
 }
 .hotline_partners{
 	padding-left: 1%;
