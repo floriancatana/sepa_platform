@@ -1252,3 +1252,14 @@ header .navigation-main{
 #main-label.page-header {
    color: #12b3a6;
 }
+
+.products-heading-h2 {
+    background-image: url(../img/store/separator_horizontal.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.87);
+    padding-bottom: 40px;
+    font-weight: 600;
+}
