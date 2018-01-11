@@ -1372,35 +1372,36 @@ header .navigation-main{
 	padding-left: 8%;
 	padding-right: 8%;
 }
-.page-product .container .nav-breadcrumb{
-	background-color: #33383c;
+.page-product  .nav-breadcrumb{
+	background-color: #33383c ;
 	color: #fff;
 }
-.page-product .container nav.nav-breadcrumb{
+.page-product nav.nav-breadcrumb{
 	padding-top: 5px;
     padding-bottom: 5px;
 }
-.page-product .container .nav-breadcrumb ul.breadcrumb{
+.page-product  .nav-breadcrumb ul.breadcrumb{
 	background-color: unset;
 	margin-bottom: 0px;
 	padding-left: 8%;
     padding-right: 8%;
     font-weight: 600;
+    line-height:unset;
 }
-.page-product .container .nav-breadcrumb ul.breadcrumb li,
-.page-product .container .nav-breadcrumb ul.breadcrumb li a{
+.page-product .nav-breadcrumb ul.breadcrumb li,
+.page-product .nav-breadcrumb ul.breadcrumb li a{
 	color: #fff;
 	text-decoration: none;
 }
-.page-product .container .nav-breadcrumb .breadcrumb>li+li:before{
+.page-product .nav-breadcrumb .breadcrumb>li+li:before{
 	content: "\002F";
 	color: #fff;
 	padding: 0 2px;
 }
-.page-product .container .nav-breadcrumb .breadcrumb>li.backToTheRoot{
+.page-product .nav-breadcrumb .breadcrumb>li.backToTheRoot{
 	float: right;
 }
-.page-product .container .nav-breadcrumb .breadcrumb>li.backToTheRoot:before{
+.page-product .nav-breadcrumb .breadcrumb>li.backToTheRoot:before{
 	content: unset;
 }
 .page-product .container .line_marking{
