@@ -124,11 +124,11 @@ GNU General Public License : http://www.gnu.org/licenses/
                     <div class="row hotline_row">
                         <div class="hotline_content col-lg-offset-2 col-md-offset-3 col-lg-10 col-md-9 row">
                             <div class="col-lg-8 col-md-10 col-sm-10 col-xs-12 row row-eq-height">
-                                <div class="hotline_phone_wrapper col-lg-5 col-md-6 col-sm-5 col-xs-6">
+                                <div class="hotline_phone_wrapper col-lg-5 col-md-6 col-sm-5 col-xs-12">
                                     <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
                                     <span class="hotline_phone"> {intl l="HADI Hotline +43 664 4083452"} </span>
                                 </div>
-                                <div class="hotline_partners col-lg-6 col-md-6 col-sm-6 col-xs-5">
+                                <div class="hotline_partners col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="dropdown">
                                         <span class="phonebook" aria-hidden="true" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></span>
                                             {intl l="Partner Hotlines"}
@@ -186,13 +186,14 @@ GNU General Public License : http://www.gnu.org/licenses/
             </header><!-- /.header -->
 
             {hook name="main.header-bottom"}
+            {block name="breadcrumb"}{include file="misc/breadcrumb.tpl"}{/block}
         </div><!-- /.header-container -->
 
         <main class="main-container" role="main">
                 {hook name="main.content-top"}
             <div class="container">
 {*                {hook name="main.content-top"}*}
-                {block name="breadcrumb"}{include file="misc/breadcrumb.tpl"}{/block}
+               
                 <div id="content">{block name="main-content"}{/block}</div>
                 {hook name="main.content-bottom"}
             </div><!-- /.container -->
