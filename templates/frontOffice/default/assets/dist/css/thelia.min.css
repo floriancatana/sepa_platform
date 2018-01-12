@@ -1,4 +1,4 @@
-!
+/*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -811,6 +811,10 @@ aside.col-md-pull-9 {
 
 .products-content .toolbar {
 	line-height: unset;	
+}
+
+.main {
+	margin-bottom: 45px;	
 }
 
 @media (max-width: 480px) {
