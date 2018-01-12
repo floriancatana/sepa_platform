@@ -1515,9 +1515,51 @@ header .navigation-main{
 .page-product #product-gallery{
 	border: 0px !important;
 }
-.footer-container .footer-block .container{
+.page-product .footer-container .footer-block .container{
     margin-left: 20%;
 }
+
+/*Comment and rating*/
+.page-product #product #product-tabs .nav-tabs li{
+	text-transform: initial;
+	margin-right: 5px;
+}
+.page-product #product #product-tabs .nav-tabs li.active{
+	background-color: #33383c;
+}
+.page-product #product #product-tabs .nav-tabs>li.active>a,
+.page-product #product #product-tabs .nav-tabs>li.active>a:focus,
+.page-product #product #product-tabs .nav-tabs>li.active>a:hover{
+	background-color: transparent;
+    color: #fff;
+}
+.page-product #product #product-tabs .nav-tabs>li>a,
+.page-product #product #product-tabs .nav-tabs>li>a:focus,
+.page-product #product #product-tabs .nav-tabs>li>a:hover{
+	color: #33383c;
+	padding: 7px 35px;
+	background-color: transparent;
+	border-top: 3px solid #33383c;
+	border-right: 3px solid #33383c;
+	border-left: 3px solid #33383c;
+	border-bottom: none;
+	border-radius: 0px;
+}
+.page-product #product #product-tabs .tab-content{
+	border: none;
+	border-top: 2px solid #33383c;
+	border-left: 1px solid lightgrey;
+	box-shadow: 5px 5px 4px #ccc;
+	-moz-box-shadow: 5px 5px 4px #ccc;
+	-webkit-box-shadow: 5px 5px 4px #ccc;
+	-khtml-box-shadow: 5px 5px 4px #ccc;
+}
+
+.page-product #product #product-tabs .tab-content .text-primary{
+	color: #33383c;
+    font-size: 18px;
+}
+/*End Commnet and rating*/
 /*End Product detail page*/
 
 /*End Custom Code Remus*/
