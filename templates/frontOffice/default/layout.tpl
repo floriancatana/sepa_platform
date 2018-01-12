@@ -209,7 +209,7 @@ GNU General Public License : http://www.gnu.org/licenses/
                             {$step=1}
                             {forhook rel="main.footer-body"}
                             	{if $step==1}
-                                <div class="col col-sm-3 col-xs-12">
+                                <div class="col-sm-3 col-xs-12">
                                     <section {if $id} id="{$id}"{/if} class="block {if $class} block-{$class}{/if}">
                                         <div class="block-heading"><h3 class="block-title">{$title}</h3></div>
                                         <div class="block-content">
@@ -218,7 +218,7 @@ GNU General Public License : http://www.gnu.org/licenses/
                                     </section>
                                 </div>
                                 {elseif $step!=1 && $step!=5 && $step!=6}
-                                <div class="col col-sm-2 col-xs-4">
+                                <div class="col-sm-2 col-xs-4">
                                     	<section {if $id} id="{$id}"{/if} class="block {if $class} block-{$class}{/if}">
                                         <div class="block-heading"><h3 class="block-title">{$title}</h3></div>
                                         <div class="block-content">
@@ -227,7 +227,7 @@ GNU General Public License : http://www.gnu.org/licenses/
                                     </section>
                                 </div>
                                 {else}
-                                <div class="col col-sm-3 col-xs-12 payment_safety">
+                                <div class="col-sm-3 col-xs-12 payment_safety">
                                     	<section {if $id} id="{$id}"{/if} class="block {if $class} block-{$class}{/if}">
                                         <div class="block-heading"><h3 class="block-title">{$title}</h3></div>
                                         <div class="block-content">

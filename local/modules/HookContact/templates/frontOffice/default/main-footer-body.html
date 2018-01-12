@@ -15,26 +15,28 @@
         </li> -->
         {if {config key="store_phone"} }
         <li class="contact-phone">
+        	<i class="fa fa-phone"></i>
             <a href="tel:{config key="store_phone"}" class="tel" itemprop="telephone">{config key="store_phone"}</a>
         </li>
         {/if}
         
         {if {config key="store_email"} }
         <li class="contact-email">
+        	<i class="fa fa-envelope-o"></i>
             <a href="mailto:{config key="store_email"}" class="email" itemprop="email">{config key="store_email"}</a>
         </li>
         {/if}
-       <!--  <li class="contact-contact">
-            <a href="{url path='/contact'}">{intl l="Find us, Contact us" d="hookcontact.fo.default"}</a>
-        </li> -->
         
-         <li class="contact-support">
+        <li class="contact-support">
+         	<i class="fa fa-comment-o"></i>
             {intl l="24/7 Support"}
         </li>
          <li class="contact-sure">
+         	<i class="fa fa-unlock-alt"></i>
             {intl l="100% sicher"}
         </li>
          <li class="contact-warranty">
+         	<i class="fa fa-undo"></i>
             {intl l="Geld-Zurück-Garantie"}
         </li>
     </ul>

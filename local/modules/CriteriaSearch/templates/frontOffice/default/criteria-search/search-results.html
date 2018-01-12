@@ -24,15 +24,15 @@
 <div class="toolbar toolbar-bottom" role="toolbar">
     {if $product_total > $limit}
         <div class="pagination-container clearfix" role="pagination" aria-labelledby="pagination-label-{$toolbar}}">
-            <span id="pagination-label-{$toolbar}" class="pagination-label">{intl l="Seite"}</span>
+            <strong id="pagination-label-{$toolbar} sr-only" class="pagination-label">{intl l="Seite"}</strong>
             <ul class="pagination pagination-sm">
                 {if $page le 1}
                     <li class="disabled">
-                        <span class="prev"><i class="fa fa-caret-left"></i></span>
+                        <span class="prev"><!-- <i class="fa fa-caret-left"></i> --></span>
                     </li>
                 {else}
                     <li>
-                        <span data-page="{$page-1}" title="{intl l="Previous"}" class="criteria-pagination prev"><i class="fa fa-caret-left"></i></span>
+                        <span data-page="{$page-1}" title="{intl l="Previous"}" class="criteria-pagination prev"><!-- <i class="fa fa-caret-left"></i> --></span>
                     </li>
                 {/if}
 
@@ -43,11 +43,11 @@
                 {if $PAGE eq $LAST}
                     {if $CURRENT eq $LAST}
                         <li class="disabled">
-                            <span class="next"><i class="fa fa-caret-right"></i></span>
+                            <span class="next"><!-- <i class="fa fa-caret-right"></i> --></span>
                         </li>
                     {else}
                         <li>
-                            <span data-page="{$NEXT}" title="{intl l="Next"}" class="criteria-pagination next"><i class="fa fa-caret-right"></i></span>
+                            <span data-page="{$NEXT}" title="{intl l="Next"}" class="criteria-pagination next"><!-- <i class="fa fa-caret-right"></i> --></span>
                         </li>
                     {/if}
                 {/if}
