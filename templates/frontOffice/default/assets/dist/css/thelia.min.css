@@ -1556,6 +1556,25 @@ header .navigation-main{
     font-size: 18px;
 }
 /*End Commnet and rating*/
+/*Modal dialog changes*/
+.bootbox .modal-dialog .modal-body,
+.bootbox .modal-dialog .modal-body .special-price .price{
+	color: #000;
+}
+.bootbox .modal-dialog .modal-body button{
+	border-left: 1px solid #ccc;
+}
+.bootbox .modal-dialog .modal-body button.btn-default{
+	background-color: #0d857b;
+}
+.bootbox .modal-dialog .modal-body .btn-primary{
+	background-color: #236487;
+}
+.bootbox .modal-dialog .modal-body button.btn-default,
+.bootbox .modal-dialog .modal-body .btn-primary{
+	color: #fff;
+}
+/*End Modal dialog changes*/
 /*End Product detail page*/
 
 /*End Custom Code Remus*/
