@@ -486,13 +486,34 @@ header .header {
 	text-align: center;	
 }
 
-#contact-footer-body .col-xs-10 {
-	padding: 0px;
+.block.block-contact .block-content ul>li.contact-phone:before {
+	content:url("../img/store/contact_phone.png");
+    zoom: 35%;
+    width: 55px;
 }
 
-.block.block-contact .block-content ul>li.contact-phone:before,
+.block.block-contact .block-content ul>li.contact-support:before {
+	content:url("../img/store/contact_support.png");
+    zoom: 25%;
+    width: 90px;
+}
+
 .block.block-contact .block-content ul>li.contact-email:before {
-	content: unset;
+	width: 25px; 
+	margin: 0px;
+	font-size: 15px;
+}
+
+.block.block-contact .block-content ul>li.contact-sure:before {
+	content:url("../img/store/contact_sure.png");
+    zoom: 26%;
+    width: 82px;
+}
+
+.block.block-contact .block-content ul>li.contact-warranty:before {
+	content:url("../img/store/contact_warranty.png");
+    zoom: 25%;
+    width: 90px;
 }
 
 .block.block-contact .block-content ul>li.contact-phone a,
@@ -588,11 +609,10 @@ header .header {
 }
 
 #criteria-search-form .dropdown-toggle:after {
+	float: right;
 	font-size: 12px;
-    color: #4d4d4d;
-    position: absolute;
-	right: 5px;
-	line-height: 20px;
+	top: 4px;
+    position: relative;
 }
 
 .dropdown-menu>.active>a, 
@@ -636,7 +656,6 @@ header .header {
     width: 100%;
     border: 1px solid #9c9c9c;
     -webkit-appearance: unset;
-    -moz-appearance: none;
 }
 
 .sorting label,
@@ -722,10 +741,6 @@ aside.col-md-pull-9 {
 	margin-right: 5px;
 }
 
-.pagination .criteria-pagination {
-	line-height: 30px;	
-}
-
 .pagination .criteria-pagination,
 .pagination>.active>a, 
 .pagination>.active>a:focus, 
@@ -743,9 +758,9 @@ aside.col-md-pull-9 {
     background-image: unset;
     border: 0px;
     border-left: 2px solid #d4d4d4;
-    padding: 0px 15px;
+    padding: 0px 10px;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 600;
     outline: unset;
 }
 
@@ -761,9 +776,7 @@ aside.col-md-pull-9 {
 	border: 0px;
 }
 
-.pagination>.active>span,
-.pagination>li>span:hover,
-.pagination>.active>span:hover {
+.pagination>.active>span {
 	font-weight: 700;
 }
 
@@ -783,57 +796,8 @@ aside.col-md-pull-9 {
 	padding: 0px 10px;
 }
 
-.pagination .prev,
-.pagination .disabled .prev,
-.pagination .next,
-.pagination .disabled .next,
-.pagination>li>span.next:hover,
-.pagination>li>span.prev:hover {
-    background-position: center;
-    background-size: 40%;
-    width: 30px;
-    height: 30px;
-    background-color: #33383c;
-    background-repeat: no-repeat;
-    padding: 0px;
-    margin: 0px;
-}
-
-.pagination .disabled .prev,
-.pagination .disabled .next,
-.pagination>.disabled>span:hover,
-.pagination .disabled .next:hover,
-.pagination .disabled .prev:hover {
-	background-color: #f5f5f5;
-	
-}
-
-.pagination>li:last-child>a, 
-.pagination>li:last-child>span {
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 0px;
-}
-
-.pagination>li:first-child>a, 
-.pagination>li:first-child>span {
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
-}
-
-.pagination .prev,
-.pagination .disabled .prev,
-.pagination>li>span.prev:hover {
-	background-image: url(../img/store/leftarrow.png);
-}
-
-.pagination .next,
-.pagination .disabled .next,
-.pagination>li>span.next:hover {
-	background-image: url(../img/store/rightarrow.png); 
-}
-
 .pagination-container .pagination-label {
-	display: none;
+	margin-right: 10px;
 }
 
 .navbar-categories .dropdown-toggle:after {
@@ -849,20 +813,6 @@ aside.col-md-pull-9 {
 .main {
 	margin-bottom: 45px;	
 }
-
-.sorting select,
-.items-page select {
-	background-image: url(../img/store/arrow_down.png);
-	background-repeat: no-repeat;
-	background-position: 98% 50%;
-    background-size: 3%;
-}
-
-.fa {
-	font-size: 16px;
-	margin-right: 10px;
-}
-
 
 @media (max-width: 480px) {
 	.partners {
@@ -917,13 +867,15 @@ aside.col-md-pull-9 {
 	    width: 39%; 
 	}
 	
-	.footer-container .col-sm-2.col-xs-4 {
+	.footer-container .col-sm-2 {
 		width: 12%;
 		padding: 0px;
 	}
-
+	
 	.sorting select,
 	.items-page select {
+		background-image: url(../img/store/arrow_down.png);
+	    background-repeat: no-repeat;
 	    background-position: 98% 50%;
 	    background-size: 2%;
 	}
@@ -955,6 +907,8 @@ aside.col-md-pull-9 {
 	
 	.sorting select,
 	.items-page select {
+		background-image: url(../img/store/arrow_down.png);
+	    background-repeat: no-repeat;
 	    background-position: 95% 50%;
 	    background-size: 5%;
 	}
@@ -1426,7 +1380,7 @@ li.open .dropdown-menu {
 	margin-top: 10px;
     display: block;
     left: -25%;
-    right: -70%;
+    right: -110%;
 }
 header .navigation-main{
 	margin-bottom: 10px;
