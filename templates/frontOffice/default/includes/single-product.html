@@ -84,55 +84,6 @@
                     <b>{$rating}</b> <span class="text-primary">{comment_stars value=$rating}</span>
                 </p> 
             {/if}
-            
-          <!--   {if $hasBtn == true}
-                {if $hasSubmit == true && $current_stock_content == "in_stock"}
-                    {form name="thelia.cart.add" }
-                    <form id="form-product-details{$product_id}" action="{url path="/cart/add" }" method="post" class="form-product">
-                        {form_hidden_fields}
-                        <input type="hidden" name="view" value="product">
-                        <input type="hidden" name="product_id" value="{$product_id}">
-                        {form_field field="append"}
-                            <input type="hidden" name="{$name}" value="1">
-                        {/form_field}
-
-                        {if $form_error}<div class="alert alert-error">{$form_error_message}</div>{/if}
-
-                        {form_field field='product_sale_elements_id'}
-                            <input type="hidden" class="pse-id" name="{$name}" value="{$PRODUCT_SALE_ELEMENT}" {$attr}>
-                        {/form_field}
-                        {form_field field="product"}
-                            <input id="{$label_attr.for}" type="hidden" name="{$name}" value="{$product_id}" {$attr} >
-                        {/form_field}
-
-                        <fieldset class="product-cart form-inline">
-                            {form_field field='quantity'}
-                                <div class="form-group group-qty hide {if $error}has-error{elseif $value != "" && !$error}has-success{/if}">
-                                    <label for="{$label_attr.for}">{$label}</label>
-                                    <input type="number" name="{$name}" id="{$label_attr.for}" class="form-control" value="{$value|default:1}" min="0" required>
-                                    {if $error }
-                                        <span class="help-block"><i class="fa fa-remove"></i> {$message}</span>
-                                    {elseif $value != "" && !$error}
-                                        <span class="help-block"><i class="fa fa"></i></span>
-                                    {/if}
-                                </div>
-                            {/form_field}
-                            <div>
-                                <div class="product-btn">
-                                    <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-shopping-cart"></i> {intl l="Add to cart"}</button>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
-                    {/form}
-                {else}
-                    <div>
-                        <div class="product-btn">
-                            <a href="{$URL nofilter}" class="btn btn-primary btn-block"><i class="fa fa-eye"></i> {intl l="View product"}</a>
-                        </div>
-                    </div>
-                {/if}
-            {/if} -->
         </div>
 
         {hook name="singleproduct.bottom" product={$product_id}}

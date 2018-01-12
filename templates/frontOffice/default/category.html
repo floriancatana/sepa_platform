@@ -61,50 +61,8 @@
 
             {hook name="category.content-top" category="$category_id"}
 
-           <!--  {if #category_display_detail# && $category_id}
-            <section class="category-description">
-                {loop name="category.description" type="category" id={$category_id} limit="1" }
-                    <h1 id="main-label" class="page-header">{category attr="title"}</h1>
-                    {loop name="category.image" type="image" source="category" source_id={$ID} width=218 height=146 resize_mode="borders"}
-                    <p><img itemprop="image" src="{$IMAGE_URL nofilter}" alt="{$TITLE}"></p>
-                    {/loop}
-                    {if $DESCRIPTION}
-                    <div class="description">
-                        {$DESCRIPTION nofilter}
-                    </div>
-                    {/if}
-                    {if $POSTSCRIPTUM}
-                    <small class="postscriptum">
-                        {$POSTSCRIPTUM}
-                    </small>
-                    {/if}
-                {/loop}
-            </section>
-            <hr/>
-            {/if}
- -->
-         <!--    {if #category_display_subcategories#}
-            {ifloop rel="subcategories"}
-                <div class="block-links">
-                    <div class="block-content">
-                        <ul>
-                            {loop name="subcategories" type="category" parent=$category_id}
-                                <li>
-                                    <a href="{$URL}">{$TITLE}</a>
-                                </li>
-                            {/loop}
-                        </ul>
-                    </div>
-                </div>
-            {/ifloop}
-            {/if} -->
-
             {ifloop rel="product_list"}
                 {$amount={count type="product" category=$category_id}}
-                <!-- <div class="toolbar toolbar-top" role="toolbar">
-                        <div class="sorter-container clearfix">
-                    </div>/.sorter 
-                </div>  -->
                 
             <div id="category-products">
                     <div class="products-content">

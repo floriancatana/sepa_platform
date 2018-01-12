@@ -29,7 +29,7 @@
     {$breadcrumbs = []}
     {loop type="product" name="product_breadcrumb" id=$product_id limit="1" with_prev_next_info="1"}
         {loop name="category_path" type="category-path" category={$DEFAULT_CATEGORY}}
-            {$breadcrumbs[] = ['title' => {$TITLE}, 'url'=> {$URL nofilter}]}
+            {$breadcrumbs[] = ['title' => {$TITLE}, 'url'=> {$URL nofilter}, 'detail_page' => 1]}
         {/loop}
         <!-- Remove smarty product title -->
         <!-- $breadcrumbs[] = ['title' => {$TITLE}, 'url'=> {$URL nofilter}] -->
