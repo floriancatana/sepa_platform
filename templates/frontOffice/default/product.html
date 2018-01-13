@@ -41,6 +41,7 @@
 {* Content *}
 {block name="main-content"}
     {if $product_id}
+<div class="">   
     <div class="line_marking"></div>
     <div class="main">
         {loop name="product.details" type="product" id=$product_id limit="1" with_prev_next_info="1" with_prev_next_visible="1"}
@@ -158,8 +159,8 @@
                         <p><a href="{$URL nofilter}" title="{intl l="More information about this brand"}"><span itemprop="brand">{$TITLE}</span></a></p>
                     {/loop}
 
-                    {if $POSTSCRIPTUM}<div class="short-description">
-                        <p>{$POSTSCRIPTUM}</p>
+                    {if $CHAPO}<div class="short-description">
+                        <p>{$CHAPO}</p>
                     </div>{/if}
                 </div>
 
@@ -247,13 +248,13 @@
                                 {if !{is_saved_in_wishlist product_id="$ID"}}
                                     <p>This product is not really in your wish list. To really add, click the button below.</p>
                                 <div class="form-group group-btn">
-                                    <a class="btn btn_add_to_cart btn-primary" href="{url path="/wishlist/add/$ID"}"><i class="fa fa-list-ul" aria-hidden="true"></i>{intl l="Add to wish list"}</a>
+                                    <a class="btn btn_add_to_cart btn-primary" href="{url path="/wishlist/add/$ID"}"><i class="fa fa-list-ul" aria-hidden="true"></i>{intl l="einer Liste hinzufügen"}</a>
                                 </div>
                                 {/if}
                             {/loop}
                         {else}
                         <div class="form-group group-btn">
-                            <a class="btn btn_add_to_cart btn-primary" href="{url path="/wishlist/add/$ID"}"><i class="fa fa-list-ul" aria-hidden="true"></i>{intl l="Add to wish list"}</a>
+                            <a class="btn btn_add_to_cart btn-primary" href="{url path="/wishlist/add/$ID"}"><i class="fa fa-list-ul" aria-hidden="true"></i>{intl l="einer Liste hinzufügen"}</a>
                         </div>
                             
                         {/if}
@@ -419,6 +420,7 @@
         {/loop}
 
     </div><!-- /.main -->
+</div>
     {else}
     <div class="main">
         <article id="content-main" class="col-main" role="main" aria-labelledby="main-label">

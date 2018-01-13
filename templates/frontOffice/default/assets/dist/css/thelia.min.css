@@ -123,6 +123,12 @@ li>a:hover{
 #products-upsell .products-grid .item:hover article {
 	background: none;
 }
+
+#products-offer .products-grid .item>article, 
+#products-related .products-grid .item>article, 
+#products-upsell .products-grid .item>article {
+	padding: 0px;
+}
 	
 	
 .block-default .block-content li a:focus, 
@@ -202,7 +208,7 @@ header .header {
 	margin: 10px;
 }
 
-.products-content li {
+.grid .products-content li {
 	padding: 0px;
 }
 
@@ -242,6 +248,41 @@ header .header {
     overflow: hidden;
     margin: 0px;
     color: #4d4d4d;
+}
+
+.list .item>article .product-info,
+.list .item>article .product-price{
+	line-height: 146px;
+	text-align: center;
+}
+
+.list .products-content>ul .item+.item {
+	padding-top: 0px;
+}
+
+.list .item>article .product-rating {
+	line-height: 146px;
+	padding-left: 0px;
+}
+
+.cart-rating {
+	text-align: center;
+	width: 100%;
+	line-height: initial;
+}	
+.cart-rating p {
+	margin: 0px;
+    display: initial;	
+}
+.cart-rating .cart-wish.row {
+	line-height: initial;
+}
+
+.list .products-content>ul .item>article .product-info .name,
+.list .products-content>ul .item>article .product-price .price-container ,
+.list .item>article .product-rating .cart-rating {
+	display: inline-block;
+    vertical-align: middle;
 }
 
 .products-content .item h3.name span:focus {
@@ -654,6 +695,7 @@ aside.col-md-pull-9 {
 .nav-breadcrumb {
 	margin: 0px;	
     background-color: #33383c;
+    margin-bottom: 40px;
 }
 
 .nav-breadcrumb .breadcrumb {
@@ -661,7 +703,6 @@ aside.col-md-pull-9 {
 	margin: 0px;
     padding: 0px;
     line-height: 35px;
-    margin-bottom: 40px;
 }
 
 .nav-breadcrumb .toolbar .sorter-container {
@@ -693,8 +734,16 @@ aside.col-md-pull-9 {
     margin-right: 10px;
 }
 
+.nav-breadcrumb .view-mode-btn .grid.active{
+	background-image: url(../img/store/grid_white.png);
+}
+
 .nav-breadcrumb .view-mode-btn .list {
 	background-image: url(../img/store/list.png); 
+}
+
+.nav-breadcrumb .view-mode-btn .list.active{
+	background-image: url(../img/store/list_white.png);
 }
 
 .nav-breadcrumb .view-mode-btn .list, 
@@ -711,12 +760,27 @@ aside.col-md-pull-9 {
     border: 0px;
 }
 
-.product-price .text-primary {
-    color: #4d4d4d;
+.grid .products-content>ul .item>article .product-rating {
+	width: 100%;
+	padding: 0px;
+    text-align: center;
+}
+
+.list .products-content>ul .item>article .product-image,
+.list #category-products .item>article .product-price .price-container {
+	margin-bottom: 0px;
+}
+
+.product-price .text-primary,
+.cart-rating .text-primary{
     font-size: 16px;
 }
 
-.product-price b {
+.text-primary {
+    color: #4d4d4d;
+}
+
+.product-rating b {
 	margin-right: 5px;
 }
 
@@ -862,10 +926,6 @@ aside.col-md-pull-9 {
 	margin-right: 10px;
 }
 
-.nav-breadcrumb .container {
-	padding: 0px;
-}
-
 .toolbar .pagination-container {
 	height: 50px;
 }
@@ -894,6 +954,10 @@ aside.col-md-pull-9 {
 
 .toolbar .sorter-container .view-mode>.view-mode-btn {
 	font-size: inherit;
+}
+
+.category_page {
+	margin: 0px;
 }
 
 @media (max-width: 480px) {
@@ -1510,28 +1574,16 @@ header .navigation-main{
 	width: 55px;
 	margin-right: 0px;
 }
-.page-product  .nav-breadcrumb{
-	background-color: #33383c ;
-	color: #fff;
-}
-.page-product nav.nav-breadcrumb{
-	padding-top: 5px;
-    padding-bottom: 5px;
-}
-.page-product  .nav-breadcrumb ul.breadcrumb{
-	background-color: unset;
-	margin-bottom: 0px;
-	padding-left: 8%;
-    padding-right: 8%;
-    font-weight: 600;
-    line-height:unset;
-}
-.page-product .nav-breadcrumb ul.breadcrumb li,
-.page-product .nav-breadcrumb ul.breadcrumb li a{
+
+.nav-breadcrumb ul.breadcrumb li,
+.nav-breadcrumb ul.breadcrumb li a{
 	color: #fff;
 	text-decoration: none;
 }
-.page-product .nav-breadcrumb .breadcrumb>li+li:before{
+.nav-breadcrumb ul.breadcrumb li a:hover {
+	color: #12b3a6;
+}
+.nav-breadcrumb .breadcrumb>li+li:before{
 	content: "\002F";
 	color: #fff;
 	padding: 0 2px;
@@ -1630,7 +1682,7 @@ header .navigation-main{
 }
 .page-product .product-cart .btn{
 	text-transform: none;
-	font-size: 16px !important;
+	font-weight: 500;
 	padding: 5px 25px 5px 5px !important;
 }
 .page-product .product-cart a.btn{

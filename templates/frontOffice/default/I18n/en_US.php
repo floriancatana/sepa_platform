@@ -11,7 +11,7 @@ return array(
     'A summary of your order has been sent to the following address' => 'A summary of your order has been sent to the following address',
     'Account' => 'Account',
     'Add a new address' => 'Add a new address',
-    'Add to cart' => 'in den WARENKORB',
+    'Add to cart' => 'in den Warenkorb',
     'Additional Info' => 'Additional Info',
     'Address' => 'Address',
     'Address %nb' => 'Address %nb',
