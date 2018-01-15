@@ -64,7 +64,7 @@
 
             {hook name="product.top" product={$ID}}
 
-            <section id="product-top-details" class="col-sm-12 row">
+            <section id="product-top-details" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row">
                 <h1 class="name col-sm-12"><span itemprop="name">{$TITLE}</span><span id="pse-name" class="pse-name"></span></h1>
                 <!-- {if $REF}<span itemprop="sku" class="sku"><span id="pse-ref">{$REF}</span></span>{/if} -->
                 <h2 class="name col-sm-12"><span itemprop="name"> Static Text, Clarify what this sould be</span><span id="pse-name" class="pse-name"></span></h2>
@@ -74,16 +74,17 @@
                {hook name="product.gallery" product={$ID}}
             {/ifhook}
             {elsehook rel="product.gallery"}
-            <section id="product-gallery" class="col-sm-6 row">
+            <section id="product-gallery" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 row">
                 {ifloop rel="image.carousel"}
-                <div id="product-thumbnails" class="carousel slide col-sm-3" style="position:relative;">
+                <div id="product-thumbnails" class="carousel slide" style="position:relative;">
                     <div class="carousel-inner">
                         <div class="item active">
                             <ul class="list-inline row">
                                 {loop name="image.carousel" type="image" product={$ID} width="560" height="445" resize_mode="borders" limit="3"}
-                                <li class="col-sm-12">
+                                <li class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <a href="{$IMAGE_URL nofilter}" class="thumbnail {if $LOOP_COUNT == 1}active{/if}">
-                                        {loop type="image" name="image.thumbs" id={$ID} product="$OBJECT_ID" width="185" height="133" resize_mode="borders"}
+                                        
+                                        {loop type="image" name="image.thumbs" id={$ID} product="$OBJECT_ID" width="132" height="95" resize_mode="borders"}
                                             <img src="{$IMAGE_URL nofilter}" alt="{$TITLE}">
                                         {/loop}
                                     </a>
@@ -114,7 +115,7 @@
                 </div>
                 {/ifloop}
                 {ifloop rel="image.main"}
-                <figure class="product-image col-sm-9">
+                <figure class="product-image">
                     {loop type="image" name="image.main" product={$ID} width="560" height="445" resize_mode="borders" limit="1"}
                         <img src="{$IMAGE_URL nofilter}" alt="{$TITLE}" class="img-responsive" itemprop="image" data-toggle="magnify">
                     {/loop}
@@ -122,7 +123,7 @@
                 {/ifloop}
             </section>
             {/elsehook}
-            <section id="product-details" class="col-sm-6">
+            <section id="product-details" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 {hook name="product.details-top" product={$ID}}
 
                 <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
