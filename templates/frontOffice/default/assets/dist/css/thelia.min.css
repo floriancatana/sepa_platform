@@ -499,6 +499,10 @@ header .header {
     border-left: 0px;
 }
 
+.footer-container {
+	margin-top: 20px;	
+}
+
 .footer-container #links-footer-body .row {
 	margin: 0px;
 }
