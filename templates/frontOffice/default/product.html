@@ -429,15 +429,18 @@
         </article>
     </div><!-- /.layout -->
     {/if}
-    
-    {loop name="products" type="keyword_product" prod_id="{$product_id}" limit="1" association_order="manual_reverse"}
-        <h3>Similar products</h3>
-    {/loop}
-    <ul class="list-unstyled row">        
-    {loop name="products" type="keyword_product" prod_id="{$product_id}" association_order="manual_reverse"}
-        {include file="includes/single-product.html" hasBtn=true hasDescription=true hasQuickView=true width="218" height="146"}
-    {/loop}
-    </ul>
+    <div class="products-related grid">
+    <div class="products-heading">
+        <h2>{intl l="ÄHNLICHE PRODUKTE"}</h2>
+    </div>
+    <div class="products-content">
+    	<ul class="products-grid list-unstyled row">        
+    		{loop name="products" type="keyword_product" prod_id="{$product_id}" association_order="manual_reverse"}
+        		{include file="includes/single-product.html" hasBtn=true hasDescription=true hasQuickView=true width="218" height="146"}
+    		{/loop}
+    	</ul>
+    </div>
+    </div>
    {hook name="product.bottom" product={$ID}}
 {/block}
 
