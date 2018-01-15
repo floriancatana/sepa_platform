@@ -1415,6 +1415,9 @@ li.cart-container{
 .cart_holder ul.navbar-cart .cart-container .cart-content #form-cart-mini .empty a.btn-primary,
 .cart_holder ul.navbar-cart .cart-container .cart-content #form-cart-mini .empty a.btn-default{
 	padding-right: inherit;
+	padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 16px;
 	border-left: none;
 	color:#fff;
 }
@@ -1697,11 +1700,34 @@ header .navigation-main{
 	-webkit-box-shadow: 5px 5px 2px #ccc;
 	-khtml-box-shadow: 5px 5px 2px #ccc;
 }
-.page-product #product #product-gallery #product-thumbnails img{
-	margin-bottom: 16px;
+@media only screen and (min-width: 1080px){
+	.page-product #product #product-gallery #product-thumbnails img{
+		margin-bottom: 16%;
+	}
+}
+@media only screen and (max-width: 1079px){
+	.page-product #product #product-gallery #product-thumbnails img{
+		margin-bottom: 11%;
+	}
+}
+.page-product #product #product-gallery #product-thumbnails ul.list-inline{
+	display: block;
+    height: auto;
 }
 .page-product #product #product-gallery #product-thumbnails .carousel-inner{
 	width: 100%;
+}
+.page-product #product #product-gallery #product-thumbnails,
+.page-product #product #product-gallery .product-image{
+	position: relative;
+    display: block;
+    float: left;
+}
+.page-product #product #product-gallery #product-thumbnails{
+	width: 25%;
+}
+.page-product #product #product-gallery .product-image{
+	width: 75%
 }
 .page-product #product-details .product-price .price-container #pse-promo #special-price span{
 	display: inline-block;
@@ -1820,6 +1846,16 @@ header .navigation-main{
 .bootbox .modal-dialog .modal-body button.btn-default,
 .bootbox .modal-dialog .modal-body .btn-primary{
 	color: #fff;
+}
+.bootbox .modal-dialog #form-product-details #pse-submit,
+.bootbox .modal-dialog #form-product-details .btn_add_to_cart{
+	border: none;
+	margin-top: 5px;
+	padding-top: 5px;
+    padding-bottom: 5px;
+}
+.bootbox .modal-dialog #form-product-details #pse-submit{
+	background-color: #0d857b;
 }
 /*End Modal dialog changes*/
 /*End Product detail page*/
