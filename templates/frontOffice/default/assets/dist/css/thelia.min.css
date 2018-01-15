@@ -1634,7 +1634,7 @@ header .navigation-main{
 	display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 360px;
+    min-height: 275px;
 }
 .page-product #product #product-details .group-qty .form-control{
 	width: 55px;
@@ -1702,20 +1702,22 @@ header .navigation-main{
 }
 @media only screen and (min-width: 1080px){
 	.page-product #product #product-gallery #product-thumbnails img{
-		margin-bottom: 16%;
+		margin-bottom: 5%;
 	}
 }
 @media only screen and (max-width: 1079px){
 	.page-product #product #product-gallery #product-thumbnails img{
-		margin-bottom: 11%;
+		margin-bottom: 10%;
 	}
 }
 .page-product #product #product-gallery #product-thumbnails ul.list-inline{
 	display: block;
     height: auto;
+    padding-left: 15px;
 }
 .page-product #product #product-gallery #product-thumbnails .carousel-inner{
 	width: 100%;
+	padding-right: 5px;
 }
 .page-product #product #product-gallery #product-thumbnails,
 .page-product #product #product-gallery .product-image{
@@ -1724,10 +1726,10 @@ header .navigation-main{
     float: left;
 }
 .page-product #product #product-gallery #product-thumbnails{
-	width: 25%;
+	width: 28%;
 }
 .page-product #product #product-gallery .product-image{
-	width: 75%
+	width: 68%;
 }
 .page-product #product-details .product-price .price-container #pse-promo #special-price span{
 	display: inline-block;
