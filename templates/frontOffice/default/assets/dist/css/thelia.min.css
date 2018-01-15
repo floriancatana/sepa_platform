@@ -1679,7 +1679,10 @@ header .navigation-main{
 	display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 275px;
+    min-height: 305px;
+}
+#product #product-details .product-cart{
+	margin-bottom: 0px !important;
 }
 .page-product #product #product-details .group-qty .form-control{
 	width: 55px;
