@@ -366,7 +366,7 @@
                 </div>
                 {/hookblock}
             </section>
-            {hook name="product.bottom" product={$ID}}
+         
 
 {* javascript confiuguration to display pse *}
 {$pse=[]}
@@ -437,7 +437,7 @@
         {include file="includes/single-product.html" hasBtn=true hasDescription=true hasQuickView=true width="218" height="146"}
     {/loop}
     </ul>
-
+   {hook name="product.bottom" product={$ID}}
 {/block}
 
 {block name="stylesheet"}
