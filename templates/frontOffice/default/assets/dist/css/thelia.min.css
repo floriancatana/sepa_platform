@@ -784,7 +784,8 @@ aside.col-md-pull-9 {
 	margin-right: 5px;
 }
 
-.pagination .criteria-pagination {
+.pagination .criteria-pagination,
+.pagination>li>a {
 	line-height: 30px;	
 }
 
@@ -798,7 +799,13 @@ aside.col-md-pull-9 {
 .pagination>li>a:focus:active, 
 .pagination>li>a:hover:active, 
 .pagination>li>span:focus:active, 
-.pagination>li>span:hover:active {
+.pagination>li>span:hover:active,
+.pagination>li>a:focus, 
+.pagination>li>a:hover, 
+.pagination>li>span:focus,
+.pagination>li>span:hover,
+.pagination>li>a, 
+.pagination>li>span {
 	background-color: unset;
     color: #7a7a7a;
     box-shadow: unset;
@@ -819,13 +826,25 @@ aside.col-md-pull-9 {
 .pagination-sm>li:nth-child(2)>span:hover:active,
 .pagination-sm>li:first-child>span:hover,
 .pagination-sm>li:last-child>span:hover,
-.pagination-sm>li:nth-child(2)>span:hover {
+.pagination-sm>li:nth-child(2)>span:hover,
+.pagination-sm>li:first-child>a,
+.pagination-sm>li:last-child>a,
+.pagination-sm>li:nth-child(2)>a,
+.pagination-sm>li:first-child>a:hover:active,
+.pagination-sm>li:last-child>a:hover:active,
+.pagination-sm>li:nth-child(2)>a:hover:active,
+.pagination-sm>li:first-child>a:hover,
+.pagination-sm>li:last-child>a:hover,
+.pagination-sm>li:nth-child(2)>a:hover {
 	border: 0px;
 }
 
 .pagination>.active>span,
+.pagination>.active>a,
 .pagination>li>span:hover,
-.pagination>.active>span:hover {
+.pagination>li>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:hover {
 	font-weight: 700;
 }
 
@@ -850,7 +869,9 @@ aside.col-md-pull-9 {
 .pagination .next,
 .pagination .disabled .next,
 .pagination>li>span.next:hover,
-.pagination>li>span.prev:hover {
+.pagination>li>span.prev:hover,
+.pagination>li>a.next:hover,
+.pagination>li>a.prev:hover  {
     background-position: center;
     background-size: 40%;
     width: 30px;
@@ -884,13 +905,15 @@ aside.col-md-pull-9 {
 
 .pagination .prev,
 .pagination .disabled .prev,
-.pagination>li>span.prev:hover {
+.pagination>li>span.prev:hover,
+.pagination>li>a.prev:hover {
 	background-image: url(../img/store/leftarrow.png);
 }
 
 .pagination .next,
 .pagination .disabled .next,
-.pagination>li>span.next:hover {
+.pagination>li>span.next:hover,
+.pagination>li>a.next:hover {
 	background-image: url(../img/store/rightarrow.png); 
 }
 
@@ -958,6 +981,46 @@ aside.col-md-pull-9 {
 
 .category_page {
 	margin: 0px;
+}
+
+.page-search #category-products {
+	margin: 15px;
+}
+
+.navbar .navbar-cart .dropdown-menu.cart-content, 
+.navbar .navbar-customer .dropdown-menu.cart-content {
+	width: 375px;
+}
+
+.table-cart thead th.subprice, 
+.table-order thead th.subprice,
+.table-cart tbody td.subprice .price, 
+.table-order tbody td.subprice .price,
+.btn-link,
+.btn-default,
+.price,
+#payment-success.panel .panel-body>h3 {
+	color: #12b3a6;
+}
+
+.label-primary {
+	background-color: #12b3a6;
+}
+
+.btn-default.active, 
+.btn-default:active, 
+.btn-default:hover, 
+.open>.dropdown-toggle.btn-default {
+	color: #0d857b;
+}
+
+.checkout-progress .btn-step.active {
+	background: #666;
+}
+
+#main-label.page-header small,
+.toolbar .amount {
+	color: #4d4d4d;
 }
 
 @media (max-width: 480px) {
