@@ -269,29 +269,6 @@
                 </div>
             </aside><!-- #products-upsell -->
         {/ifloop}
-
-        <aside id="products-upsell" class="grid" role="complementary" aria-labelledby="products-upsell-label">
-            <div class="products-heading">
-                <h3 id="products-upsell-label">{intl l="Wishlist"}</h3>
-            </div>
-            {loop name="wishlist" type="wishlist"}
-                {loop name="products-in-wishlist" type="product" id="{$WISHLIST_PRODUCT_LIST}"}
-                <div style="    border-style: solid;
-                                border-color: #e8e8e8;
-                                border-width: 3px; margin-bottom: 3px;">
-                    <p>{$DESCRIPTION|truncate:100 nofilter}</p>
-                    <div class="products-content">
-                        <ul class="products-grid list-unstyled row">
-                                {include file="includes/single-product.html" colClass="col-md-2" product_id=$ID hasBtn=false hasDescription=true width="218" height="146"}
-                        </ul>
-                    </div>
-                    <div class="form-group group-btn">
-                        <a class="btn btn_add_to_cart btn-primary" href="{url path="/wishlist/remove/$ID"}">{intl l="Remove from wish list"}</a>
-                    </div>
-                </div>
-                {/loop}
-            {/loop}
-        </aside>
         
     </div>
 {/block}

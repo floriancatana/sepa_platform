@@ -1067,7 +1067,9 @@ aside.col-md-pull-9 {
 	background: #12b3a6;
 }
 
-
+#products-upsell .products-heading h3 {
+	color: #12b3a6;
+}
 @media (max-width: 480px) {
 	.partners {
 	    display: none !important;
@@ -1920,7 +1922,7 @@ header .navigation-main{
 
 /*FAQ*/
 #faqs dt, #faqs dd { padding: 0 0 0 50px }
-#faqs dt { font-size:1.5em; color: black; cursor: pointer; height: 37px; line-height: 37px; margin: 0 0 15px 25px;}
+#faqs dt { font-size:20px; color: black; cursor: pointer; height: 37px; line-height: 37px; margin: 0 0 15px 25px;}
 #faqs dd { font-size: 1em; margin: 0 0 20px 25px}
 #faqs dt { background: url("../img/store/selectarrow.png") no-repeat left; background-size: contain;}
 #faqs .expanded { background: url("../img/store/selectedarrow.png") no-repeat left; background-size: contain;}
@@ -1936,6 +1938,13 @@ header .navigation-main{
 .static-pages h3 {
 	font-weight: 600;	
 	color: #000;
+	font-size: 20px;
+}
+
+.static-pages .title {	
+	color: #12b3a6;
+	text-transform: uppercase;
+	margin-bottom: 30px;
 }
 
 .static-pages h2 {
