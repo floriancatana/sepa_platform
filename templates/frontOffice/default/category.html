@@ -38,7 +38,7 @@
 {if $category_id}
     {$breadcrumbs = []}
     {loop name="category_path" type="category-path" category=$category_id}
-        {$breadcrumbs[] = ['title' => {$TITLE}, 'url'=> {$URL nofilter}]}
+        {$breadcrumbs[] = ['title' => {$TITLE}, 'url'=> {$URL nofilter}, 'category_page' => 1]}
     {/loop}
 {/if}
 {/block}
