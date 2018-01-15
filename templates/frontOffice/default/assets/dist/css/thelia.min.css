@@ -944,7 +944,7 @@ aside.col-md-pull-9 {
     background-size: 3%;
 }
 
-.fa {
+.footer-container .fa{
 	font-size: 16px;
 	margin-right: 10px;
 }
