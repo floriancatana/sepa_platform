@@ -31,4 +31,13 @@ class GeneralImportExport extends BaseModule
     //    ]);
         return true;
     }
+    
+    public function postDeactivation(ConnectionInterface $con = null)
+    {
+        $database = new Database($con);
+        $database->insertSql(null, [
+            __DIR__ . "/Config/thelia.sql"
+        ]);
+        return true;
+    }  
 }
