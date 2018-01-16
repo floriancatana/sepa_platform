@@ -12,7 +12,7 @@
 		
 		{hook name="singleproduct.top" product="{$product_id}"}
 
-        <a href="{$URL nofilter}" itemprop="url" tabindex="-1" class="product-image{if $hasQuickView == true} product-quickview{/if} col-sm-3">
+        <a href="{$URL nofilter}" itemprop="url" tabindex="-1" class="product-image{if $hasQuickView == true} product-quickview{/if} col-xs-3">
             {loop name="product_thumbnail" type="image" product=$product_id width="{$width}" height="{$height}" resize_mode="borders" limit="1"}
                 <img itemprop="image" src="{$IMAGE_URL nofilter}" class="img-responsive" alt="{$productTitle}">
             {/loop}
@@ -21,7 +21,7 @@
             {/elseloop}
         </a>
 
-        <div class="product-info col-sm-3">
+        <div class="product-info col-xs-3">
             <h2 class="name"><a href="{$URL nofilter}"><span itemprop="name">{$productTitle}</span></a></h2>
             <!-- {if $hasDescription}
             <div class="description" itemprop="description">
@@ -40,7 +40,7 @@
             {/if}
         {/if}
 
-        <div class="product-price col-sm-3">
+        <div class="product-price col-xs-3">
             <div class="price-container row" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                 <meta itemprop="category" content="{category attr="title"}">
                 {* List of condition : NewCondition, DamagedCondition, UsedCondition, RefurbishedCondition *}
@@ -66,8 +66,8 @@
                 {/if}
             </div>
         </div>
-
-                    <div class="product-rating col-sm-3">
+		
+		<div class="product-rating col-xs-3">
 			<div class="cart-rating">
                     {if $breadcrumbs[0].title || $smarty.get.category_id || $smarty.get.q}
 	                {$rating={meta meta="COMMENT_RATING" key="product" id="$ID"}}

@@ -260,7 +260,8 @@ header .header {
 }
 
 .list .item>article .product-info,
-.list .item>article .product-price{
+.list .item>article .product-price,
+.list .item>article .product-image{
 	line-height: 146px;
 	text-align: center;
 }
@@ -289,7 +290,8 @@ header .header {
 
 .list .products-content>ul .item>article .product-info .name,
 .list .products-content>ul .item>article .product-price .price-container ,
-.list .item>article .product-rating .cart-rating {
+.list .item>article .product-rating .cart-rating,
+.list .item>article .product-image img{
 	display: inline-block;
     vertical-align: middle;
 }
@@ -312,7 +314,7 @@ header .header {
 	text-align: center;
     margin-top: 20px;
     border-bottom: 3px solid #33383c;
-    line-height: 11px;
+    height: 32px;
 }
 
 .carousel_controls .carousel-control.left,
@@ -1188,6 +1190,10 @@ aside.col-md-pull-9 {
 	.grid #category-products ul {
 		margin-left: 0px;
 	}
+	
+	.nav-breadcrumb .toolbar .view-mode>.view-mode-btn .list {
+		display: none;
+	}
 }
 
 @media (min-width: 992px ) {
@@ -1229,6 +1235,10 @@ aside.col-md-pull-9 {
 	.header_wrapper .col-1{
 		padding-right: 0px;
 	}
+	
+	.list .item {
+		margin-left: 0px;
+	}
 }
 
 @media (min-width: 1200px) {
@@ -1266,6 +1276,21 @@ aside.col-md-pull-9 {
 	}
 }
 
+@media (max-width: 1200px) { 
+	.list .item>article .product-price,
+	.list .item>article .product-image {
+		width: 16.66666667%;
+	}
+	
+	.list .item>article .product-image img {
+		padding: 0px;
+	}
+	
+	.list .item>article .product-rating {
+		width: 33.33333333%;
+		padding-left: 15px;
+	}
+}
 /* Custom Code Remus */
 .header_wrapper .header_section_1{
 	padding-right: 0px;
@@ -1304,7 +1329,7 @@ aside.col-md-pull-9 {
 }
 
 .hotline_content {
-	margin: 0px;	
+	margin-right: 0px;	
 }
 
 .hotline_content .glyphicon-earphone{
