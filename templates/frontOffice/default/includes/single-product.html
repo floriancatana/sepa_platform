@@ -53,16 +53,16 @@
                     {assign var="combination_count" value={count type="product_sale_elements" promo="1" product=$ID}}
                     <span class="special-price  {if $SHOW_ORIGINAL_PRICE} col-xs-6 {else} col-xs-12 {/if} "><span itemprop="price" class="price-label">{intl l="Special Price:"} </span><span class="price">
                         {if $combination_count > 1}
-                            {intl l="From %price" price={format_money number=$BEST_TAXED_PRICE}}
+                            {intl l="From %price" price={format_money number=$BEST_TAXED_PRICE}|replace:'.':','}
                         {else}
-                            {format_money number=$BEST_TAXED_PRICE}
+                            {{format_money number=$BEST_TAXED_PRICE}|replace:'.':','}
                         {/if}
                     </span></span>
                     {if $SHOW_ORIGINAL_PRICE}
-                    <span class="old-price col-xs-6"><span class="price-label">{intl l="Regular Price:"} </span><span class="price">{format_money number=$TAXED_PRICE}</span></span>
+                    <span class="old-price col-xs-6"><span class="price-label">{intl l="Regular Price:"} </span><span class="price">{{format_money number=$TAXED_PRICE}|replace:'.':','}</span></span>
                     {/if}
                 {else}
-                    <span class="regular-price col-xs-12"><span itemprop="price" class="price">{format_money number=$BEST_TAXED_PRICE}</span></span>
+                    <span class="regular-price col-xs-12"><span itemprop="price" class="price">{{format_money number=$BEST_TAXED_PRICE}|replace:'.':','}</span></span>
                 {/if}
             </div>
         </div>

@@ -138,9 +138,9 @@
                         <div id="pse-promo">
                             <div class="special-price">
                                 <span class="price-label">{intl l="Special Price:"} {currency attr="code"}</span>
-                                <span class="prince_value">{$TAXED_PROMO_PRICE}</span>
+                                <span class="prince_value">{$TAXED_PROMO_PRICE|replace:'.':','}</span>
                             </div>
-                            <meta itemprop="price" content="{$TAXED_PROMO_PRICE}">
+                            <meta itemprop="price" content="{$TAXED_PROMO_PRICE|replace:'.':','}">
                         </div>
                     </div>
                     <div class="availability">
