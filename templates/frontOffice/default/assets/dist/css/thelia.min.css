@@ -308,6 +308,37 @@ header .header {
 	text-transform: uppercase;
 }
 
+.carousel_controls {
+	text-align: center;
+    margin-top: 20px;
+    border-bottom: 3px solid #33383c;
+    line-height: 11px;
+}
+
+.carousel_controls .carousel-control.left,
+.carousel_controls .carousel-control.right {
+	background: none;
+	position: relative;
+	background-position: center;
+    background-size: 40%;
+    width: 30px;
+    height: 30px;
+    background-color: #33383c;
+    background-repeat: no-repeat;
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+    opacity: 1;
+}
+
+.carousel_controls .carousel-control.left {
+	background-image: url(../img/store/leftarrow.png);
+}
+
+.carousel_controls .carousel-control.right {
+	background-image: url(../img/store/rightarrow.png);
+}
+
 .form-group.wish-list {
 	margin-bottom: 0px;
 }
@@ -1271,6 +1302,11 @@ aside.col-md-pull-9 {
 	padding-top: 1.2%;
 	padding-bottom: 0.3%;
 }
+
+.hotline_content {
+	margin: 0px;	
+}
+
 .hotline_content .glyphicon-earphone{
 	color: black;
 	line-height: 1.2em;
