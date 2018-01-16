@@ -85,7 +85,7 @@ jQuery(function($){
             type: "GET",
             data: search_form.serialize()
         }).done(function(data) {
-            $(".products-content").html(data);
+            $("#category-products .products-content").html(data);
             $(".amount").html($("#total-search-results").html());
 
             $('.criteria-pagination').on('click', function(e) {
