@@ -1103,11 +1103,24 @@ aside.col-md-pull-9 {
 #products-upsell .products-heading h3 {
 	color: #12b3a6;
 }
+
+#products-new .carousel-inner {
+	overflow: initial;
+}
+
 @media (max-width: 480px) {
 	.partners {
 	    display: none !important;
 	}
 	
+	#products-new li {
+		margin: 0px;
+		margin-bottom: 20px;
+	}
+	
+	.grid .products-content>ul .item {
+		margin: 0px 0px 20px;
+	}
 }
 
 @media (min-width: 450px) {
