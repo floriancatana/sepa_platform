@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<config xmlns="http://thelia.net/schema/dic/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://thelia.net/schema/dic/config http://thelia.net/schema/dic/config/thelia-1.0.xsd">
+    <import_categories>
+        <import_category id="thelia.import.features">
+            <title locale="fr_FR">features</title>
+            <title locale="en_US">Features</title>
+            <title locale="de_DE">Features</title>
+        </import_category>
+    </import_categories>
+    <imports>
+        <import id="thelia.import.feature" class="SepaImporter\Import\FeatureImport"
+                category_id="thelia.import.features">
+            <import_descriptive locale="de_DE">
+                <title>Attribute Importer</title>
+                <description>
+                    <![CDATA[
+                    File Benötigt:
+                    <ul>
+                        <li>id: Feature iD</li>
+                        <li>locale: Feature locale</li>
+                        <li>title: Feature title</li>
+                        <li>description: Feature description</li>
+                    </ul>
+                    ]]>
+                </description>
+            </import_descriptive>
+        </import>
+        <import id="thelia.import.feature" class="SepaImporter\Import\ProductFeature"
+                category_id="thelia.import.features">
+            <import_descriptive locale="de_DE">
+                <title>Connect Products with Features</title>
+                <description>
+                    <![CDATA[
+                    File Benötigt:
+                    <ul>
+                        <li>id: product_feature id</li>
+                        <li>product id</li>
+                        <li>feature id</li>
+                        <li>feature_av_id</li>
+                        <li>free_text_value</li>
+                    </ul>
+                    ]]>
+                </description>
+            </import_descriptive>
+        </import>
+        <import id="thelia.import.product" class="SepaImporter\Import\ProductImport"
+                category_id="thelia.import.products">
+            <import_descriptive locale="de_DE">
+                <title>Product Importer</title>
+                <description>
+                    <![CDATA[
+                    File Benötigt:
+                    <ul>
+                        <li>materialnummer (Artikelnummer)</li>
+                        <li>EAN</li>
+                        <li>Brand(Text)</li>
+                        <li>Template</li>
+                        <li>Features</li>
+                    </ul>
+                    ]]>
+                </description>
+            </import_descriptive>
+        </import>
+        <import id="thelia.import.price.gp" class="SepaImporter\Import\GenericProductImport"
+                category_id="thelia.import.products">
+            <import_descriptive locale="en_US">
+                <title>Import Full Product </title>
+                <description>
+				  <![CDATA[
+                    Importer.2 supports the following structure:</br>
+                    Produkt_id, Extern_id, Ref, Marke_id, Kategorie_id, Template_id, Produkt_titel, Kurze_beschreibung, Beschreibung, Postscriptum, Meta_titel, 
+                    Meta_beschreibung, Meta_keywords, Menge, Ist_in_Angebot, Ist_neu, Gewicht, EAN_code, Bild_name, Bild_titel, Bild_beschreibung,
+					Bild_kurz_beschreibung, Bild_postscriptum, Bild_file, Price, Promo_price, Listen_price, Ek_preis_sht, Ek_preis_gc, Ek_preis_oag, 
+					Ek_preis_holter, Preis_reuter, Vergleich_ek, Aufschlag</br>
+					
+                    Indications:
+                    <ul>
+                        <li>Decimal numbers must use "." as separator : 12.34</li>
+                        <li>Values are always numbers(even constraint values)</li>
+                        <li>"False" and "true" must be replaced with 0 and 1</li>
+                    </ul>
+                    ]]>
+                </description>
+            </import_descriptive>
+            <import_descriptive locale="de_DE">
+                <title>Gesamte Produkten importieren </title>
+                <description>
+				  <![CDATA[
+                    Importer.2 supports the following structure:</br>
+                    Produkt_id, Extern_id, Ref, Marke_id, Kategorie_id, Template_id, Produkt_titel, Kurz_beschreibung, Beschreibung, Postscriptum, Meta_titel, 
+                    Meta_beschreibung, Meta_keywords, Menge, Ist_in_Angebot, Ist_neu, Gewicht, EAN_code, Bild_name, Bild_titel, Bild_beschreibung,
+					Bild_kurz_beschreibung, Bild_postscriptum, Price, Promo_price, Listen_price, Ek_preis_sht, Ek_preis_gc, Ek_preis_oag, 
+					Ek_preis_holter, Preis_reuter, Vergleich_ek, Aufschlag</br>
+					
+					Indications:
+                    <ul>
+                        <li>Decimal numbers must use "." as separator : 12.34</li>
+                        <li>Values are always numbers(even constraint vales)</li>
+                        <li>"False" and "true" must be replaced with 0 and 1</li>
+                    </ul>
+                    ]]>
+                </description>
+            </import_descriptive>
+        </import>
+        <import id="thelia.import.price.hf"
+                class="SepaImporter\Import\ProductVendorPriceImport"
+                category_id="thelia.import.products">
+            <import_descriptive locale="en_US">
+                <title>Import ek prices excluding taxes</title>
+                <description>
+                    <![CDATA[
+                    Your file must have the following columns:
+                    <ul>
+                        <li>id: The id of your product sale elements </li>
+                        <li>price: The price excluding taxes of the product attribute combinations</li>
+                    </ul>
+                    ]]>
+                </description>
+            </import_descriptive>
+            <import_descriptive locale="de_DE">
+                <title>Preis importieren</title>
+                <description>
+                    <![CDATA[
+                    Your file must have the following columns:
+                    <ul>
+                        <li>id: The id of your product sale elements </li>
+                        <li>price: The price excluding taxes of the product attribute combinations</li>
+                        <li>ek_price_sht</li>
+                        <li>ek_price_gc</li>
+                    </ul>
+
+                    ]]>
+                </description>
+            </import_descriptive>
+        </import>
+    </imports>
+</config>

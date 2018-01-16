@@ -14,7 +14,7 @@
 
                         <div class="carousel-caption">
                             {if $TITLE}<h3>{$TITLE}</h3>{/if}
-                            {if $DESCRIPTION}{$DESCRIPTION nofilter}{/if}
+                            {if $DESCRIPTION}<div class="slide_description">{$DESCRIPTION nofilter}</div>{/if}
                         </div>
                     </figure>
                     {$sliders=$LOOP_COUNT}

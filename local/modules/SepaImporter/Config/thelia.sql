@@ -1,0 +1,2 @@
+DELETE FROM `import`
+WHERE 1;
