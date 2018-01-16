@@ -1,5 +1,5 @@
-DELETE FROM `thelia`.`export`
+DELETE FROM `export`
 WHERE 1;
 
-DELETE FROM `thelia`.`import`
+DELETE FROM `import`
 WHERE 1;
