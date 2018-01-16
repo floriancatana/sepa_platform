@@ -1678,6 +1678,15 @@ header .navigation-main{
 	width: 22px;
 	height: 22px;
 }
+.carousel-caption{left: 35%; 
+	padding-bottom: 7%;
+	text-align: left;
+    font-family: inherit;
+    font-size: 3.2vw;
+    font-weight: bolder;
+    line-height: 120%;
+    color: #fff;
+}
 /*End Carousel Overrides*/
 /*End Main Menu Code*/
 
