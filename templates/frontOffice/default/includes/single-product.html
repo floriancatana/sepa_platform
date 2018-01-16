@@ -67,9 +67,9 @@
             </div>
         </div>
 
-		<div class="product-rating col-sm-3">
+                    <div class="product-rating col-sm-3">
 			<div class="cart-rating">
-				 {if $breadcrumbs[0].title }
+                    {if $breadcrumbs[0].title || $smarty.get.category_id || $smarty.get.q}
 	                {$rating={meta meta="COMMENT_RATING" key="product" id="$ID"}}
 	                {function name=comment_stars empty=1}
 	                    {$star='<span class="glyphicon glyphicon-star"></span>'}
