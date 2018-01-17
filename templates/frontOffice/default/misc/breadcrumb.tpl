@@ -30,7 +30,7 @@
        
 		{$product_total={count type="search_product" complex="true" feature_availability=$features attribute_availability=$attributes category=$category_id brand=$brands min_price=$price_min max_price=$price_max category_id=$category_id min_stock=$in_stock new=$new promo=$promo limit="100000" depth="10"}}
       
-    	<ul class="breadcrumb col-xs-6" itemscope itemtype="http://schema.org/BreadcrumbList" >
+    	<ul class="breadcrumb col-xs-7" itemscope itemtype="http://schema.org/BreadcrumbList" >
        		<li itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement" ><a href="{navigate to="index"}" itemprop="item">
             	<span itemprop="name">{intl l="Home"}</span></a>
             	<meta itemprop="position" content="1">
@@ -54,7 +54,7 @@
         	{/foreach}
     	</ul>
     	{if $breadcrumbs[0].category_page || $breadcrumbs[0].search_page }
-    	<div class="toolbar toolbar-top col-xs-6" role="toolbar">
+    	<div class="toolbar toolbar-top col-xs-5" role="toolbar">
     		<div class="sorter-container clearfix">
             	<span class="view-mode">
                 	<span class="view-mode-label sr-only">{intl l="Ansicht"}</span>
