@@ -529,7 +529,7 @@ header .header {
 	width: 30%;
 	text-transform: uppercase;
 	font-size: 12px;
-	height: 34px;
+	height: 32px;
 	padding: 0px;
     text-align: center;
 	border: 1px solid #000;
@@ -2072,11 +2072,35 @@ header .navigation-main{
 /*End Custom Code Remus*/
 
 /*FAQ*/
-#faqs dt, #faqs dd { padding: 0 0 0 50px }
-#faqs dt { font-size:20px; color: black; cursor: pointer; height: 37px; line-height: 37px; margin: 0 0 15px 25px;}
-#faqs dd { font-size: 1em; margin: 0 0 20px 25px}
-#faqs dt { background: url("../img/store/selectarrow.png") no-repeat left; background-size: contain;}
-#faqs .expanded { background: url("../img/store/selectedarrow.png") no-repeat left; background-size: contain;}
+#faqs dd { 
+	padding: 0 0 0 45px;
+}
+
+#faqs dt { 
+	font-size: 18px; 
+	color: black; 
+	cursor: pointer; 
+	height: 37px; 
+	line-height: 37px; 
+	margin: 0px;
+}
+
+#faqs dt .arrow-img {
+    background: url(../img/store/selectarrow.png) no-repeat center bottom;
+    background-size: 75%;
+    height: 30px;
+    width: 30px;
+    float: left;
+    margin-right: 15px;
+}
+
+#faqs .expanded .arrow-img { 
+	background: url("../img/store/selectedarrow.png") no-repeat bottom;  
+	background-size: 75%;
+    height: 30px;
+    width: 30px;
+    float: left;
+}
 
 #main-label.page-header {
    color: #12b3a6;
@@ -2095,7 +2119,8 @@ header .navigation-main{
 .static-pages .title {	
 	color: #12b3a6;
 	text-transform: uppercase;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
+    margin-left: 45px;
 }
 
 .static-pages h2 {
