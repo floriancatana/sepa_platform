@@ -15,6 +15,7 @@ class FrontHook extends BaseHook
 		$product["pse_count"] = $event->getArgument('pse_count');
 		$product["pse"] = $event->getArgument('pse');
 		$product["type_products"] = $event->getArgument('type_products');
+		$product["uniq_element"] = uniqid();
 		
 		$event->add($this->render(
 				'cart-wish-list.html' ,

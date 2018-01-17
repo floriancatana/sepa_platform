@@ -13,12 +13,11 @@
 {else}
     {assign var="hasSubmit" value = true}
 {/if}
-
 <div class="row cart-wish">
 	<div class = "col-md-10 col-sm-10"> 
         {if $hasSubmit == true && $current_stock_content == "in_stock"}
             {form name="thelia.cart.add" }
-            <form id="{$type_products}_form-product-details-{$product_id}" action="{url path="/cart/add" }" method="post" class="form-product">
+            <form id="{$type_products}_form-product-details-{$product_id}_{$uniq_element}" action="{url path="/cart/add" }" method="post" class="form-product">
                 {form_hidden_fields}
                 <input type="hidden" name="view" value="product">
                 <input type="hidden" name="product_id" value="{$product_id}">
@@ -32,14 +31,14 @@
                     <input type="hidden" class="pse-id" name="{$name}" value="{$pse}" {$attr}>
                 {/form_field}
                 {form_field field="product"}
-                    <input id="{$type_products}_{$label_attr.for}_{$product_id}" type="hidden" name="{$name}" value="{$product_id}" {$attr} >
+                    <input id="{$type_products}_{$label_attr.for}_{$product_id}_{$uniq_element}" type="hidden" name="{$name}" value="{$product_id}" {$attr} >
                 {/form_field}
 
                 <fieldset class="product-cart form-inline">
                     {form_field field='quantity'}
                         <div class="form-group group-qty hide {if $error}has-error{elseif $value != "" && !$error}has-success{/if}">
                             <label for="{$label_attr.for}">{$label}</label>
-                            <input type="number" name="{$name}" id="{$type_products}_{$label_attr.for}_{$product_id}" class="form-control" value="{$value|default:1}" min="0" required>
+                            <input type="number" name="{$name}" id="{$type_products}_{$label_attr.for}_{$product_id}_{$uniq_element}" class="form-control" value="{$value|default:1}" min="0" required>
                             {if $error }
                                 <span class="help-block"><i class="fa fa-remove"></i> {$message}</span>
                             {elseif $value != "" && !$error}
