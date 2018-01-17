@@ -259,6 +259,10 @@ header .header {
     color: #4d4d4d;
 }
 
+#products-new .products-content .item h3.name {
+	padding: 0px 3px;
+}
+
 .list .item>article .product-info,
 .list .item>article .product-price,
 .list .item>article .product-image{
@@ -765,6 +769,10 @@ aside.col-md-pull-9 {
 #search-price .slider.slider-horizontal .slider-track div:nth-of-type(5),
 #search-price .slider.slider-horizontal .max-slider-handle {
 	margin-left: -20px;
+}
+
+#products-amount {
+	display: none;
 }
 
 .nav-breadcrumb {
