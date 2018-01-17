@@ -87,6 +87,7 @@ jQuery(function($){
         }).done(function(data) {
             $("#category-products .products-content").html(data);
             $(".amount").html($("#total-search-results").html());
+            $( "#breadcrumb-products-amount" ).html($("#products-amount").html());
 
             $('.criteria-pagination').on('click', function(e) {
                 $('input[name=page]').val($(this).data('page'));

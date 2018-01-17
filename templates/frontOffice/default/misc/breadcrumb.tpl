@@ -41,7 +41,7 @@
                 	<li itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement" class="active">
                 		<span itemprop="name">{$breadcrumb.title|unescape}</span>
                 		{if $breadcrumbs[0].category_page}
-                			<span class="amount">{if ($product_total > 1)}{intl l="- %nb Items" nb="{$product_total}"}{else}{intl l="- %nb Item" nb="{$product_total}"}{/if}</span>
+                			<span id="breadcrumb-products-amount">{if ($product_total > 1)}{intl l="- %nb Items" nb="{$product_total}"}{else}{intl l="- %nb Item" nb="{$product_total}"}{/if}</span>
                 		{/if}
                 	</li>
             	{else}

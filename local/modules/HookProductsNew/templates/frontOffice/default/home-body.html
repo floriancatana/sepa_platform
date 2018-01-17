@@ -1,4 +1,4 @@
-<!-- {ifloop rel="product_new"}
+ {ifloop rel="product_new"}
 <section id="products-new">
     <div class="products-heading">
         <h2>{intl l="Latest" d="hookproductsnew.fo.default"} <a href="{url path="/view_all"  type="new"}" class="btn-all">{intl l="+ View All" d="hookproductsnew.fo.default"}</a></h2>
@@ -9,7 +9,7 @@
             {loop name="product_new" type="product" limit="5" new="yes"}
             <li class="item col-md-5th col-sm-4 col-xs-6">
                 <article itemscope itemtype="http://schema.org/Product">
-                    Use the meta tag to specify content that is not visible on the page in any way
+                    
                     {$product_id=$ID}
                     {loop name="brand.feature" type="feature" product="{$ID}" title="brand"}
                     {loop name="brand.value" type="feature_value" feature="{$ID}" product="$product_id"}
@@ -35,7 +35,7 @@
                         {/elseloop}
                   
                         <h3 class="name"><span itemprop="name">{$TITLE}</span></h3>
-                        <div class="short-description" itemprop="description">{$CHAPO}</div>
+                       <!--  <div class="short-description" itemprop="description">{$CHAPO}</div> -->
 
                         <div class="product-price">
                             <div class="price-container" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                   	</a> 
-                </article>/product
+                </article>
            		
            		{ifhook rel="product.cart-wish"}
            			{hook name="product.cart-wish" product_id="{$product_id}" virtual="{$VIRTUAL}" quantity="{$QUANTITY}" pse_count="{$PSE_COUNT}" pse="{$PRODUCT_SALE_ELEMENT}" type_products="new"}
@@ -58,20 +58,20 @@
             {/loop}
         </ul>
     </div>
-</section>#products-new
+</section>
 
 {/ifloop}
- -->
 
+<!-- 
 {ifloop rel="product_new"}	
 <section id="products-new">
     <div class="products-heading">
-        <h2>{intl l="Latest" d="hookproductsnew.fo.default"} <!-- <a href="{url path="/view_all"  type="new"}" class="btn-all">{intl l="+ View All" d="hookproductsnew.fo.default"}</a> --></h2>
+        <h2>{intl l="Latest" d="hookproductsnew.fo.default"} <a href="{url path="/view_all"  type="new"}" class="btn-all">{intl l="+ View All" d="hookproductsnew.fo.default"}</a></h2>
     </div>
 
 	<div class="tcb-product-slider" style="">
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-	        <!-- Wrapper for slides -->
+	        Wrapper for slides
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
 					<div class="products-content">
@@ -79,7 +79,7 @@
 				            {loop name="product_new" type="product" limit="5" id="245,246,247,248,249"}
 				            	 <li class="item col-md-5th col-sm-4 col-xs-6">
 				                <article itemscope itemtype="http://schema.org/Product">
-				                    <!-- Use the meta tag to specify content that is not visible on the page in any way -->
+				                    Use the meta tag to specify content that is not visible on the page in any way
 				                    {$product_id=$ID}
 				                    {loop name="brand.feature" type="feature" product="{$ID}" title="brand"}
 				                    {loop name="brand.value" type="feature_value" feature="{$ID}" product="$product_id"}
@@ -105,7 +105,7 @@
 				                        {/elseloop}
 				                  
 				                        <h3 class="name"><span itemprop="name">{$TITLE}</span></h3>
-				                        <!-- <div class="short-description" itemprop="description">{$CHAPO}</div> -->
+				                        <div class="short-description" itemprop="description">{$CHAPO}</div>
 				
 				                        <div class="product-price">
 				                            <div class="price-container" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
@@ -119,7 +119,7 @@
 				                            </div>
 				                        </div>
 				                  	</a> 
-				                </article><!-- /product -->
+				                </article>/product
 				           		
 				           		{ifhook rel="product.cart-wish"}
 				           			{hook name="product.cart-wish" product_id="{$product_id}" virtual="{$VIRTUAL}" quantity="{$QUANTITY}" pse_count="{$PSE_COUNT}" pse="{$PRODUCT_SALE_ELEMENT}" type_products="new"}
@@ -135,7 +135,7 @@
 				            {loop name="product_new" type="product" limit="5" id="250,242,244,21,330"}
 				           <li class="item col-md-5th col-sm-4 col-xs-6">
 				                <article itemscope itemtype="http://schema.org/Product">
-				                    <!-- Use the meta tag to specify content that is not visible on the page in any way -->
+				                    Use the meta tag to specify content that is not visible on the page in any way
 				                    {$product_id=$ID}
 				                    {loop name="brand.feature" type="feature" product="{$ID}" title="brand"}
 				                    {loop name="brand.value" type="feature_value" feature="{$ID}" product="$product_id"}
@@ -161,7 +161,7 @@
 				                        {/elseloop}
 				                  
 				                        <h3 class="name"><span itemprop="name">{$TITLE}</span></h3>
-				                        <!-- <div class="short-description" itemprop="description">{$CHAPO}</div> -->
+				                        <div class="short-description" itemprop="description">{$CHAPO}</div>
 				
 				                        <div class="product-price">
 				                            <div class="price-container" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
@@ -175,7 +175,7 @@
 				                            </div>
 				                        </div>
 				                  	</a> 
-				                </article><!-- /product -->
+				                </article>/product
 				           		
 				           		{ifhook rel="product.cart-wish"}
 				           			{hook name="product.cart-wish" product_id="{$product_id}" virtual="{$VIRTUAL}" quantity="{$QUANTITY}" pse_count="{$PSE_COUNT}" pse="{$PRODUCT_SALE_ELEMENT}" type_products="new"}
@@ -192,7 +192,7 @@
 				            {loop name="product_new" type="product" limit="5" id="328,325,280,276,277"}
 				             <li class="item col-md-5th col-sm-4 col-xs-6">
 				                <article itemscope itemtype="http://schema.org/Product">
-				                    <!-- Use the meta tag to specify content that is not visible on the page in any way -->
+				                    Use the meta tag to specify content that is not visible on the page in any way
 				                    {$product_id=$ID}
 				                    {loop name="brand.feature" type="feature" product="{$ID}" title="brand"}
 				                    {loop name="brand.value" type="feature_value" feature="{$ID}" product="$product_id"}
@@ -218,7 +218,7 @@
 				                        {/elseloop}
 				                  
 				                        <h3 class="name"><span itemprop="name">{$TITLE}</span></h3>
-				                        <!-- <div class="short-description" itemprop="description">{$CHAPO}</div> -->
+				                        <div class="short-description" itemprop="description">{$CHAPO}</div>
 				
 				                        <div class="product-price">
 				                            <div class="price-container" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
@@ -232,7 +232,7 @@
 				                            </div>
 				                        </div>
 				                  	</a> 
-				                </article><!-- /product -->
+				                </article>/product
 				           		
 				           		{ifhook rel="product.cart-wish"}
 				           			{hook name="product.cart-wish" product_id="{$product_id}" virtual="{$VIRTUAL}" quantity="{$QUANTITY}" pse_count="{$PSE_COUNT}" pse="{$PRODUCT_SALE_ELEMENT}" type_products="new"}
@@ -247,11 +247,11 @@
 	</div>
 	
 	<div class="carousel_controls">
-        <!-- Controls -->
+        Controls
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
         </a>
         <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
         </a>
 	</div>
 </section>
-{/ifloop}
+{/ifloop} -->

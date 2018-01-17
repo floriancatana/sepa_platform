@@ -46,7 +46,7 @@
 
                     <li>
                         <a href="{$URL nofilter}">
-                            {$TITLE} ({count type="product" category=$ID})
+                            {$TITLE} <!-- ({count type="product" category=$ID}) -->
                         </a>
 
                         <a href="#collapse{$ID}" class="accordion-toggle {$collapsed}" data-toggle="collapse" data-parent="#collapse{$ID}"></a>
@@ -56,7 +56,7 @@
                 {else}
                     <li>
                         <a href="{$URL nofilter}">
-                            {$TITLE} ({count type="product" category=$ID})
+                            {$TITLE} <!-- ({count type="product" category=$ID}) -->
                         </a>
                     </li>
                 {/if}
