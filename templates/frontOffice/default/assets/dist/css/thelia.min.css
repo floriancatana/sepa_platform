@@ -12,6 +12,23 @@
 
 /*hadi css*/
 /*start overwrite thelia css*/
+body {
+	color: #4d4d4d;
+}
+
+#account-info .group-btn a:focus, 
+#account-info .group-btn a:hover {
+	color: #12b3a6;
+}
+
+.checkout-progress .btn-step .step-label {
+	font-size: 16px;
+}
+
+.btn-default {
+	border-left: 1px solid #ccc;
+}
+
 .bg-primary {
 	background-color:#12b3a6;
 }
@@ -2146,15 +2163,3 @@ header .navigation-main{
     font-weight: 600;
 }
 
-#account-info .group-btn a:focus, 
-#account-info .group-btn a:hover {
-	color: #12b3a6;
-}
-
-.checkout-progress .btn-step .step-label {
-	font-size: 16px;
-}
-
-.btn-default {
-	border-left: 1px solid #ccc;
-}

@@ -75,7 +75,7 @@
                         <span></span>
                     </button>
                     <a class="navbar-brand" href="{url path='/admin/home'}">
-                        {images file='assets/img/logo-white.png'}
+                        {images file='assets/img/logo_hadi.png'}
                             <img src="{$asset_url}" alt="{intl l='Version %ver' ver="{$THELIA_VERSION}"}">
                             <span>{intl l='Version %ver' ver="{$THELIA_VERSION}"}</span>
                         {/images}

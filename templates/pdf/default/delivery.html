@@ -14,7 +14,7 @@
 {literal}
 <style>
     h1, h2, h3, h4 {
-        color:#f6993c;
+        color:#0d857b;
         margin: .5em 0;
     }
 
@@ -31,12 +31,12 @@
     }
 
     h4 {
-        color:#58585a;
+        color:;
         font-size: 12px;
     }
 
     p, td {
-        color:#58585a;
+        color:;
         font-size: 9px;
     }
 
@@ -70,7 +70,7 @@
 
     .table-info h3 span {
         font-size: 18px;
-        color: #f6993c;
+        color: #58585a;
     }
 
     .table-1 td {
@@ -200,7 +200,7 @@
         <col style="width: 50%; padding: 3mm;" />
         <col style="padding: 3mm;" />
         <tr>
-            <td style="border-left: solid 1mm #f6993c;" >
+            <td style="border-left: solid 1mm #0d857b;" >
                 <h3>{intl l="Delivery address"}</h3>
 				{ifhook rel="delivery.delivery-address"}
                 {* delivery module can customize the delivery address *}
@@ -210,7 +210,7 @@
 				    {format_address order_address=$DELIVERY_ADDRESS locale=$locale}
                 {/elsehook}
             </td>
-            <td style="border-left: solid 1mm #f6993c;">
+            <td style="border-left: solid 1mm #0d857b;">
                 <h3>{intl l="Invoice address"}</h3>
                 {format_address order_address=$INVOICE_ADDRESS locale=$locale}
             </td>
@@ -230,7 +230,7 @@
             <td style="border:solid 1px #dddddd;background:#f1f3f4;">
                 <h3 style="color:#58585a;">{intl l="product"}</h3>
             </td>
-            <td style="border:solid 1px #dddddd;background-color:#f6993c;">
+            <td style="border:solid 1px #dddddd;background-color:#0d857b;">
                 <h3 style="color:white; text-align:center;">{intl l="Quantity"}</h3>
             </td>
         </tr>
@@ -261,7 +261,7 @@
     <table style="padding-top: 5mm;">
         <col style="width: 40%; padding: 3mm;" />
         <tr>
-            <td  class="table-3-module" style="border-left:solid 3px #f6993c; padding-top: 2mm">
+            <td  class="table-3-module" style="border-left:solid 3px #0d857b; padding-top: 2mm">
                 <h3>{intl l="Delivery module"}</h3>
                 <p>
                     <span>{loop name="delivery-module" type="module" id=$DELIVERY_MODULE}{$TITLE}{/loop}</span>

@@ -14,7 +14,7 @@
 {literal}
 <style>
     h1, h2, h3, h4 {
-        color:#f6993c;
+        color:#0d857b;
         margin: .5em 0;
     }
 
@@ -31,7 +31,7 @@
     }
 
     h4 {
-        color:#58585a;
+        color:#0d857b;
         font-size: 12px;
     }
 
@@ -70,7 +70,7 @@
 
     .table-info h3 span {
         font-size: 18px;
-        color: #f6993c;
+        color: #58585a;
     }
 
     .table-1 td {
@@ -202,7 +202,7 @@
         <col style="width: 50%; padding: 3mm;" />
         <col style="padding: 3mm;" />
         <tr>
-            <td style="border-left: solid 1mm #f6993c;" >
+            <td style="border-left: solid 1mm #0d857b;" >
                 <h3>{intl l="Delivery address"}</h3>
 				{ifhook rel="invoice.delivery-address"}
                     {* delivery module can customize the delivery address *}
@@ -212,7 +212,7 @@
 				    {format_address order_address=$DELIVERY_ADDRESS locale=$locale}
                	{/elsehook}
             </td>
-            <td style="border-left: solid 1mm #f6993c;">
+            <td style="border-left: solid 1mm #0d857b;">
                 <h3>{intl l="Invoice address"}</h3>
                 {format_address order_address=$INVOICE_ADDRESS locale=$locale}
             </td>
@@ -235,7 +235,7 @@
             <td><h4 class="align-center">{intl l="Tax"}</h4></td>
             <td><h4 class="align-center">{intl l="Unit taxed price"}</h4></td>
             <td><h4 class="align-center">{intl l="Quantity"}</h4></td>
-            <td style="background:#f6993c"><h4 style="color:white;" class="align-center">{intl l="Taxed total"}</h4></td>
+            <td style="background:#0d857b"><h4 style="color:white;" class="align-center">{intl l="Taxed total"}</h4></td>
         </tr>
         {loop type="order_product" name="order-products" order=$ID}
             {if $WAS_IN_PROMO == 1}
@@ -353,8 +353,8 @@
                         <td class="table-3-1 align-right"><p>{format_money number=$POSTAGE currency_id=$CURRENCY}</p></td>
                     </tr>
                     <tr>
-                        <td class="table-3-1" style="background:#f6993c;"><h3 style="color:white;">{intl l="Total"}</h3></td>
-                        <td class="table-3-1 align-right" style="background:#f6993c;"><h3 style="color:white;">{format_money number=$TOTAL_TAXED_AMOUNT currency_id=$CURRENCY}</h3></td>
+                        <td class="table-3-1" style="background:#0d857b;"><h3 style="color:white;">{intl l="Total"}</h3></td>
+                        <td class="table-3-1 align-right" style="background:#0d857b;"><h3 style="color:white;">{format_money number=$TOTAL_TAXED_AMOUNT currency_id=$CURRENCY}</h3></td>
                     </tr>
                 </table>
             </td>
