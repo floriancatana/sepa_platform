@@ -63,7 +63,8 @@
         "propel/propel": "dev-thelia-2.3",
         "commerceguys/addressing": "0.8.*",
         "symfony/cache": "~3.1.0",
-        "thelia/stripe-payment-module": "~1.0"
+        "thelia/stripe-payment-module": "~1.0",
+        "thelia/paypal-module": "~3.0.0"
     },
     "require-dev": {
         "fzaninotto/faker": "1.5.*",

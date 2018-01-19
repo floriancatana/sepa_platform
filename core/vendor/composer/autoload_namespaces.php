@@ -14,6 +14,7 @@ return array(
     'Psr\\Log\\' => array($vendorDir . '/psr/log'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
     'Propel' => array($vendorDir . '/propel/propel/src'),
+    'PayPal' => array($vendorDir . '/paypal/rest-api-sdk-php/lib'),
     'Michelf' => array($vendorDir . '/michelf/php-markdown'),
     'Less' => array($vendorDir . '/oyejorge/less.php/lib'),
     'Imagine' => array($vendorDir . '/imagine/imagine/lib'),

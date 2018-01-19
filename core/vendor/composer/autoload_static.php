@@ -11,13 +11,13 @@ class ComposerStaticInit2ad5329847d600dda1ae18c49e161e04
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         'e40631d46120a9c38ea139981f8dab26' => __DIR__ . '/..' . '/ircmaxell/password-compat/lib/password.php',
         'edc6464955a37aa4d5fbf39d40fb6ee7' => __DIR__ . '/..' . '/symfony/polyfill-php55/bootstrap.php',
+        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
         'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
         '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
         'ce89ac35a6c330c55f4710717db9ff78' => __DIR__ . '/..' . '/kriswallsmith/assetic/src/functions.php',
         '8cd2fca4db21bffce1ad0612f7caeec4' => __DIR__ . '/..' . '/ramsey/array_column/src/array_column.php',
-        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'ef59a7524a39cf678a351859a6e326b4' => __DIR__ . '/../../..' . '/core/bootstrap.php',
     );
 
@@ -69,6 +69,11 @@ class ComposerStaticInit2ad5329847d600dda1ae18c49e161e04
         'P' => 
         array (
             'Psr\\Cache\\' => 10,
+        ),
+        'M' => 
+        array (
+            'MySQLHandler\\' => 13,
+            'Monolog\\' => 8,
         ),
         'F' => 
         array (
@@ -243,6 +248,14 @@ class ComposerStaticInit2ad5329847d600dda1ae18c49e161e04
         array (
             0 => __DIR__ . '/..' . '/psr/cache/src',
         ),
+        'MySQLHandler\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wazaari/monolog-mysql/src/MySQLHandler',
+        ),
+        'Monolog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
         'Faker\\' => 
         array (
             0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
@@ -308,6 +321,10 @@ class ComposerStaticInit2ad5329847d600dda1ae18c49e161e04
             'Propel' => 
             array (
                 0 => __DIR__ . '/..' . '/propel/propel/src',
+            ),
+            'PayPal' => 
+            array (
+                0 => __DIR__ . '/..' . '/paypal/rest-api-sdk-php/lib',
             ),
         ),
         'M' => 
