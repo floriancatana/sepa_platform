@@ -14,7 +14,7 @@ use Thelia\Core\Thelia;
 use Thelia\Core\HttpFoundation\Response;
 use Thelia\Core\HttpFoundation\Request;
 use Thelia\Core\HttpKernel\HttpCache\HttpCache;
-
+use Thelia\Model\ConfigQuery;
 //use Symfony\Component\DependencyInjection;
 
 $env = 'dev';
@@ -29,7 +29,7 @@ $trustedIp = array(
 $request = Request::createFromGlobals();
 $thelia = new Thelia("dev", true);
 
-if (false === in_array($request->getClientIp(), $trustedIp)) {
+if (false === in_array($request->getClientIp(), $trustedIp)  && ConfigQuery::read("dev_mode_allowed") == 0) {
     $response = Response::create('Forbidden', 403)->send();
     $thelia->terminate($request, $response);
 } else {
