@@ -1,29 +1,104 @@
-{extends file="email-layout.tpl"}
-
-{* Open in browser  *}
-{block name="browser"}{/block}
-
-{* No big image header *}
-{block name="image-header"}{/block}
-
-{* No pre-header *}
-{block name="pre-header"}{/block}
-
-{* Subject  *}
-{block name="email-subject"}{intl l='Confirm your %store account' store={config key="store_name"}}{/block}
-
-{* Title  *}
-{block name="email-title"}{/block}
-
-{* Content  *}
-{block name="email-content"}
-    {loop type="customer" name="confirmation" current=false id=$customer_id}
-        <p>{intl l="Welcome to %store," store={config key="store_name"}}</p>
-        <p>{intl l="To complete your customer account creation, please confirm your email address by clicking the link below, or copying it in your browser address bar."}</p>
-        <p><a href="{url path='/customer/confirm/%token' token=$CONFIRMATION_TOKEN}">{url path='/customer/confirm/%token' token=$CONFIRMATION_TOKEN}</a></p>
-        <p>
-            {intl l='Kind regards'},<br>
-            {intl l="The %store team." store={config key="store_name"}}
-        </p>
-    {/loop}
-{/block}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--[if !mso]><!-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--<![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    {literal}
+    <style type="text/css">
+        body {margin: 0 !important; padding: 0; background-color: #ffffff;}
+        table {border-spacing: 0;font-family: sans-serif; color: #333333;}
+        td {padding: 0;}
+        th {padding: 0;}
+        img {border: 0;}
+        div[style*="margin: 16px 0"] { margin:0 !important;}
+        .wrapper {width: 100%;table-layout: fixed; -webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}
+        .webkit {max-width: 800px; margin: 0 auto;}
+        .outer {margin: 0 auto; width: 100%; max-width: 800px;}
+        .full-width-image img {width: 100%; max-width: 800px; height: auto;}
+        caption {width: 50%; display: block;margin-top: 15px;margin-bottom: 15px;}
+        .cap1{float: left;}
+        .cap2{float: right;}
+        .full-width-text-title{width: 100%; max-width: 800px; background-color: #ffffff; height: 100px; color: #12b3a6; font-size: 2.4em; text-align: center;}
+        .full-width-text-title a{color: #12b3a6; text-decoration: none;}
+        .full-width-text{width: 100%; max-width: 800px; background-color: #ffffff; height: auto; color: #000; text-align: center; font-weight: 100;}
+        .social-media-icons img{margin-left: 10px; margin-right: 10px; margin-top: 50px; margin-bottom: 30px;}
+        .social-media-icons a{text-decoration: none;}
+        .mcnTextContent{ text-align: center; }
+    </style>
+    {/literal} 
+    <!--[if (gte mso 9)|(IE)]>
+    {literal} 
+    <style type="text/css">
+        table {border-collapse: collapse;}
+    </style>
+    {/literal} 
+    <![endif]-->
+</head>
+<body >
+    <center class="wrapper">
+        <div class="webkit">
+            <!--[if (gte mso 9)|(IE)]>
+            {literal}
+            <table width="800" cellpadding="0" cellspacing="0" border="0" align="center">
+            {/literal}
+            <tr>
+            <td>
+            <![endif]-->
+            <table class="outer" align="center">
+                <caption class="cap1">{intl l="Juhu HADI App hat ein Investment!"}</caption>
+                <caption class="cap2">{intl l="Email im Browser ansehen"}</caption>
+                <tr>
+                    <td class="full-width-image" >
+                        <a href="https://hadiapp.at/">
+                            <img src="{image file='assets/img/mail_header.png'}" width="800" alt="" />
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="full-width-text-title" >
+                        <a href="{url path="/"}">
+                            {intl l="HADILUJA!"}
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="full-width-text" >
+                        {intl l="Herzlich Willkommen bei HADI. Bitte bestatige deine E-Mail Adresse um deine"}</br>
+                        {intl l="Registrierung abzuschliessesn. Dein HADI-Team."}
+                    </td>
+                </tr>
+                <tr class="social-media-icons">
+                    <td style="text-align: center; border-bottom: 1px solid darkgrey;">
+                        <a href="https://www.facebook.com/hadiapp/">
+                            <img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-48.png" alt="" />
+                        </a>
+                        <a href="https://www.instagram.com/hadi_app/">
+                            <img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-instagram-48.png" alt="" />
+                        </a>
+                        <a href="https://vimeo.com/user43044245">
+                            <img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-vimeo-48.png" alt="" />
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="mcnTextContent" style="padding: 0 18px 9px 18px" valign="top">
+                        <br><br><br>
+                        <em>Copyright © {$smarty.now|date_format:"%Y"} *{intl l="HADISHOP"}*, All rights reserved.</em><br> 
+                        <br><br>
+                        <strong>Our mailing address is:</strong><br><a href="mailto:support@hadishop.eu">support@hadishop.eu</a><br><br> 
+                    </td>
+                </tr>
+            </table>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </div>
+    </center>
+</body>
+</html>
