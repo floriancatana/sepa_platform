@@ -1,0 +1,47 @@
+<routes xmlns="http://symfony.com/schema/routing"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+	<route id="sofort.configure" path="/admin/module/sofort/configure" methods="post">
+		<default key="_controller">Sofort\Controller\ConfigurationController::configure</default>
+	</route>
+
+    <route id="sofort.download.log" path="/admin/module/sofort/log">
+        <default key="_controller">Sofort\Controller\ConfigurationController::downloadLog</default>
+    </route>
+
+    <route id="sofort.cancel" path="/module/sofort/cancel/{order_id}" methods="get">
+        <default key="_controller">Sofort\Controller\SofortResponse::cancel</default>
+        <requirement key="order_id">\d+</requirement>
+    </route>
+
+    <route id="sofort.ok" path="/module/sofort/ok/{order_id}" methods="get">
+        <default key="_controller">Sofort\Controller\SofortResponse::ok</default>
+        <requirement key="order_id">\d+</requirement>
+    </route>
+    
+     <route id="sofort.pending" path="/module/sofort/pending/{order_id}" methods="post">
+        <default key="_controller">Sofort\Controller\SofortResponse::pending</default>
+        <requirement key="order_id">\d+</requirement>
+    </route>
+    
+    <route id="sofort.loss" path="/module/sofort/loss/{order_id}" methods="post">
+        <default key="_controller">Sofort\Controller\SofortResponse::loss</default>
+        <requirement key="order_id">\d+</requirement>
+    </route>
+    
+    <route id="sofort.received" path="/module/sofort/received/{order_id}" methods="post">
+        <default key="_controller">Sofort\Controller\SofortResponse::received</default>
+        <requirement key="order_id">\d+</requirement>
+    </route>
+    
+     <route id="sofort.refunded" path="/module/sofort/refunded/{order_id}" methods="post">
+        <default key="_controller">Sofort\Controller\SofortResponse::refunded</default>
+        <requirement key="order_id">\d+</requirement>
+    </route>
+       <route id="sofort.untraceable" path="/module/sofort/untraceable/{order_id}" methods="post">
+        <default key="_controller">Sofort\Controller\SofortResponse::untraceable</default>
+        <requirement key="order_id">\d+</requirement>
+    </route>
+
+</routes>
