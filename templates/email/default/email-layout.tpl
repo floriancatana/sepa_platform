@@ -118,8 +118,8 @@ h4{
     text-align:left;
 }
 #templatePreheader{
-    background-color:#f5f5f5;
-    border-top:10px solid #f5f5f5;
+    background-color:#fafafa;
+    border-top:10px solid #fafafa;
     border-bottom:0;
 }
 .preheaderContent{
@@ -138,7 +138,7 @@ h4{
 }
 #templateHeader{
     background-color:#FFFFFF;
-    border-top:10px solid #f5f5f5;
+    border-top:10px solid #fafafa;
     border-bottom:0;
 }
 .headerContent{
@@ -182,7 +182,7 @@ h4{
 .bodyContentBlock{
     background-color:#FFFFFF;
     border-top:0;
-    border-bottom:1px solid #E5E5E5;
+    border-bottom:0px;
 }
 .bodyContent{
     color:#505050;
@@ -195,13 +195,12 @@ h4{
 }
 .bodyContent a:link,.bodyContent a:visited,.bodyContent a .yshortcuts {
     color:#E1523D;
-    font-weight:normal;
     text-decoration:underline;
 }
 .templateButton{
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
-    background-color:#f49a17;
+    background-color:#12b3a6;
     border:0;
     border-radius:5px;
 }
@@ -221,7 +220,7 @@ h4{
     max-width:600px;
 }
 body,#bodyTable{
-    background-color:#444444;
+    background-color:#fafafa;
 }
 #templateFooter{
     border-top:0;
@@ -333,43 +332,88 @@ body,#bodyTable{
 }
 
 .preheaderContent a:link,.preheaderContent a:visited,.preheaderContent a .yshortcuts{
-    color:#f49a17;
+    color:#12b3a6;
 }
 .footerContent a:link,.footerContent a:visited,.footerContent a .yshortcuts{
     color:#ffffff;
 }
 .bodyContent a:link,.bodyContent a:visited,.bodyContent a .yshortcuts{
-    color:#f49a17;
+    color:#12b3a6;
     text-decoration:none;
-    font-weight:normal;
 }
 .templateButtonContent,.templateButtonContent a:link,.templateButtonContent a:visited,.templateButtonContent a .yshortcuts{
     font-weight:normal;
+}
+
+body {margin: 0 !important; padding: 0; background-color: #ffffff;}
+table {border-spacing: 0;font-family: sans-serif; color: #333333;}
+td {padding: 0;}
+th {padding: 0;}
+img {border: 0;}
+div[style*="margin: 16px 0"] { margin:0 !important;}
+.wrapper {width: 100%;table-layout: fixed; -webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}
+.webkit {max-width: 800px; margin: 0 auto;}
+.outer {margin: 0 auto; width: 100%; max-width: 800px;}
+.full-width-image img {width: 100%; max-width: 800px; height: auto;}
+caption {width: 50%; display: block;margin-top: 15px;margin-bottom: 15px;}
+.cap1{float: left;}
+.cap2{float: right;}
+.full-width-text-title{width: 100%; max-width: 800px; background-color: #ffffff;margin-bottom: 20px; display:block; color: #12b3a6; font-size: 26px; text-align: center;}
+.full-width-text-title a{color: #12b3a6; text-decoration: none; font-weight: bold;}
+.full-width-text, .full-width-text-link{ text-align: center;}
+.full-width-text-subtitle {
+	font-size: 16px; 
+	color: #12b3a6;
+	font-weight: bold;
+}
+.social-media-icons {
+	text-align: center;
+}
+
+.social-media-icons img{margin-left: 10px; margin-right: 10px; margin-top: 30px; margin-bottom: 30px; width:24px; height: 24px;}
+.social-media-icons a{text-decoration: none;}
+.mcnTextContent{ text-align: center; }
+.headerContent img {
+	width: 100%;
+}
+
+.full-width-text-link {
+	margin-top: 50px;
+	display: block;
+}
+
+.full-width-text-link a {
+	font-size: 16px;
+    font-weight: bold;
+}
+
+a {
+	color: #12b3a6;
 }
 {/literal}
 </style>
 {hook name="email-html.layout.css"}
 </head>
-<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="margin: 0;padding: 0;background-color: #444444;">
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="margin: 0;padding: 0;background-color: #fafafa;">
 <center>
-    <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;margin: 0;padding: 0;background-color: #444444;border-collapse: collapse !important;height: 100% !important;width: 100% !important;">
+    <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;margin: 0;padding: 0;background-color: #fafafa;border-collapse: collapse !important;height: 100% !important;width: 100% !important;">
         <tr>
             <td align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;">
                 <table border="0" cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;">
                     {block name="pre-header"}
                     <tr>
                         <td align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templatePreheader" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-color: #f5f5f5;border-top: 10px solid #f5f5f5;border-bottom: 0;border-collapse: collapse !important;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templatePreheader" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-color: #fafafa;border-top: 10px solid #fafafa;border-bottom: 0;border-collapse: collapse !important;">
                                 <tr>
                                     <td align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;">
                                         <table border="0" cellpadding="0" cellspacing="0" class="templateContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 600px;border-collapse: collapse !important;">
                                             <tr>
-                                                <td valign="top" class="preheaderContent" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;color: #707070;font-family: Helvetica;font-size: 10px;line-height: 125%;padding-top: 10px;padding-bottom: 10px;text-align: left;border-collapse: collapse !important;">
-                                                    {block name="email-intro"}{/block}
+                                                <td valign="top" class="preheaderContent" style="text-align: left; mso-table-lspace: 0pt;mso-table-rspace: 0pt;color: #707070;font-family: Helvetica;font-size: 10px;line-height: 125%;padding-top: 10px;padding-bottom: 10px;text-align: left;border-collapse: collapse !important;">
+                                                    {block name="email-intro"}{intl l="Juhu HADI App hat ein Investment!"}{/block}
                                                 </td>
 
-                                                <td valign="top" class="preheaderContent" style="padding-left: 20px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;color: #707070;font-family: Helvetica;font-size: 10px;line-height: 125%;padding-top: 10px;padding-bottom: 10px;text-align: left;border-collapse: collapse !important;" width="200">
-                                                    {block name="browser"}{intl l="Email not displaying correctly?"}<br><a href="{config key="url_site"}?view=email/register" target="_blank" style="color: #f49a17;font-weight: normal;text-decoration: underline;">{intl l="View it in your browser"}</a>.{/block}
+                                                <td valign="top" class="preheaderContent" style="text-align: right; padding-left: 20px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;color: #707070;font-family: Helvetica;font-size: 10px;line-height: 125%;padding-top: 10px;padding-bottom: 10px;text-align: left;border-collapse: collapse !important;" width="200">
+                                                    {block name="browser"}{intl l="Email not displaying correctly?"}<br><a href="{config key="url_site"}?view=email/register" target="_blank" style="color: #12b3a6;font-weight: normal;text-decoration: underline;">{intl l="View it in your browser"}</a>.{/block}
                                                 </td>
                                             </tr>
                                         </table>
@@ -383,14 +427,16 @@ body,#bodyTable{
                     {block name="logo-header"}
                     <tr>
                         <td align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-color: #FFFFFF;border-top: 10px solid #f5f5f5;border-bottom: 0;border-collapse: collapse !important;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-color: #FFFFFF;border-top: 10px solid #fafafa;border-bottom: 0;border-collapse: collapse !important;">
                                 <tr>
                                     <td align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;">
                                         <table border="0" cellpadding="0" cellspacing="0" class="templateContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 600px;border-collapse: collapse !important;">
                                             <tr>
                                                 <td class="headerContent" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;color: #202020;font-family: Helvetica;font-size: 20px;font-weight: bold;line-height: 100%;padding-top: 40px;padding-right: 0;padding-bottom: 20px;padding-left: 0;text-align: left;vertical-align: middle;border-collapse: collapse !important;">
                                                     {local_media type="logo"}
-                                                        <img src="{$MEDIA_URL}" alt="{$company_name}" border="0" style="border: 0px none;border-color: ;border-style: none;border-width: 0px;height: 75px;width: 135px;margin: 0;padding: 0;line-height: 100%;outline: none;text-decoration: none;" width="135" height="75">
+                                                        <a href="https://hadiapp.at/">
+                            								<img src="{image file='assets/img/mail_header.png'}" alt="" />
+                        								</a>
                                                     {/local_media}
                                                 </td>
                                             </tr>
@@ -420,15 +466,15 @@ body,#bodyTable{
                                             </tr>
                                             <tr>
                                                 <td align="center" valign="top" style="padding-bottom: 40px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;">
-                                                    <table border="0" cellpadding="10" cellspacing="0" width="100%" class="bodyContentBlock" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-color: #FFFFFF;border-top: 0;border-bottom: 1px solid #E5E5E5;border-collapse: collapse !important;">
+                                                    <table border="0" cellpadding="10" cellspacing="0" width="100%" class="bodyContentBlock" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-color: #FFFFFF;border-top: 0;border-collapse: collapse !important;">
                                                         {block name="image-header"}
-                                                        <tr>
+                                                        <!--  <tr>
                                                             <td class="bodyContent" style="padding-bottom: 20px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;color: #505050;font-family: Helvetica;font-size: 16px;line-height: 150%;padding-top: 20px;text-align: left;border-collapse: collapse !important;">
                                                                 {local_media type="banner"}
                                                                 <img class="bodyImage" src="{$MEDIA_URL}" alt="" border="0" style="border: 0px none;border-color: ;border-style: none;border-width: 0px;margin: 0;padding: 0;line-height: 100%;outline: none;text-decoration: none;display: inline;max-width: 600px;">
                                                                 {/local_media}
                                                             </td>
-                                                        </tr>
+                                                        </tr> -->
                                                         {/block}
                                                         <tr>
                                                             <td valign="top" class="bodyContent" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;padding-top: 0px;padding-bottom: 20px;text-align: left;border-collapse: collapse !important;">
@@ -446,30 +492,30 @@ body,#bodyTable{
                     </tr>
                     <tr>
                         <td align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-top: 0;border-collapse: collapse !important;">
-                                <tr>
-                                    <td align="center" valign="top" style="padding-bottom: 40px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;">
-                                        {hook name="email-html.layout.footer"}
-                                        {elsehook rel="email-html.layout.footer"}
-                                        <table border="0" cellpadding="0" cellspacing="0" class="templateContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 600px;border-collapse: collapse !important;">
-                                            <tr>
-                                                <td valign="top" class="footerContent" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;color: #808080;font-family: Helvetica;font-size: 10px;line-height: 150%;padding-top: 20px;text-align: left;border-collapse: collapse !important;">
-                                                    <strong>{intl l="Our mailing address is:"}</strong>
-                                                    <br>
-                                                    {config key="store_address1"} {config key="store_address2"} {config key="store_address3"}<br>
-                                                    {config key="store_zipcode"} {config key="store_city"},
-                                                    {if {config key="store_country"} }
-                                                        {loop type="country" name="address.country.title" id={config key="store_country"}}, {$TITLE}{/loop}
-                                                    {/if}
-                                                    <br>
-                                                    <br>
-                                                    <em>{intl l="Copyright"} &copy; {'Y'|date} {$company_name}, {intl l="All rights reserved."}</em>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        {/elsehook}
-                                    </td>
-                                </tr>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-top: 3px solid #EAEAEA;border-collapse: collapse !important;">
+                               	<tr class="social-media-icons">
+             						<td style="text-align: center; border-bottom: 2px solid #EAEAEA; width: 600px; display: inline-block;">
+                 						<a href="https://www.facebook.com/hadiapp/">
+                     						<img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-48.png" alt="" />
+                 						</a>
+                 						<a href="https://www.instagram.com/hadi_app/">
+                     						<img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-instagram-48.png" alt="" />
+                 						</a>
+                 						<a href="https://vimeo.com/user43044245">
+                     						<img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-vimeo-48.png" alt="" />
+                 						</a>
+             						</td>
+         						</tr>
+         						<tr>
+             						<td class="mcnTextContent" style="padding: 0 18px 9px 18px" valign="top">
+                 						<br><br>
+                 						<em>Copyright © {$smarty.now|date_format:"%Y"} {intl l="HADISHOP"}, All rights reserved.</em><br> 
+                 						<br><br>
+                 						{block name="footer-content"}
+                 							<strong>Our mailing address is:</strong><br><a href="mailto:support@hadishop.eu">support@hadishop.eu</a><br><br> 
+                 						{/block}
+             						</td>
+         						</tr>
                             </table>
                         </td>
                     </tr>
