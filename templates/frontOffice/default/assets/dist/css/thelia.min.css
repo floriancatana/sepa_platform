@@ -2168,3 +2168,6 @@ header .navigation-main{
     font-weight: 600;
 }
 
+.products-content>ul .item .product-price .price-container {
+	padding: 0px 5px;
+}

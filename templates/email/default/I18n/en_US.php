@@ -87,5 +87,5 @@ return array(
 	'Your order on %shop_name' => 'Your order on %shop_name',
     'Your password for %store' => 'Your password for %store',
     'Your password is <span style="font-family: courier, fixed; font-size: 120%">%pass</span>' => 'Your password is <span style="font-family: courier, fixed; font-size: 120%">%pass</span>',
-    'Your subscriotion to %store newsletter' => 'Your subscriotion to %store newsletter',
+    'Your subscription to %store newsletter' => 'Your subscription to %store newsletter',
 );
