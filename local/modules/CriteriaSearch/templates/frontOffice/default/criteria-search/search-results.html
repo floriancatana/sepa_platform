@@ -4,7 +4,7 @@
 <ul class="list-unstyled row">
     {loop type="search_product" name="product_list" complex="true" feature_availability=$features attribute_availability=$attributes category=$category_id brand=$brands min_price=$price_min max_price=$price_max min_stock=$in_stock new=$new promo=$promo limit=$limit order=$order page=$page depth="10" min_price_ttc=$price_min max_price_ttc=$price_max category_id=$category_id}
         {loop type="product" name="product" id=$ID limit="1" }
-        	{include file="includes/single-product.html" hasBtn=true hasDescription=true hasQuickView=true width="218" height="146"}
+        	{include file="includes/single-product.html" hasBtn=true hasDescription=true hasQuickView=true width="410" height="410"}
         {/loop}
     {/loop}
 </ul>

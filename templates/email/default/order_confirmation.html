@@ -16,8 +16,10 @@
 
 {* Title  *}
 {block name="email-title"}
-	{loop type="customer" name="customer.invoice" id=$CUSTOMER current="0"}
-		<div class="full-width-text-title" style="font-weight:bold;">{intl l="Thank you %customer_fname %customer_lname for your order on %shop_name!" customer_fname=$FIRSTNAME customer_lname=$LASTNAME shop_name={config key="store_name"}}</div>
+	{loop name="order.invoice" type="order" id=$order_id customer="*"}
+		{loop type="customer" name="customer.invoice" id=$CUSTOMER current="0"}
+			<div class="full-width-text-title" style="font-weight:bold;">{intl l="Thank you %customer_fname %customer_lname for your order on %shop_name!" customer_fname=$FIRSTNAME customer_lname=$LASTNAME shop_name={config key="store_name"}}</div>
+		{/loop}	
 	{/loop}	
 {/block}
 

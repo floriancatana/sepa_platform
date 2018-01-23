@@ -25,7 +25,7 @@
                     <a href="{$URL}" itemprop="url" tabindex="-1" class="product-image">
                         {ifloop rel="image_product_new" }
                         <img itemprop="image" class="img-responsive center-block"
-                        {loop name="image_product_new" type="image" limit="1" product="{$ID}" force_return="true" width="280" height="196" resize_mode="borders"}
+                        {loop name="image_product_new" type="image" limit="1" product="{$ID}" force_return="true" width="410" height="410" resize_mode="borders"}
                         src="{$IMAGE_URL}"
                         {/loop}
                         alt="Product #{$LOOP_COUNT}" >

@@ -9,7 +9,7 @@
 {block name="email-subject"}{intl l="New order placed on %store_name Nº %ref" ref={$order_ref} store_name={config key="store_name"}}{/block}
 
 {* Title  *}
-{block name="email-title"}{intl l="Hello, a new order has been placed."}{/block}
+{block name="email-title"}<div class="full-width-text-title">{intl l="Hello, a new order has been placed."}</div>{/block}
 
 {* Content  *}
 {block name="email-content"}
@@ -29,7 +29,7 @@
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
                 <td valign="top" width="55%">
-                    <strong>{intl l="Customer delivery address:"}</strong><br>
+                    <strong style="color:#12b3a6;">{intl l="Customer delivery address:"}</strong><br>
                     {ifhook rel="email-html.order-notification.delivery-address"}
                         {* delivery module can customize the delivery address *}
                         {hook name="email-html.order-notification.delivery-address" module={$DELIVERY_MODULE} order=$order_id}
@@ -39,7 +39,7 @@
                     {/elsehook}
                 </td>
                 <td valign="top">
-                    <strong>{intl l="Customer billing address:"}</strong><br />
+                    <strong style="color:#12b3a6;">{intl l="Customer billing address:"}</strong><br />
                     {format_address order_address=$INVOICE_ADDRESS locale=$locale}
                 </td>
             </tr>
@@ -58,9 +58,9 @@
         {hook name="email-html.order-notification.before-products" order=$order_id}
 
         <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size:13px;line-height:2em">
-            <tr style="color:#999;font-size:11px">
-                <td style="color:#999;border-bottom:1px solid #000">{intl l="What You Purchased"}</td>
-                <td align="right" style="color:#999;border-bottom:1px solid #000">{intl l="Price in"} {$orderCurrencyIsoCode}</td>
+            <tr style="color:#12b3a6;font-size:16px">
+                <td style="color:#12b3a6;border-bottom:1px solid #000">{intl l="Purchased items"}</td>
+                <td align="right" style="color:#12b3a6;border-bottom:1px solid #000">{intl l="Price in"} {$orderCurrencyIsoCode}</td>
             </tr>
             {loop type="order_product" name="order-products" order=$ID}
             {if $WAS_IN_PROMO == 1}
@@ -74,7 +74,7 @@
             {/if}
                 <tr>
                     <td style="border-bottom:1px solid #000">
-                        <b>{$TITLE}</b> <i>({$REF}{if $REF != $PRODUCT_SALE_ELEMENTS_REF}, {$PRODUCT_SALE_ELEMENTS_REF}{/if})</i>
+                        <b style="color: #12b3a6;">{$TITLE}</b> <i>({$REF}{if $REF != $PRODUCT_SALE_ELEMENTS_REF}, {$PRODUCT_SALE_ELEMENTS_REF}{/if})</i>
                         {ifloop rel="combinations"}<br />
                         {loop type="order_product_attribute_combination" name="combinations" order_product=$ID}
                             <span style="color:#999;display:block;font-size:11px;line-height:1.2">* {$ATTRIBUTE_TITLE}: {$ATTRIBUTE_AVAILABILITY_TITLE}</span>
@@ -98,8 +98,8 @@
                 <td align="right" style="text-align:right">{format_money number=$POSTAGE currency_id=$CURRENCY}</td>
             </tr>
             <tr>
-                <td align="right" style="text-align:right"><strong>{intl l="Order Total"}</strong></td>
-                <td align="right" style="text-align:right"><strong>{format_money number=$TOTAL_TAXED_AMOUNT currency_id=$CURRENCY}</strong></td>
+                <td align="right" style="text-align:right; color: #12b3a6;"><strong>{intl l="Order Total"}</strong></td>
+                <td align="right" style="text-align:right; color: #12b3a6;"><strong>{format_money number=$TOTAL_TAXED_AMOUNT currency_id=$CURRENCY}</strong></td>
             </tr>
         </table>
     {/loop}

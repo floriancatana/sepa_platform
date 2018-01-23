@@ -1235,6 +1235,7 @@ aside.col-md-pull-9 {
 	#products-offer {
 		margin-top: 50px;
 	}
+	
 }
 
 
@@ -2171,3 +2172,24 @@ header .navigation-main{
 .products-content>ul .item .product-price .price-container {
 	padding: 0px 5px;
 }
+
+.bootbox-alert .btn {
+	padding: 2px 15px;
+}
+
+.bootbox .modal-dialog .modal-body .bootbox-close-button {
+	padding: 0px 5px;
+    border: 2px solid #ccc;
+}
+
+#form-register .panel-info>.panel-heading {
+	color: #7a7a7a;
+    background-color: #f5f5f5;
+    border-color: #f5f5f5;
+}
+
+#form-register .panel-info {
+	border-color: #f5f5f5;
+}
+
+
