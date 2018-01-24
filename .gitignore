@@ -1,7 +1,7 @@
 local/config/build.properties
 local/config/config_db.php
 local/config/build
-local/config/database.yml
+#local/config/database.yml
 local/config/database.yml.sample.save
 local/config/key
 #core/vendor

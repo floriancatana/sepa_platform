@@ -1,0 +1,6 @@
+database:
+  connection:
+    driver: mysql
+    user: root
+    password: admin
+    dsn: mysql:host=localhost;dbname=hadi;port=3306
