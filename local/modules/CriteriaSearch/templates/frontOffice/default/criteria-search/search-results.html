@@ -28,18 +28,17 @@
                     <li{if $PAGE eq $CURRENT} class="active"{/if}>
                         <span class="criteria-pagination" data-page="{$PAGE}"> {$PAGE} </span>
                     </li>
-                {if $PAGE eq $LAST}
-                    {if $CURRENT eq $LAST}
-                        <li class="disabled">
-                            <span class="next"><!-- <i class="fa fa-caret-right"></i> --></span>
-                        </li>
-                    {else}
-                        <li>
-                            <span data-page="{$NEXT}" title="{intl l="Next"}" class="criteria-pagination next"><!-- <i class="fa fa-caret-right"></i> --></span>
-                        </li>
-                    {/if}
+                {/pageloop}   
+                   
+                {if $CURRENT eq $LAST}
+                    <li class="disabled">
+                        <span class="next"><!-- <i class="fa fa-caret-right"></i> --></span>
+                    </li>
+                {else}
+                    <li>
+                        <span data-page="{$NEXT}" title="{intl l="Next"}" class="criteria-pagination next"><!-- <i class="fa fa-caret-right"></i> --></span>
+                    </li>
                 {/if}
-                {/pageloop}
             </ul>
         </div>
     {/if}
