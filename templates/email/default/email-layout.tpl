@@ -496,13 +496,13 @@ a {
                                	<tr class="social-media-icons">
              						<td style="text-align: center; border-bottom: 2px solid #EAEAEA; width: 600px; display: inline-block;">
                  						<a href="https://www.facebook.com/hadiapp/">
-                     						<img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-48.png" alt="" />
+                     						<img src="{image file='assets/img/color-facebook-48.png'}" alt="" />
                  						</a>
                  						<a href="https://www.instagram.com/hadi_app/">
-                     						<img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-instagram-48.png" alt="" />
+                     						<img src="{image file='assets/img/color-instagram-48.png'}" alt="" />
                  						</a>
                  						<a href="https://vimeo.com/user43044245">
-                     						<img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-vimeo-48.png" alt="" />
+                     						<img src="{image file='assets/img/color-vimeo-48.png'}" alt="" />
                  						</a>
              						</td>
          						</tr>
