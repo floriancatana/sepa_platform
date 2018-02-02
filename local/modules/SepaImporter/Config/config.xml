@@ -104,6 +104,47 @@
                 </description>
             </import_descriptive>
         </import>
+        <import id="thelia.import.price.gp.hadi" class="SepaImporter\Import\ProductImportHadi"
+                category_id="thelia.import.products">
+            <import_descriptive locale="en_US">
+                <title>Import Product Hadi </title>
+                <description>
+				  <![CDATA[
+                    Importer.2 supports the following structure:</br>
+                    Produkt_id, Extern_id, Ref, Marke_id, Kategorie_id, Template_id, Produkt_titel, Kurze_beschreibung, Beschreibung, Postscriptum, Meta_titel, 
+                    Meta_beschreibung, Meta_keywords, Menge, Ist_in_Angebot, Ist_neu, Gewicht, EAN_code, Bild_name, Bild_titel, Bild_beschreibung,
+					Bild_kurz_beschreibung, Bild_postscriptum, Bild_file, Price, Promo_price, Listen_price, Ek_preis_sht, Ek_preis_gc, Ek_preis_oag, 
+					Ek_preis_holter, Preis_reuter, Vergleich_ek, Aufschlag</br>
+					
+                    Indications:
+                    <ul>
+                        <li>Decimal numbers must use "." as separator : 12.34</li>
+                        <li>Values are always numbers(even constraint values)</li>
+                        <li>"False" and "true" must be replaced with 0 and 1</li>
+                    </ul>
+                    ]]>
+                </description>
+            </import_descriptive>
+            <import_descriptive locale="de_DE">
+                <title>Import Product Hadi </title>
+                <description>
+				  <![CDATA[
+                    Importer.2 supports the following structure:</br>
+                    Produkt_id, Extern_id, Ref, Marke_id, Kategorie_id, Template_id, Produkt_titel, Kurz_beschreibung, Beschreibung, Postscriptum, Meta_titel, 
+                    Meta_beschreibung, Meta_keywords, Menge, Ist_in_Angebot, Ist_neu, Gewicht, EAN_code, Bild_name, Bild_titel, Bild_beschreibung,
+					Bild_kurz_beschreibung, Bild_postscriptum, Price, Promo_price, Listen_price, Ek_preis_sht, Ek_preis_gc, Ek_preis_oag, 
+					Ek_preis_holter, Preis_reuter, Vergleich_ek, Aufschlag</br>
+					
+					Indications:
+                    <ul>
+                        <li>Decimal numbers must use "." as separator : 12.34</li>
+                        <li>Values are always numbers(even constraint vales)</li>
+                        <li>"False" and "true" must be replaced with 0 and 1</li>
+                    </ul>
+                    ]]>
+                </description>
+            </import_descriptive>
+        </import>
         <import id="thelia.import.price.hf"
                 class="SepaImporter\Import\ProductVendorPriceImport"
                 category_id="thelia.import.products">
