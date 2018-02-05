@@ -236,7 +236,7 @@ class ProductImportHadi extends AbstractImport {
             if ($template_id != null)
                 $productThelia->setTemplateId($template_id);
             else
-                $productThelia->setTemplateId(3);
+                $productThelia->setTemplateId(1);
 
             if ($ist_online != null)
                 $productThelia->setVisible($ist_online);
