@@ -279,6 +279,7 @@ header .header {
     overflow: hidden;
     margin: 0px;
     color: #4d4d4d;
+    text-overflow: ellipsis;
 }
 
 #products-new .products-content .item h3.name {
@@ -1596,6 +1597,11 @@ li.cart-container{
 @media (max-width: 1200px) {
 	.hook_cart{
 		padding-left: 15px;
+	}
+}
+@media only screen and (min-width: 1130px) and (max-width: 1200px) {
+	.navbar-cart{
+		min-width: 80px;
 	}
 }
 @media only screen and (min-width: 993px) and (max-width: 1130px) {
