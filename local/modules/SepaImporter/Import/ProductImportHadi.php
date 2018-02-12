@@ -121,7 +121,7 @@ class ProductImportHadi extends AbstractImport {
         if (!$category) {
             $newCategoryInEn = new CategoryI18n();
             $newCategoryInEn->setLocale("en_US");
-            $newCategoryInEn->setTitle(htmlentities($name));
+            $newCategoryInEn->setTitle($name);
 
             $newCategoryInDe = new CategoryI18n();
             $newCategoryInDe->setLocale("de_DE");
@@ -149,7 +149,7 @@ class ProductImportHadi extends AbstractImport {
                 $log->debug(" Not exist category name for Id = " . $id . " ");
                 return FALSE;
             } else {
-                $this->saveIsNotInCategory($name, $kategorie_id);
+                $this->saveIsNotInCategory(html_entity_decode($name), $kategorie_id);
             }
         }
 
