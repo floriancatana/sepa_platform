@@ -636,6 +636,9 @@ header .header {
 .block-nav .block-content li a {
 	color: #4d4d4d;
 	font-weight: 600;
+	text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 10px 30px 10px 3px;
 }
 
 #categories {
