@@ -1599,6 +1599,11 @@ li.cart-container{
 		padding-left: 15px;
 	}
 }
+@media only screen and (min-width: 1130px) and (max-width: 1200px) {
+	.navbar-cart{
+		min-width: 80px;
+	}
+}
 @media only screen and (min-width: 993px) and (max-width: 1130px) {
 	.hook_customer{
 		padding-right: 0px;
