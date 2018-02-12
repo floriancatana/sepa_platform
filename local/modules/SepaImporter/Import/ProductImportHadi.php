@@ -267,14 +267,14 @@ class ProductImportHadi extends AbstractImport {
             $productI18n->setLocale("en_US");
 
             if ($produkt_titel != null)
-                $productI18n->setTitle($produkt_titel);
+                $productI18n->setTitle(mb_convert_encoding($produkt_titel, 'Windows-1252'));
 
             if ($beschreibung != null)
-                $productI18n->setDescription($beschreibung);
+                $productI18n->setDescription(mb_convert_encoding($beschreibung, 'Windows-1252'));
 
             if (Common::getActiveModule("AmazonIntegration") == 1) {
                 if ($infoAmazon['description'] && (strlen($infoAmazon['description']) > strlen($beschreibung))) {
-                    $productI18n->setDescription($infoAmazon['description']);
+                    $productI18n->setDescription(mb_convert_encoding($infoAmazon['description'], 'Windows-1252'));
                 }
             }
 
@@ -285,13 +285,13 @@ class ProductImportHadi extends AbstractImport {
                 $productI18n->setPostscriptum($postscriptum);
 
             if ($meta_titel != null)
-                $productI18n->setMetaTitle($meta_titel);
+                $productI18n->setMetaTitle(mb_convert_encoding($meta_titel, 'Windows-1252'));
 
             if ($meta_beschreibung != null)
-                $productI18n->setMetaDescription($meta_beschreibung);
+                $productI18n->setMetaDescription(mb_convert_encoding($meta_beschreibung, 'Windows-1252'));
 
             if ($meta_keywords != null)
-                $productI18n->setMetaKeywords($meta_keywords);
+                $productI18n->setMetaKeywords(mb_convert_encoding($meta_keywords, 'Windows-1252'));
 
             $productI18n->save();
             //$log->debug ( " product_i18n en_US is added ".$productI18n->__toString() );
@@ -302,14 +302,14 @@ class ProductImportHadi extends AbstractImport {
             $productI18n->setProduct($productThelia);
             $productI18n->setLocale("de_DE");
             if ($produkt_titel != null)
-                $productI18n->setTitle($produkt_titel);
+                $productI18n->setTitle(mb_convert_encoding($produkt_titel, 'Windows-1252'));
 
             if ($beschreibung != null)
-                $productI18n->setDescription($beschreibung);
+                $productI18n->setDescription(mb_convert_encoding($beschreibung, 'Windows-1252'));
 
             if (Common::getActiveModule("AmazonIntegration") == 1) {
                 if ($infoAmazon['description'] && (strlen($infoAmazon['description']) > strlen($beschreibung))) {
-                    $productI18n->setDescription($infoAmazon['description']);
+                    $productI18n->setDescription(mb_convert_encoding($infoAmazon['description'], 'Windows-1252'));
                 }
             }
 
@@ -320,13 +320,13 @@ class ProductImportHadi extends AbstractImport {
                 $productI18n->setPostscriptum($postscriptum);
 
             if ($meta_titel != null)
-                $productI18n->setMetaTitle($meta_titel);
+                $productI18n->setMetaTitle(mb_convert_encoding($meta_titel, 'Windows-1252'));
 
             if ($meta_beschreibung != null)
-                $productI18n->setMetaDescription($meta_beschreibung);
+                $productI18n->setMetaDescription(mb_convert_encoding($meta_beschreibung, 'Windows-1252'));
 
             if ($meta_keywords != null)
-                $productI18n->setMetaKeywords($meta_keywords);
+                $productI18n->setMetaKeywords(mb_convert_encoding($meta_keywords, 'Windows-1252'));
 
             $productI18n->save();
             //	$log->debug ( " generic_product_import product_i18n de_DE is added ".$productI18n->__toString() );
