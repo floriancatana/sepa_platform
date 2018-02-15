@@ -124,7 +124,7 @@ li>a:hover{
 
 #products-new li {
 	padding: 0px;
-}
+	}
 
 .block.block-contact .block-content ul>li:before{ 
 	color:#4d4d4d;
@@ -273,9 +273,9 @@ header .header {
 #products-new .products-content .item h3.name,
 .products-content .item h2.name,
 .grid #category-products .item>article .product-info .name {
-	font-size: 20px;
-	font-weight: 600;
-	height: 45px;
+	font-size: 16px;
+	font-weight: 550;
+	height: 64px;
     overflow: hidden;
     margin: 0px;
     color: #4d4d4d;
