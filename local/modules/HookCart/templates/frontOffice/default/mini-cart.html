@@ -31,10 +31,16 @@
                                 {/loop}
                             {/ifloop}
                             {elseloop rel="pse-first-image"}
-                                {loop type="image" name="product-image" product=$PRODUCT_ID limit="1" width="118" height="60"}
-                                    <img src="{$IMAGE_URL nofilter}" alt="{$TITLE}">
-                                {/loop}
+                                {ifloop rel="product-image"}
+                                    {loop type="image" name="product-image" product=$PRODUCT_ID limit="1" width="118" height="60"}
+                                        <img src="{$IMAGE_URL nofilter}" alt="{$TITLE}">
+                                    {/loop}
+                                {/ifloop}
+                                {elseloop rel="product-image"}
+                                    <img src="{image file='assets/dist/img/410x410.png'}" alt="{$TITLE}"  width="60" height="60">
+                                {/elseloop}
                             {/elseloop}
+                       
                         </td>
                         <td class="product">
                             <h3 class="name" style="margin:0">

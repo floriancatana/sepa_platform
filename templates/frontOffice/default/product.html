@@ -121,6 +121,9 @@
                     {/loop}
                 </figure>
                 {/ifloop}
+                {elseloop rel="image.main"}
+                    <img itemprop="image" src="{image file='assets/dist/img/410x410.png'}" class="img-responsive" alt="{$TITLE}">
+                {/elseloop}
             </section>
             {/elsehook}
             <section id="product-details" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
